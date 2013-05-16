@@ -1,0 +1,565 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SaintGeorgeOnline_DataAccess
+</name>
+</assembly>
+<members>
+<member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_UPD_FichaMedicaAlumno(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_FichaMedica,System.Data.DataSet,System.String@,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Actualiza los datos de la Ficha Medica del Alumno
+ </summary>
+	<param name="objFichaMedica">Datos de la entidad Ficha Medica</param>
+	<param name="objDetalle">Data set que almacena los datos de los detalles de la Ficha médica de alumno</param>
+	<param name="str_Mensaje"></param>
+	<returns>Código del alumno</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaEnfermedad(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasEnfermedades,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las enfermedades  
+ </summary>
+	<param name="objFichaMedicaEnfermedad">Datos de la entidad Relacion de Ficha Medica de enfermedades </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaVacuna(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasVacunas,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Vacunas.  
+ </summary>
+	<param name="objFichaMedicaVacuna">Datos de la entidad Relacion de Ficha Medica de Vacuna </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaAlergia(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasAlergias,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Alergias.  
+ </summary>
+	<param name="objFichaMedicaAlergia">Datos de la entidad Relacion de Ficha Medica de Alergias </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaSeguro(SaintGeorgeOnline_BusinessEntities.ModuloMatricula.be_FichaSeguro,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Alergias.  
+ </summary>
+	<param name="objFichaMedicaSeguro">Datos de la entidad Relacion de Ficha Medica de Alergias </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     24/01/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaRentaEstudiantil(SaintGeorgeOnline_BusinessEntities.ModuloMatricula.be_FichaSeguroRentaEstudiantil,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Caracteristicas de la piel.  
+ </summary>
+	<param name="objFichaMedicaRentaEstudiantil">Datos de la entidad Relacion de Ficha Medica de Caracteristicas de la piel </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     20/02/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaCaracteristicasPiel(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasCarecteristicasPiel,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Caracteristicas de la piel.  
+ </summary>
+	<param name="objFichaMedicaCaracteristicasPiel">Datos de la entidad Relacion de Ficha Medica de Caracteristicas de la piel </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaMedicamento(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasMedicamentos,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de los medicamentos que usa el alumno.  
+ </summary>
+	<param name="objFichaMedicaMedicamento">Datos de la entidad Relacion de Ficha Medica de medicamentos </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaHospitalizacion(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasMotivoHospitalizacion,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las hospitalizaciones que haya tenido el alumno.  
+ </summary>
+	<param name="objFichaMedicaHospitalizacion">Datos de la entidad Relacion de Ficha Medica de Hospitalización </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaOperacion(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasOperaciones,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Operaciones que haya tenido el alumno.  
+ </summary>
+	<param name="objFichaMedicaOperacion">Datos de la entidad Relacion de Ficha Medica de Operación. </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaTipoControl(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasTiposControles,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de los tipos de control que haya tenido el alumno.  
+ </summary>
+	<param name="objFichaMedicaTipoControl">Datos de la entidad Relacion de Ficha Medica de Tipos de control. </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaControlPesoTalla(SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasControlesPesoTalla,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle del conrol de peso y talla  que haya tenido el alumno.  
+ </summary>
+	<param name="objFichaMedicaControlPesoTalla">Datos de la entidad Relacion de Ficha Medica de control de peso y talla. </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaEnfermedad(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de enfermedad.
+ </summary>
+	<param name="int_CodigoFichaMedica">Codigo de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaVacuna(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Vacuna.
+ </summary>
+	<param name="int_CodigoFichaMedica">Codigo de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaAlergia(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Alergia.
+ </summary>
+	<param name="int_CodigoFichaMedica">Codigo de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaDatosSeguro(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Alergia.
+ </summary>
+	<param name="int_CodigoAlumno">Codigo de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaRentaEstudiantil(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Renta estudiantil.
+ </summary>
+	<param name="int_CodigoAlumno">Codigo de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     20/02/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaCaracteristicasPiel(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Caracteristicas de la Piel.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaMedicamento(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Medicamentos.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaHospitalizacion(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Hospitalización.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaOperacion(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Operación de la Ficha médica.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaControlPesoTalla(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Contrl de Peso y Talla de la Ficha médica.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_DEL_FichaMedicaTipoControl(System.Int32,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminación del detalle de Tipo de Control de la Ficha médica.
+ </summary>
+	<param name="int_CodigoFichaMedica">Código de Alumno</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_UPD_FichaMedicaActualizacion(System.String,System.Int32,System.Int32,System.Int32,System.Data.DataTable,System.Data.DataSet,System.String@,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Actualiza los datos de la Ficha Medica del Alumno
+ </summary>
+	<param name="intCodigoFichaMedica">Codigo del alumno</param>
+	<param name="intCodigoPersona">Codigo de la persona </param>
+	<param name="intCodigoSolicitud">Codigo de la solicitud</param>
+	<param name="intCodigoPerfil">Codigo del Perfil</param>
+	<param name="objDT_Cabecera">Tabla que almacena los datos de la Ficha médica de alumno</param>
+	<param name="objDetalle">Data set,almacena los datos de los detalles de la Ficha médica de alumno</param>
+	<param name="str_Mensaje">Mensaje que se muestra</param>
+	<returns>Código del alumno</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_UPD_EstadoSolicitudActualizacion(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Data.SqlClient.SqlTransaction,System.String@,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Actualiza el estado de solicitud de la Ficha Medica del Alumno
+ </summary>
+	<param name="CodigoSolicitud">Codigo de solicitud</param>
+	<param name="CodigoPerfil">Codigo de perfil </param>
+	<param name="detEnfermedad">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detVacuna">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detcaracteristicasPiel">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detMedicamentos">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detHospitalizacion">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detOperacion">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detTipoControl">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="detAlergia">Nos indica si tiene al menos un registro donde el valor=1;sino tiene registros el valor=0</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<param name="str_Mensaje">Mensaje que se muestra</param>
+	<returns>Código del alumno</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicasAlumnosTemp(SaintGeorgeOnline_BusinessEntities.ModuloMatricula.be_SolicitudActualizacionFichaMedicaAlumno,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_FichaMedica,System.String,System.Data.DataSet,System.String@,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en la Ficha medica de alumnos temporal
+ </summary>
+	<param name="objSolicitud">Datos de la entidad Solicitud de actualizacion de Ficha médica</param>
+	<param name="objFichaMedicaAlumno">Datos de la entidad Ficha Medica</param>
+	<param name="str_CadenaCodigoPerfil">Codigo de perfil</param>
+	<param name="objDetalle">Data set que almacena los datos de los detalles de la Ficha médica de alumno</param>
+	<param name="str_Mensaje">Mensaje que se muestra</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaEnfermedadTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasEnfermedades,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las enfermedades temporales 
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de Solicitud</param>
+	<param name="objFichaMedicaEnfermedad">Datos de la entidad Relacion de Ficha Medica de enfermedades temporales </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaVacunaTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasVacunas,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Vacunas temporales.  
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaVacuna">Datos de la entidad Relacion de Ficha Medica de Vacuna Temporales </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaAlergiaTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasAlergias,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Alergias temporales.  
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaAlergia">Datos de la entidad Relacion de Ficha Medica de Alergias temporales </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaCaracteristicasPielTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasCarecteristicasPiel,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Caracteristicas de la piel temporal.  
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaCaracteristicasPiel">Datos de la entidad Relacion de Ficha Medica de Caracteristicas de la piel temporal</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaMedicamentoTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasMedicamentos,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de los medicamentos de la tabla temporal.  
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaMedicamento">Datos de la entidad Relacion de Ficha Medica de medicamentos de la tabla temporal </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaHospitalizacionTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasMotivoHospitalizacion,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las hospitalizaciones de la tabla temporal.
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaHospitalizacion">Datos de la entidad Relacion de Ficha Medica de Hospitalización de la tabla temporal.</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaOperacionTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasOperaciones,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de las Operaciones de la tabla temporal.  
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaOperacion">Datos de la entidad Relacion de Ficha Medica de Operación de la tabla temporal. </param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_INS_FichaMedicaTipoControlTemp(System.Int32,SaintGeorgeOnline_BusinessEntities.ModuloEnfermeria.be_RelacionFichaMedicasTiposControles,System.Data.SqlClient.SqlTransaction,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Inserta los datos en el detalle de los tipos de control de la tabla temporal.
+ </summary>
+	<param name="int_CodigoSolicitud">Codigo de solicitud</param>
+	<param name="objFichaMedicaTipoControl">Datos de la entidad Relacion de Ficha Medica de Tipos de control de la tabla temporal.</param>
+	<param name="objSqlTransaction">cadena de conexion</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_LIS_FichaMedicaAlumno(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Lista los datos de la Ficha Medica del Alumno
+ </summary>
+	<param name="str_ApellidoPaterno">Apellido Paterno del alumno</param>
+	<param name="str_ApellidoMaterno">Apellido Materno del alumno</param>
+	<param name="str_Nombre">Nombre del alumno</param>
+	<param name="int_estadoAlumno">Estado del alumno</param>
+	<param name="int_Nivel">Nivel en que se encuentra el alumno</param>
+	<param name="int_SubNivel">SubNivel en que se encuentra el alumno</param>
+	<param name="int_Grado">Grado en que se encuentra el alumno</param>
+	<param name="int_Aula">Aula en que se encuentra el alumno</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_GET_FichaMedicaActualizacion(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Obtiene los datos de la solicitud de actualizacion de Ficha Médica del alumno
+ </summary>
+	<param name="int_Codigo">Codigo del alumno</param>
+	<param name="int_CodigoSolicitud">Codigo de la solicitud</param>
+	<param name="int_CodigoPerfil">Codigo del perfil</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_LIS_FichaMedicaActualizacion(SaintGeorgeOnline_BusinessEntities.ModuloMatricula.be_MaestroPersonas,System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Lista los datos de la solicitud de actualizacion de Ficha Médica del alumno
+ </summary>
+	<param name="objMaestroPersona">Contiene los datos de la entidad Maestro Persona</param>
+	<param name="dt_FechaRangoInicial">Fecha en que se inicia la busqueda de la ficha médica</param>
+	<param name="dt_FechaRangoFinal">Fecha en que se finaliza la busqueda de la ficha médica</param>
+	<param name="int_CodigoPerfil">Codigo del perfil</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloEnfermeria.da_FichaMedicasAlumnos.FUN_GET_FichaMedicaAlumnoVisualizacionActualizacionFamiliar(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Obtiene los datos para la visualizacion del Familiar
+ </summary>
+	<param name="str_CodigoAlumno">Codigo de Alumno</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.da_combos.listarAnioPresupuestal">
+	<summary>
+ listar el anio presupuestal
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.da_combos.fListarEstadosPresupuesto">
+	<summary>
+ listar el estado de presupuestos 
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.da_SolicitudPresupuesto.fValidarPresupuestoSiguienteValidador(System.Int32,System.Int32,System.String@,System.String@,System.String@,System.String@,System.Int32@)">
+	<summary>
+ funcion par validar el prespouesto 
+ 
+ </summary>
+	<param name="ASSSCC_CodigoAsignacionSSSCentroCosto"></param>
+	<param name="EP_CodigoEstadoPresupuesto"></param>
+	<param name="mensaje"></param>
+	<param name="nombrePresupuesto"></param>
+	<param name="nombrePersona"></param>
+	<param name="nombreArea"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.da_ValidarPresupuesto.fListarEstructuraPresupuestoValidar(System.Int32,System.Int32)">
+	<summary>
+ funcion para listar estructura de un presupuesto 
+ </summary>
+	<param name="ASSSCC_CodigoAsignacionSSSCentroCosto">codigo del presupuesto</param>
+	<param name="codTrabajador"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloMatricula.da_Alumnos.FUN_LIS_FichaAlumno(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Lista los datos de la Ficha del Alumno
+ </summary>
+	<param name="str_ApellidoPaterno">Apellido Paterno del alumno</param>
+	<param name="str_ApellidoMaterno">Apellido Materno del alumno</param>
+	<param name="str_Nombre">Nombre del alumno</param>
+	<param name="int_estadoAlumno">Estado del alumno</param>
+	<param name="int_Nivel">Nivel en que se encuentra el alumno</param>
+	<param name="int_SubNivel">SubNivel en que se encuentra el alumno</param>
+	<param name="int_Grado">Grado en que se encuentra el alumno</param>
+	<param name="int_Aula">Aula en que se encuentra el alumno</param>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     07/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_DataAccess.ModuloNotas.da_RegistroNotasComponentes.listarEstructuraComponenteindicadorSubindicadorPorAula(System.Int32,System.Int32)">
+	<summary>
+ funcion que  lista toda la estrucutura de resitro componente indicador  subindicador para generar su registro nota componente,nota indicador ,subindicador  
+
+ </summary>
+	<param name="codAsignacionAula">codigo del salo ha generar su libreta de notas </param>
+	<param name="codBimestre">bimestre para generar su libreta de notas</param>
+	<returns>retorna 3 tablas 1.)tabla de componente 2.)tabla idnicador 3.) tabla subindicador  </returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SaintGeorgeOnline_BusinessLogic
+</name>
+</assembly>
+<members>
+<member name="M:SaintGeorgeOnline_BusinessLogic.bl_RegistroNotasComponentes.listarEstructuraComponenteindicadorSubindicadorPorAula(System.Int32,System.Int32)">
+	<summary>
+ funcion que  lista toda la estrucutura de resitro componente indicador  subindicador para generar su registro nota componente,nota indicador ,subindicador  
+
+ </summary>
+	<param name="codAsignacionAula">codigo del salo ha generar su libreta de notas </param>
+	<param name="codBimestre">bimestre para generar su libreta de notas</param>
+	<returns>retorna 3 tablas 1.)tabla de componente 2.)tabla idnicador 3.) tabla subindicador  </returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_BusinessLogic.bl_RegistroNotasComponentes.FUN_INS_CU_InsertarNotaComponenteEstrucuturaSalon(System.Int32,System.Collections.Generic.List{SaintGeorgeOnline_DataAccess.ModuloNotas.ComponenteNuevo},System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+	</summary>
+	<param name="codBimestre">codigo de bimestre </param>
+	<param name="lstComponenteNuevo">lista de estructuras  de componenente indicador  subindicador</param>
+	<param name="int_CodigoUsuario"></param>
+	<param name="int_CodigoTipoUsuario"></param>
+	<param name="int_CodigoModulo"></param>
+	<param name="int_CodigoOpcion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_BusinessLogic.ModuloConfiguraciones.bl_SolicitudDePresupuesto.fValidarPresupuestoSiguienteValidador(System.Int32,System.Int32,System.String@,System.String@,System.String@,System.String@,System.Int32@)">
+	<summary>
+   funcion que  sirven para actualizar el estado del presupuesto
+ </summary>
+	<param name="ASSSCC_CodigoAsignacionSSSCentroCosto"></param>
+	<param name="EP_CodigoEstadoPresupuesto"></param>
+	<param name="mensaje"></param>
+	<param name="nombrePresupuesto"></param>
+	<param name="nombrePersona"></param>
+	<param name="nombreArea"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_BusinessLogic.ModuloConfiguraciones.bl_SolicitudDePresupuesto.fListarClaseCategoriaSubcategoriaObservadosPresupuesto(System.Int32,System.Int32)">
+	<summary>
+ funcion para listar todos los clases y categorias y subcategorias 
+ </summary>
+	<param name="SP_CodigoSolicitudPresupuesto"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

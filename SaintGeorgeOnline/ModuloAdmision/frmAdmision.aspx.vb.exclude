@@ -1,0 +1,23 @@
+﻿Imports System.Data
+Imports System.IO
+Imports SaintGeorgeOnline_BusinessLogic
+Imports ClosedXML.Excel
+Partial Class ModuloAdmision_frmAdmision
+    Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+      
+
+    End Sub
+End Class
+
+Public Class left
+    Public idPostulante As Integer
+    Public nombre As String
+    Public grado As String
+    Public cancelo As String
+End Class
+Public Class right
+    Public cancelo As String
+    Public idPostulante As Integer
+End Class

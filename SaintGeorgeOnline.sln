@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SaintGeorgeOnline_DataAccess", "SaintGeorgeOnline_DataAccess\SaintGeorgeOnline_DataAccess.vbproj", "{63DE71E8-3036-4EF9-B37B-AAB7166060E7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SaintGeorgeOnline_BusinessEntities", "SaintGeorgeOnline_BusinessEntities\SaintGeorgeOnline_BusinessEntities.vbproj", "{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SaintGeorgeOnline_BusinessLogic", "SaintGeorgeOnline_BusinessLogic\SaintGeorgeOnline_BusinessLogic.vbproj", "{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SaintGeorgeOnline_Utilities", "SaintGeorgeOnline_Utilities\SaintGeorgeOnline_Utilities.vbproj", "{C2183CA4-F67A-407D-B1DC-417C9105C5FC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SaintGeorgeOnline", "SaintGeorgeOnline\", "{5A9607F7-4E46-42D9-8D29-A603437370C2}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFramework = "3.5"
+		ProjectReferences = "{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}|SaintGeorgeOnline_BusinessEntities.dll;{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}|SaintGeorgeOnline_BusinessLogic.dll;{63DE71E8-3036-4EF9-B37B-AAB7166060E7}|SaintGeorgeOnline_DataAccess.dll;{C2183CA4-F67A-407D-B1DC-417C9105C5FC}|SaintGeorgeOnline_Utilities.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/SaintGeorgeOnline"
+		Debug.AspNetCompiler.PhysicalPath = "SaintGeorgeOnline\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\SaintGeorgeOnline\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/SaintGeorgeOnline"
+		Release.AspNetCompiler.PhysicalPath = "SaintGeorgeOnline\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\SaintGeorgeOnline\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63416"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SaintGeorgeOnline_Listeners", "SaintGeorgeOnline_Listeners\SaintGeorgeOnline_Listeners.vbproj", "{B3D81B4C-F569-495D-866D-283C3E57717D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63DE71E8-3036-4EF9-B37B-AAB7166060E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DE71E8-3036-4EF9-B37B-AAB7166060E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DE71E8-3036-4EF9-B37B-AAB7166060E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DE71E8-3036-4EF9-B37B-AAB7166060E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2183CA4-F67A-407D-B1DC-417C9105C5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2183CA4-F67A-407D-B1DC-417C9105C5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2183CA4-F67A-407D-B1DC-417C9105C5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2183CA4-F67A-407D-B1DC-417C9105C5FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A9607F7-4E46-42D9-8D29-A603437370C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9607F7-4E46-42D9-8D29-A603437370C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9607F7-4E46-42D9-8D29-A603437370C2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9607F7-4E46-42D9-8D29-A603437370C2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B3D81B4C-F569-495D-866D-283C3E57717D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D81B4C-F569-495D-866D-283C3E57717D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D81B4C-F569-495D-866D-283C3E57717D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D81B4C-F569-495D-866D-283C3E57717D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

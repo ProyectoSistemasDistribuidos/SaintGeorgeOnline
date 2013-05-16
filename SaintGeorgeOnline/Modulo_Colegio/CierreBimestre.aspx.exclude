@@ -1,0 +1,106 @@
+﻿<%@ Page Language="VB" MasterPageFile="~/PaginaPrincipal.master" AutoEventWireup="false" CodeFile="CierreBimestre.aspx.vb" Inherits="Modulo_Colegio_CierreBimestre" title="Página sin título" %>
+
+<%@ OutputCache Location ="None" %>
+<%@ MasterType VirtualPath="~/PaginaPrincipal.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+<div id="miPaginaMantenimiento" style="margin-left: 10px; border: solid 0px blue; width: 1030px;">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">   
+    <ContentTemplate>    
+ 
+<div style="border: solid 0px blue; width: 1030px;">
+    <div id="miBusquedaMant" style="border: solid 0px blue; width: 1030px;">
+    <fieldset style="width: 1010px;">
+        <legend>Datos de Filtro</legend>
+        
+    <table cellpadding="0" cellspacing="0" border="0" style="width: 990px; border: solid 0px red; margin: 0 0 0 10px; padding: 0; font-size: 11px; font-family: Arial;">
+        <tr>
+            <td style="height: 15px; width: 70px"></td>
+            <td style="height: 15px; width: 130px"></td>
+            <td style="height: 15px; width: 70px"></td>
+            <td style="height: 15px; width: 130px"></td>
+            <td style="height: 15px; width: 70px"></td>
+            <td style="height: 15px; width: 130px"></td>
+            <td style="height: 15px; width: 70px"></td>
+            <td style="height: 15px; width: 130px"></td>            
+            <td style="height: 15px; width: 100px"></td>
+            <td style="height: 15px; width:  90px"></td>
+        </tr>
+
+                        
+        <tr>
+            <td style="width: 70px; height: 25px;" align="left" valign="middle">
+                <span>Año:</span>   
+            </td>
+            <td style="width: 920px; height: 25px;" align="left" valign="middle" colspan="9">
+<asp:DropDownList ID="ddlAnioAcademico" runat="server" style="width: 125px; font-size: 8pt; font-family: Arial;">
+</asp:DropDownList>                  
+            </td>
+
+        <tr>
+            <td style="width: 70px; height: 25px;" align="left" valign="middle">
+                <span>Salón:</span> 
+            </td>
+            <td style="width: 920px; height: 25px;" align="left" valign="middle" colspan="9">
+<asp:DropDownList ID="ddlAsignacionAula" runat="server" Width="525px" style="font-size: 8pt; font-family: Courier New;">
+</asp:DropDownList>               
+            </td>
+        </tr>   
+        <tr>
+            <td style="width: 70px; height: 25px;" align="left" valign="middle">
+                <span>Bimestre:</span> 
+            </td>
+            <td style="width: 920px; height: 25px;" align="left" valign="middle" colspan="9">
+<asp:DropDownList ID="ddlBimestre" runat="server" style="width: 311px; font-size: 8pt; font-family: Arial;">
+</asp:DropDownList>                           
+            </td>
+        </tr>   
+        <tr>
+            <td style="width: 70px; height: 25px;" align="left" valign="middle">
+                <span>Estado:</span> 
+            </td>
+            <td style="width: 920px; height: 25px;" align="left" valign="middle" colspan="9">
+<asp:RadioButtonList ID="rbList" runat="server">
+    <asp:ListItem Text="Aperturado" Value="1" Selected="True"></asp:ListItem>
+    <asp:ListItem Text="Cerrado" Value="0"></asp:ListItem>
+</asp:RadioButtonList>
+            </td>
+        </tr>          
+        <tr>
+            <td style="width: 70px; height: 25px;" align="left" valign="middle">
+                <asp:Button ID="btnGrabar" runat="server" Text="Grabar" OnClick="btnGrabar_Click"  />
+            </td>
+            <td style="width: 920px; height: 25px;" align="left" valign="middle" colspan="9">
+            </td>
+        </tr>    
+        <tr>
+            <td style="height: 15px;" colspan="10"></td>
+        </tr>                                   
+    </table>              
+    
+      </fieldset>
+    </div> 
+</div>       
+    
+    </ContentTemplate>
+</asp:UpdatePanel>  
+
+</div> 
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $("#imgControl").attr("src", '/SaintGeorgeOnline/App_Themes/Imagenes/menuShow.png');
+        $("#menu").hide('fast');
+        $("#menu").width(0);
+        $("#contenido").width(893);
+            
+    });
+
+</script>
+</asp:Content>
+

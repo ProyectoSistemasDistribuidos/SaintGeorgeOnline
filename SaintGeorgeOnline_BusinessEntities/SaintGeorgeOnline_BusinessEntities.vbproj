@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SaintGeorgeOnline_BusinessEntities</RootNamespace>
+    <AssemblyName>SaintGeorgeOnline_BusinessEntities</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SaintGeorgeOnline_BusinessEntities.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SaintGeorgeOnline_BusinessEntities.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mantenimientos_Colegio\be_Bimestres.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_SemanasAcademicas.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_DuracionGrupo.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_NombresGrupos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_MedicamentosAlumnos.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_FichaSeguro.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_MotivosSalidasAlumnos.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_CalificativoDescriptores.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_ColegiosExternos.vb" />
+    <Compile Include="Mantenimientos_Notas\be_Criterios.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_ConceptosServicios.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_Empresas.vb" />
+    <Compile Include="Mantenimientos_Seguimientos\be_CalificativosEvaluacion.vb" />
+    <Compile Include="Mantenimientos_Seguimientos\be_CriteriosEvaluacion.vb" />
+    <Compile Include="Mantenimientos_Seguimientos\be_GrupoCriterioEvaluacion.vb" />
+    <Compile Include="Mantenimientos_Seguimientos\be_TipoDocumentoSeguimiento.vb" />
+    <Compile Include="Mantenimiento_Configuraciones\be_Item.vb" />
+    <Compile Include="Modulo_Academico\be_CierrePeriodo.vb" />
+    <Compile Include="Modulo_Academico\be_RegistroNotasCargo.vb" />
+    <Compile Include="Modulo_Actividades\be_ConfirmacionParticipantes.vb" />
+    <Compile Include="Modulo_Articulos\BE_AF_MovimientoArticulos_Cabecera.vb" />
+    <Compile Include="Modulo_Articulos\BE_AF_MovimientoArticulos_Detalle.vb" />
+    <Compile Include="Modulo_Articulos\be_articulo.vb" />
+    <Compile Include="Modulo_Articulos\BE_categoria.vb" />
+    <Compile Include="Modulo_Articulos\be_color.vb" />
+    <Compile Include="Modulo_Articulos\be_marca.vb" />
+    <Compile Include="Modulo_Articulos\BE_nombreArticulo.vb" />
+    <Compile Include="Modulo_Articulos\be_Presentaciones.vb" />
+    <Compile Include="Modulo_Articulos\BE_PROVEEDOR  .vb" />
+    <Compile Include="Modulo_Articulos\BE_Subcategoria.vb" />
+    <Compile Include="Modulo_AsistenciaAlumno\be_AsistenciaAlumnos.vb" />
+    <Compile Include="Modulo_AsistenciaAlumno\be_Motivo.vb" />
+    <Compile Include="Modulo_BancoLibros\be_AsignacionVigenciaLibros.vb" />
+    <Compile Include="Modulo_BancoLibros\be_AsignacionVigenciaTitulos.vb" />
+    <Compile Include="Modulo_BancoLibros\be_CopiaLibros.vb" />
+    <Compile Include="Modulo_BancoLibros\be_CursosLibros.vb" />
+    <Compile Include="Modulo_BancoLibros\be_Devoluciones.vb" />
+    <Compile Include="Modulo_BancoLibros\be_DistribucionAnualLibros.vb" />
+    <Compile Include="Modulo_BancoLibros\be_Libros.vb" />
+    <Compile Include="Modulo_BancoLibros\be_PrestamoDetalle.vb" />
+    <Compile Include="Modulo_BancoLibros\be_Prestamos.vb" />
+    <Compile Include="Modulo_BancoLibros\be_TipoLibros.vb" />
+    <Compile Include="Modulo_Colegio\be_AsignacionIniciosBimestres.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_AniosAcademicos.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Aulas.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Colegios.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_DepartamentosAcademicos.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_EstadosAniosAcademicos.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Grados.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_GradosMinisterio.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Precedencias.vb" />
+    <Compile Include="Modulo_Colegio\be_AsignacionAulas.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_SedesColegio.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Subniveles.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Ambientes.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_AulasMinisterio.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_Criterio.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_Cursos.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_Descriptores.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_NombresCursos.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_TipoCriterio.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_TipoCurso.vb" />
+    <Compile Include="Mantenimientos_Cursos\be_TipoDescriptores.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_CompaniaSeguro.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_MotivoRestriccionMatricula.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Niveles.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_NivelesMinisterio.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_NombresGradosMinisterio.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Bloques.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_Pisos.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionAlumnosFamiliares.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionClinicasSeguro.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionIdiomaPersona.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionFamiliarProfesion.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionNacionalidadPersona.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_RelacionTiposDiscapacidadesAlumnos.vb" />
+    <Compile Include="Mantenimientos_Colegio\be_TipoAmbientes.vb" />
+    <Compile Include="Mantenimientos_Notas\be_FormasCalificacion.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_Bancos.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_ConceptosCobros.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_CuentasBancarias.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_FormasPagos.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_Moneda.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_MotivoBeca.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_Talonarios.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_TipoBeca.vb" />
+    <Compile Include="Mantenimientos_Pensiones\be_TipoCambio.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_AccionesAcceso.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_AsignacionBloquesInformacion.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_AsignacionCamposInformacion.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_BloquesInformaciones.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_CamposInformacion.vb" />
+    <Compile Include="Modulo_Comunicado\be_AsignacionComunicadoIdiomas.vb" />
+    <Compile Include="Modulo_Comunicado\be_AsignacionComunicadosGrados.vb" />
+    <Compile Include="Modulo_Comunicado\be_AsignacionComunicadosTipoPersonas.vb" />
+    <Compile Include="Modulo_Comunicado\be_ComunicadosAcademicos.vb" />
+    <Compile Include="Modulo_Comunicado\be_TiposComunicados.vb" />
+    <Compile Include="Modulo_Conducta\be_CriteriosConducta.vb" />
+    <Compile Include="Modulo_Conducta\be_RegistroBlackMark.vb" />
+    <Compile Include="Modulo_Conducta\be_RegistroMeritosDemeritos.vb" />
+    <Compile Include="Modulo_Conducta\be_TipoCriterioConductual.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_ActualizarDetaalleSolicitudArticuloPrecioCantidad.vb" />
+    <Compile Include="Modulo_Configuraciones\be_AsignacionArticulosPeriodo.vb" />
+    <Compile Include="Modulo_Configuraciones\be_AsignacionClasesPresupuesto.vb" />
+    <Compile Include="Modulo_Configuraciones\be_AsignacionResponsablesPresupuestos.vb" />
+    <Compile Include="Modulo_Configuraciones\be_AsignacionResponsablesValidacion.vb" />
+    <Compile Include="Modulo_Configuraciones\be_CentrosCostos.vb" />
+    <Compile Include="Modulo_Configuraciones\be_DetalleSolicitudSubCategoria.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_AsignacionArticulosPeriodos.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_AsignacionEstructuraSSSCentroCostoClases.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_AsignacionResponsablesValidaciones.vb" />
+    <Compile Include="Modulo_Configuraciones\be_PS_AsignacionSSSCentroCostoCategoria.vb" />
+    <Compile Include="Modulo_Configuraciones\be_PS_AsignacionSSSCentroCostoSubCategoria.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_DetalleSolicitudArticulos.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_RegistroValidacionesDetallePresupuestos.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_RegistroValidacionesPresupuestos.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_PS_SituacionItem.vb" />
+    <Compile Include="Modulo_Configuraciones\BE_SolicitudPresupuesto.vb" />
+    <Compile Include="Modulo_Configuraciones\be_SubCentrosCostos.vb" />
+    <Compile Include="Modulo_Configuraciones\be_SubSubCentrosCostos.vb" />
+    <Compile Include="Modulo_Configuraciones\be_SubSubSubCentrosCostos.vb" />
+    <Compile Include="Modulo_CrearPlantillaOficiales\BE_asignacionGrupo.vb" />
+    <Compile Include="Modulo_CrearPlantillaOficiales\BE_NotaBimestral.vb" />
+    <Compile Include="Modulo_CrearPlantillaOficiales\BE_RegistroNotaAnualCualitativa.vb" />
+    <Compile Include="Modulo_Cursos\be_AsignacionCursos.vb" />
+    <Compile Include="Modulo_Cursos\be_AsignacionFormaCalificacion.vb" />
+    <Compile Include="Modulo_Cursos\be_AsignacionGrupos.vb" />
+    <Compile Include="Modulo_Cursos\be_ConfiguracionAnualTaller.vb" />
+    <Compile Include="Modulo_Cursos\BE_CU_HomologacionCursosMinisterio.vb" />
+    <Compile Include="Modulo_Cursos\be_DetalleConfiguracionAnualTaller.vb" />
+    <Compile Include="Modulo_Enfermeria\be_Consulta.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasAlergias.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasAlergias_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasCarecteristicasPiel.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasCarecteristicasPiel_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasEnfermedades.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasEnfermedades_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasMedicamentos.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasMedicamentos_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasMotivoHospitalizacion.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasMotivoHospitalizacion_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasOperaciones.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasOperaciones_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasTiposControles.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasTiposControles_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasVacunas.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_EN_RelacionFichaMedicasVacunas_Temp.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_FichaEnfermeria.vb" />
+    <Compile Include="Modulo_Enfermeria\BE_FichaEnfermeriaTemp.vb" />
+    <Compile Include="Modulo_Enfermeria\be_Kardex.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasCarecteristicasPiel.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasAlergias.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_Alergias.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_AlmacenMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_Diagnosticos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_DosisVacunas.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_Enfermedades.vb" />
+    <Compile Include="Modulo_Enfermeria\be_FichaAtencion.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaAtencionesDiagnosticos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaAtencionesMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaAtencionesProcedimientosRealizados.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasControlesPesoTalla.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasEnfermedades.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasMotivoHospitalizacion.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasOperaciones.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasTiposControles.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionFichaMedicasVacunas.vb" />
+    <Compile Include="Modulo_Entrevistas\be_ProgramacionEntrevistaCabecera.vb" />
+    <Compile Include="Modulo_Entrevistas\be_ProgramacionEntrevistaDetalle.vb" />
+    <Compile Include="Modulo_Fotocopias\be_DetalleSolicitudFotocopias.vb" />
+    <Compile Include="Modulo_Fotocopias\be_SolicitudFotocopias.vb" />
+    <Compile Include="Modulo_Logueo\be_TiposPersonas.vb" />
+    <Compile Include="Modulo_Logueo\be_Usuario.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Clinicas.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_EstadosAlumnos.vb" />
+    <Compile Include="Modulo_Enfermeria\be_FichaMedica.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_FrecuenciaUsoMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_IndicacionEnfermeria.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_Medicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_MotivoSalidaMedicamento.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_MotivosHospitalizaciones.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_NombresMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_PresentacionesMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_ProcedimientosRealizados.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_RelacionPresentacionesUnidadesMedidasMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposAlergias.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposCaracteristicasPiel.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposControles.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposNacimientos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposOperacionesMedicas.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_TiposSangre.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_UnidadesMedidasMedicamentos.vb" />
+    <Compile Include="Mantenimientos_Enfermeria\be_Vacunas.vb" />
+    <Compile Include="Modulo_Matricula\be_Alumnos.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Departamentos.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Distritos.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_EscolaridadesMinisterio.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_EstadosCiviles.vb" />
+    <Compile Include="Modulo_Colegio\be_AsignacionSemanasPorBimestres.vb" />
+    <Compile Include="Modulo_Matricula\be_DetalleIntegrantesFamilia.vb" />
+    <Compile Include="Modulo_Matricula\be_Familia.vb" />
+    <Compile Include="Modulo_Matricula\be_FichaSeguroAlumno.vb" />
+    <Compile Include="Modulo_Matricula\be_FichaSeguroRentaEstudiantil.vb" />
+    <Compile Include="Modulo_Matricula\be_IntegrantesFamilia.vb" />
+    <Compile Include="Modulo_Matricula\be_Familiares.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Houses.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Idiomas.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_IdiomasMinisterio.vb" />
+    <Compile Include="Modulo_Matricula\be_MaestroPersonas.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Nacionalidades.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_NivelesInstruccion.vb" />
+    <Compile Include="Modulo_Matricula\be_Matricula.vb" />
+    <Compile Include="Modulo_Matricula\be_Otros.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Paises.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_PaisesMinisterio.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Parentescos.vb" />
+    <Compile Include="Modulo_Matricula\be_Personas.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Profesiones.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Provincias.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Religiones.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_ServiciosRadio.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_Sexo.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_TiposDiscapacidades.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_TiposDocumentosIdentidad.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_SituacionesLaborales.vb" />
+    <Compile Include="Mantenimientos_Matricula\be_TiposSeguro.vb" />
+    <Compile Include="Modulo_Matricula\be_Procedencia.vb" />
+    <Compile Include="Modulo_Matricula\be_Retiros.vb" />
+    <Compile Include="Modulo_Matricula\be_SolicitudActualizacionFichaFamiliares.vb" />
+    <Compile Include="Modulo_Matricula\be_SolicitudActualizacionFichaMedicaAlumno.vb" />
+    <Compile Include="Modulo_Matricula\be_SolicitudActualizacionFichaAlumnos.vb" />
+    <Compile Include="Modulo_Matricula\be_FichaAutos.vb" />
+    <Compile Include="Modulo_Mensajeria\be_AdjuntosEnviados.vb" />
+    <Compile Include="Modulo_Mensajeria\be_MensajesEnviados.vb" />
+    <Compile Include="Modulo_Mensajeria\be_MensajesRecibidos.vb" />
+    <Compile Include="Mantenimientos_Notas\be_Componentes.vb" />
+    <Compile Include="Mantenimientos_Notas\be_Indicadores.vb" />
+    <Compile Include="Modulo_Notas\be_AlumnoNotaCuantitativa.vb" />
+    <Compile Include="Modulo_Notas\be_CU_RegistroNotasBimestralesCualitativas.vb" />
+    <Compile Include="Modulo_Notas\be_CU_RegistroNotasIndicadores.vb" />
+    <Compile Include="Modulo_Notas\be_NotaCriterio.vb" />
+    <Compile Include="Modulo_Notas\be_NotaEvaluacion.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroComponentes.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroCriteriosCuantitativos.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroCriteriosEST.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroEvaluacionesCuantitativos.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroEvaluacionesEST.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroGradosPronostico.vb" />
+    <Compile Include="Mantenimientos_Notas\be_SubIndicadores.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroIndicadores.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasAnualCualitativo.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasAnualCuantitativo.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasBimestralesCualitativas.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasBimestralesCuantitativas.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasComponentes.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasCriterios.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasDescriptores.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroNotasEvaluaciones.vb" />
+    <Compile Include="Modulo_Notas\be_registroNotaSubIndicadores.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroPerfilEstudiante.vb" />
+    <Compile Include="Modulo_Notas\be_RegistroSubIndicadores.vb" />
+    <Compile Include="Modulo_Notas\Componente.vb" />
+    <Compile Include="Modulo_Notas\indicador.vb" />
+    <Compile Include="Modulo_Notas\notaComponente.vb" />
+    <Compile Include="Modulo_Notas\notaIndicador.vb" />
+    <Compile Include="Modulo_Notas\notaSubIndicador.vb" />
+    <Compile Include="Modulo_Notas\persona.vb" />
+    <Compile Include="Modulo_Notas\subindicador.vb" />
+    <Compile Include="Modulo_Pensiones\be_AsignacionBecas.vb" />
+    <Compile Include="Modulo_Pensiones\be_CalendarioPagos.vb" />
+    <Compile Include="Modulo_Pensiones\be_CompromisosPagos.vb" />
+    <Compile Include="Modulo_Pensiones\be_CompromisosPagosDetalle.vb" />
+    <Compile Include="Modulo_Permisos\be_AccionesAccesoPermisosPerfiles.vb" />
+    <Compile Include="Modulo_Permisos\be_AsignacionPermisosPerfiles.vb" />
+    <Compile Include="Modulo_Permisos\be_AsignacionPermisosReportesPerfiles.vb" />
+    <Compile Include="Modulo_Permisos\be_BloqueoFichasAtenciones.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_BloquesMenus.vb" />
+    <Compile Include="Modulo_Permisos\be_EstadosProcesosProyectos.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_NombresAcciones.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_Perfiles.vb" />
+    <Compile Include="Mantenimientos_Permisos\be_SubbloquesMenus.vb" />
+    <Compile Include="Modulo_Pensiones\be_Deudas.vb" />
+    <Compile Include="Modulo_Pensiones\be_Letras.vb" />
+    <Compile Include="Modulo_Pensiones\be_LetrasDetalle.vb" />
+    <Compile Include="Modulo_Pensiones\be_NotaCreditoDebito.vb" />
+    <Compile Include="Modulo_Pensiones\be_NotaCreditoDebitoDetalle.vb" />
+    <Compile Include="Modulo_Pensiones\be_Pagos.vb" />
+    <Compile Include="Modulo_Pensiones\be_PagosDetalle.vb" />
+    <Compile Include="Modulo_presupuesto\BE_PS_DetalleSolicitudCompraPresupuesto.vb" />
+    <Compile Include="Modulo_presupuesto\BE_PS_SolicitudCompraPresupuesto.vb" />
+    <Compile Include="Modulo_Reportes\be_Parametros.vb" />
+    <Compile Include="Modulo_Seguimiento\be_AsignacionCalificativosCriterios.vb" />
+    <Compile Include="Modulo_Seguimiento\be_MidTermReport.vb" />
+    <Compile Include="Modulo_Seguimiento\be_MidTermReportDetalle.vb" />
+    <Compile Include="Modulo_Seguimiento\be_ProgramacionAlumnosWeekly.vb" />
+    <Compile Include="Modulo_Seguimiento\be_ProgramacionMidTermReport.vb" />
+    <Compile Include="Modulo_Seguimiento\be_ProgramacionWeekly.vb" />
+    <Compile Include="Modulo_Seguimiento\be_SG_CabeceraProgresoEstudiante.vb" />
+    <Compile Include="Modulo_Seguimiento\be_SG_DetalleProgresoEstudiante.vb" />
+    <Compile Include="Modulo_Seguimiento\BE_TutorReportCabecera.vb" />
+    <Compile Include="Modulo_Seguimiento\BE_TutorReportDetalle.vb" />
+    <Compile Include="Modulo_Seguimiento\be_WeeklyReport.vb" />
+    <Compile Include="Modulo_Seguimiento\Calificativos.vb" />
+    <Compile Include="Modulo_Seguimiento\calificativosTutorReport.vb" />
+    <Compile Include="Modulo_Seguimiento\contexto.vb" />
+    <Compile Include="Modulo_Seguimiento\Criterios.vb" />
+    <Compile Include="Modulo_Seguimiento\criterioTutorReport.vb" />
+    <Compile Include="Modulo_Seguimiento\grupos.vb" />
+    <Compile Include="Modulo_Seguimiento\TutorReportDetalle.vb" />
+    <Compile Include="Modulo_Tareas\be_AdjuntoTarea.vb" />
+    <Compile Include="Modulo_Tareas\be_TareaAcademica.vb" />
+    <Compile Include="Modulo_Tareas\be_TipoTarea.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

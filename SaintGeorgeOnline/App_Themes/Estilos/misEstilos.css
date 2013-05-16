@@ -1,0 +1,1530 @@
+﻿.miHiddenStyle{
+    display:none;
+}
+.noMarginPadding{
+    padding: 0;
+    margin:0;       
+}
+.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.miEspacio{
+    width: 100%;
+    height: 10px;
+} 
+
+#miHeaderDetCPago1 {        
+        background: #0a0f14 url(../Imagenes/header_CP1.gif) repeat-x;
+        text-align: left;
+        color: white;
+        height: 50px;        
+    }
+#miHeaderDetCPago2 {        
+        background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+        text-align: left;
+        color: white;
+        height: 26px;        
+    }
+/*
+FICHA MEDICA DEL ALUMNO
+*/
+#miContenidoFichaMedica{  
+    width: 500px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miCabeceraFichaMedica{
+    margin: 0px 10px 0px 10px;    
+    width: 700px;
+}
+    #miCabeceraFichaMedica fieldset{
+        border: solid 1px #a6a3a3;
+         margin-left: 0px;
+        width: 520px;    }   
+        
+    #miCabeceraFichaMedica fieldset em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 7px;
+        padding: 0;
+    }     
+    #miCabeceraFichaMedica fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miCabeceraFichaMedica fieldset .misLabels  {
+        font-size: 12px;
+        font-family: Arial;
+    }  
+    #miCabeceraFichaMedica fieldset .misTextBoxLabels  {
+        font-size: 12px;
+        font-family: Arial;
+        border:0;
+        width:200px
+    }      
+    #miCabeceraFichaMedica legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 470px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabeceraFichaMedica table{
+        margin: 3px 10px 5px 10px;
+       /* margin-left : 0px;*/
+        font-size: 10px;
+        font-family: Arial;
+    }
+    
+/*FICHA DE ALUMNO*/
+
+#miPaginaFichaAlumno{  
+    width: 851px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+#miContainerFichaAlumno{
+    width: 830px;
+    margin: 0px 10px 0px 10px;
+}
+
+#miContenidoFichaAlumno{  
+    width: 751px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miCabeceraFichaAlumno{
+    margin: 0px 10px 0px 10px;    
+    width: 670px;
+}
+    #miCabeceraFichaAlumno fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 670px;    }   
+        
+    #miCabeceraFichaAlumno fieldset em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 12px;
+        padding: 0;
+    }     
+    #miCabeceraFichaAlumno fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miCabeceraFichaAlumno fieldset .misLabels  {
+        font-size: 12px;
+        font-family: Arial;
+    }  
+    #miCabeceraFichaAlumno fieldset .misTextBoxLabels  {
+        font-size: 12px;
+        font-family: Arial;
+        border:0;
+        width:400px
+    }      
+    #miCabeceraFichaAlumno legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 600px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabeceraFichaAlumno table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }
+    
+    #miContainerFichaAlumno{
+    width: 831px;
+    margin: 0px 10px 0px 10px;
+}
+    #miContainerFichaAlumno fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 811px;
+    }
+    #miContainerFichaAlumno fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miContainerFichaAlumno legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 590px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miContainerFichaAlumno table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }    
+    #miContainerFichaAlumno table table{
+        margin: 0;
+    }
+    
+    #miContainerFichaAlumno .miTabla{
+        border: solid 1px black
+    }    
+    #miContainerFichaAlumno Table Th{
+        height: 26px;
+        /*background: url(../Imagenes/table_header.gif) repeat-x;*/
+        color: white;
+    }
+/************************
+Mantenimiento de Alumnos
+*************************/
+#miPaginaMantenimiento_Alumno{  
+    width: 891px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miContainerMantenimiento_Alumno{
+    width: 870px;
+    margin: 0px 10px 0px 10px;
+}
+
+#miBusquedaMant_Alumno{
+    margin: 0;   
+    padding: 0; 
+    width: 850px;    
+    border: solid 0px green 
+}
+    #miBusquedaMant_Alumno fieldset{
+        width: 830px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #miBusquedaMant_Alumno fieldset table tr td fieldset{
+        width: 805px;    
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        margin: 0;     
+        padding: 0;    
+    }
+    #miBusquedaMant_Alumno fieldset table tr td fieldset table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    .miPanelInside{
+        margin: 0;    
+        padding: 0;     
+    }
+    #miBusquedaMant_Alumno fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miBusquedaMant_Alumno legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 730px;
+        height: 21px;
+        background: url(/SaintGeorgeOnline/App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miBusquedaMant_Alumno table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaMant_Alumno table th {
+        height: 26px;
+    }   
+    
+     #miBusquedaMant_Alumno table table{
+        margin: 0;
+    } 
+
+#miGridviewMant_Alumno{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 830px;    
+    border: solid 1px #a6a3a3; 
+ 
+}  
+.miGridviewMant_Alumno_Rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa;
+	text-align: center ;
+}
+  
+    
+#miFooterMant_Alumno{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 830px;    
+    border: solid 0px #a6a3a3;  
+    text-align: left
+}
+.miFooterMantLabelLeft_Alumno{
+    margin-left:10px;
+    padding: 0;
+}
+.miFooterMantLabelRight_Alumno{
+    margin-right:10px;
+    padding: 0;
+}
+
+
+.miGridviewBusqueda_Alumno{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 830px;
+    border:0;
+    height:auto;  
+}
+
+.miGridviewBusqueda_AsignacionPermisosPerfiles{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 8px;    
+    margin: 0;
+    width: 628px;
+    padding: 0;     
+    border:0;
+    height:auto;  
+}
+
+.miGridviewBusqueda_Header_Alumno{
+    /*height: 21px;
+    background: url(../Imagenes/table_header.gif) repeat-x;
+    color: white;*/
+    
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+}
+
+.miGridviewBusqueda_Rows_Alumno{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa; 
+}
+
+.miGridviewBusqueda_Footer_Alumno{
+    /*height: 20px;*/
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+    /*border: solid 1px red;*/
+}
+
+/************************
+    Grabar Archivo
+*************************/
+#miBusquedaArchivo{
+    margin: 0;   
+    padding: 0; 
+    width: 850px;    
+    border: solid 0px green 
+}
+    #miBusquedaArchivo fieldset{
+        width: 830px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #miBusquedaArchivo fieldset table tr td fieldset{
+        width: 805px;    
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        margin: 0;     
+        padding: 0;    
+    }
+    #miBusquedaArchivo fieldset table tr td fieldset table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    .miPanelInside{
+        margin: 0;    
+        padding: 0;     
+    }
+    #miBusquedaArchivo fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miBusquedaArchivo legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 730px;
+        height: 21px;
+        background: url(/SaintGeorgeOnline/App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miBusquedaArchivo table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaArchivo table th {
+        height: 26px;
+    }   
+    
+     #miBusquedaArchivo table table{
+        margin: 0;
+    } 
+
+
+/*Detalle Mantenimiento*/
+#miGridviewMantDetalle_Alumno{
+    margin: 0px 0px 0px 0px;   
+    padding: 0; 
+    width: 790px;    
+    border: solid 1px #a6a3a3; 
+ 
+}  
+.miGridviewMantDetalle_Alumno_Rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa;
+	text-align: center ;
+}
+
+
+.miGridviewBusquedaDetalle_Alumno{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 790px;
+    border:0;
+    height:auto;  
+}
+
+.miGridviewBusquedaDetalle_Header_Alumno{
+    /*height: 21px;
+    background: url(../Imagenes/table_header.gif) repeat-x;
+    color: white;*/
+    
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+}
+
+.miGridviewBusquedaDetalle_Rows_Alumno{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa; 
+}
+
+/* FOOTER */
+.letranormal{
+    color:#000000;
+    font-size: 8pt;
+    font-style:normal;
+    font-weight:normal
+}
+.gopag {
+    font-size:x-small;
+    width:20px;
+}
+.pagfirst{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_first.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.pagprev{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_previous.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.pagnext{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_next.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.paglast{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_last.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+
+/* Gridview Legend */
+#GVLegenda_Alumno{  
+    margin: 0;   
+    padding: 0; 
+    width: 850px;    
+    border: solid 0px green 
+}    
+    #GVLegenda_Alumno table{
+        margin: 5px 10px 5px 10px;
+        border: solid 1px #707070;
+        height: 26px;
+        background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    }   
+    #GVLegenda_Alumno Table Span{
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: bold;
+        color: white;   
+    }
+
+
+
+
+
+/* FICHA DE ATENCION */
+
+#miPaginaFicha{  
+    width: 651px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+#miContainerFicha{
+    width: 830px;
+    margin: 0px 10px 0px 10px;
+}
+
+    #miContainerFicha em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 7px;
+        padding: 0;
+    } 
+
+#miContenidoFicha{  
+    width: 651px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miCabeceraFicha{
+    margin: 0px 10px 0px 10px;    
+    width: 631px;
+}
+    #miCabeceraFicha fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 629px;    }   
+        
+    #miCabeceraFicha fieldset em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 7px;
+        padding: 0;
+    }     
+    #miCabeceraFicha fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miCabeceraFicha fieldset .misLabels  {
+        font-size: 12px;
+        font-family: Arial;
+    }  
+    #miCabeceraFicha fieldset .misTextBoxLabels  {
+        font-size: 12px;
+        font-family: Arial;
+        border:0;
+        width:200px
+    }      
+    #miCabeceraFicha legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabeceraFicha table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }
+    #miCabeceraFicha fieldset table tr td table{
+        margin: 0;
+        font-size: 10px;
+        font-family: Arial;
+    }
+    
+
+#miContainerFicha{
+    width: 831px;
+    margin: 0px 10px 0px 10px;
+}
+    #miContainerFicha fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 811px;
+    }
+    #miContainerFicha fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miContainerFicha legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 490px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miContainerFicha table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }    
+    #miContainerFicha table table{
+        margin: 0;
+    }
+    
+    #miContainerFicha .miTabla{
+        border: solid 1px black
+    }    
+    #miContainerFicha Table Th{
+        height: 26px;
+        /*background: url(../Imagenes/table_header.gif) repeat-x;*/
+        color: white;
+    }
+
+/* Detalle de ficha de atencion */
+
+    #miGVMantFicha{
+        margin: 0px 10px 0px 10px;   
+        padding: 0; 
+        width: 790px;    
+        border: solid 1px #a6a3a3;
+    }      
+    #miGVMantFicha Table {
+        margin: 0;
+        padding: 0;
+    }       
+    .miGVBusquedaFicha {
+        background-color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+        font-size: 10px;    
+        margin: 0px;
+        padding: 0px; 
+        width: 790px;
+        border:0;
+        height:auto;  
+    }    
+    .miGVBusquedaFicha_Header {        
+        background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+        text-align: left;
+        color: white;
+        height: 26px;        
+    }
+    .miGVBusquedaFicha_HeaderAux {        
+        background: #0a0f14 url(../Imagenes/gridview_headerAux.gif) repeat-x;
+        text-align: left;
+        color: white;
+        height: 26px;        
+    }
+    .miGVBusquedaFicha_Header_V2{        
+        background: #0a0f14 url(../Imagenes/legend_header.gif) repeat-x;
+        text-align: left;
+        color: black;
+        height: 26px;        
+        border-bottom: solid 1px black;
+    }
+    .miGVBusquedaFicha_Rows {
+        height: 20px;
+        border-bottom: solid 1px #d3eefa; 
+    }
+    
+
+
+	.miGVBusquedaAsignacionPermisos_Rows {
+        height: 20px;
+        border-bottom: solid 1px #d3eefa; 
+        border-left: solid 1px #d3eefa;  
+    }
+    
+    .miGVBusquedaAsignacionPermisos_Rows_2 {
+        height: 20px;
+        
+    }
+    
+    #miGVMantFichaRegitros_Detalle{
+        margin: 0;   
+        padding: 0; 
+        /*width: 590px;*/    
+        border: solid 1px #a6a3a3;
+    }      
+    #miGVMantFichaRegitros_Detalle Table {
+        margin: 0;
+        padding: 0;
+    }  
+    
+    
+    #miGVMantFichaRegitros{
+        margin: 0;   
+        padding: 0; 
+        width: 790px;    
+        border: solid 1px #a6a3a3;
+    }      
+    #miGVMantFichaRegitros Table {
+        margin: 0;
+        padding: 0;
+    }  
+    
+         
+
+#miCabecera{
+    margin: 0px 10px 0px 10px;    
+    width: 580px;
+}
+    #miCabecera fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 580px;
+    }
+    #miCabecera legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabecera table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }
+    
+#miContainer{
+    width: 580px;
+    margin: 0px 10px 0px 10px;
+}
+    #miContainer fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 540px;
+        /*padding-top: -40px;*/
+        /*background-color: #FFFFFF;*/
+    }
+    #miContainer legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 490px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miContainer table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }    
+    #miContainer table table{
+        margin: 0;
+    }
+    
+    #miContainer .miTabla{
+        border: solid 1px black
+    }    
+    #miContainer table th{
+        height: 21px;
+        background: url(../Imagenes/table_header.gif) repeat-x;
+        color: white;
+    }
+
+        .miTextBox
+        {
+            border: solid 1px #a6a3a3;
+            height: 15px;
+        }
+        .miTextBox:hover
+        {
+            border: solid 1px #7F9DB9;
+            height: 15px;
+        }
+        .miTextBoxMultiLine
+        {
+            border: solid 1px #a6a3a3;
+        }
+        .miTextBoxMultiLine:hover
+        {
+            border: solid 1px #7F9DB9;
+        }
+        .miComboBox
+        {
+            border: solid 1px #a6a3a3;
+            height: 20px;
+        }
+        .miComboBox:Hover
+        {
+            border: solid 1px #7F9DB9;
+            height: 20px;
+        }
+        .miBoton
+        {
+            cursor: pointer;
+        }         
+        .miTextBoxCalendar
+        {
+            border: solid 1px #a6a3a3;
+            width: 100px;
+        }
+        .miTextBoxCalendar:hover
+        {
+            border: solid 1px #7F9DB9;
+            width: 100px;
+        }
+
+.Table_Highlight tr:Hover{
+    background-color: #d3eefa   
+}
+
+/* DETALLE MANTENIMIENTOS */
+.miGridview{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 520px;
+    border:0;
+    height:auto;  
+}
+
+.miGridview_Rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa;
+	text-align: center ;
+}
+
+/* MANTENIMIENTOS */
+
+
+#miPaginaMantenimiento{  
+    width: 691px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miContainerMantenimiento{
+    width: 670px;
+    margin: 0px 10px 0px 10px;
+}
+
+#miBusquedaMant{
+    margin: 0;   
+    padding: 0; 
+    width: 650px;    
+    border: solid 0px green 
+}
+    #miBusquedaMant fieldset{
+        width: 630px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #miBusquedaMant fieldset table tr td fieldset{
+        width: 605px;    
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        margin: 0;     
+        padding: 0;    
+    }
+    #miBusquedaMant fieldset table tr td fieldset table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    .miPanelInside{
+        margin: 0;    
+        padding: 0;     
+    }
+    #miBusquedaMant fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miBusquedaMant legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(/SaintGeorgeOnline/App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miBusquedaMant table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaMant table th {
+        height: 26px;
+    }   
+    
+     #miBusquedaMant table table{
+        margin: 0;
+    } 
+
+#miGridviewMant{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 630px;    
+    border: solid 1px #a6a3a3; 
+}    
+    
+#miGridviewMant2{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 800px;    
+    border: solid 1px #a6a3a3; 
+} 
+    
+#miFooterMant{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 630px;    
+    border: solid 0px #a6a3a3;  
+    text-align: left
+}
+.miFooterMantLabelLeft{
+    margin-left:10px;
+    padding: 0;
+}
+.miFooterMantLabelRight{
+    margin-right:10px;
+    padding: 0;
+}
+
+
+.miGridviewBusqueda{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 630px;
+    border:0;
+    height:auto;  
+}
+
+.miGridviewBusqueda_Header{
+    /*height: 21px;
+    background: url(../Imagenes/table_header.gif) repeat-x;
+    color: white;*/
+    
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+}
+
+.miGridviewBusqueda_Rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa; 
+}
+
+.miGridviewBusqueda_RowsAux{
+    height: 20px;
+    border-bottom: solid 1px #a6a3a3; 
+}
+.miGridviewBusqueda_RowsAux_Left{
+    height: 20px;
+    border-bottom: solid 1px #a6a3a3; 
+    border-left: solid 1px #a6a3a3; 
+}
+.miGridviewBusqueda_RowsAux_Solo{
+    height: 20px; 
+}
+.miGridviewBusqueda_RowsAux_SoloLeft{
+    height: 20px;
+    border-left: solid 1px #a6a3a3; 
+}
+.miGridviewBusqueda_RowsAux_Sides{
+    height: 20px;
+    border-left: solid 1px #a6a3a3; 
+    border-right: solid 1px #a6a3a3; 
+    border-bottom: solid 1px #a6a3a3; 
+}
+
+
+.miGridviewBusqueda_Footer{
+    /*height: 20px;*/
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+    /*border: solid 1px red;*/
+}
+
+/* FOOTER */
+.letranormal{
+    color:#000000;
+    font-size: 8pt;
+    font-style:normal;
+    font-weight:normal
+}
+.gopag {
+    font-size:x-small;
+    width:20px;
+}
+.pagfirst{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_first.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.pagprev{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_previous.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.pagnext{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_next.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+.paglast{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background: url('../Images/GridView/btn_last.png') no-repeat center;
+    height:1.3em;
+    width:16px;
+    cursor:pointer;
+}
+
+/* Gridview Legend */
+#GVLegenda{  
+    margin: 0;   
+    padding: 0; 
+    width: 650px;    
+    border: solid 0px green 
+}    
+    #GVLegenda table{
+        margin: 5px 10px 5px 10px;
+        border: solid 1px #707070;
+        height: 26px;
+        background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    }   
+    #GVLegenda Table Span{
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: bold;
+        color: white;   
+    }
+
+/* DETALLE MANTENIMIENTO */
+#miDetalleMant{
+    margin: 0;   
+    padding: 0; 
+    width: 650px;    
+    border: solid 0px green 
+}
+    #miDetalleMant fieldset{
+        width: 630px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #miDetalleMant fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miDetalleMant fieldset em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 7px;
+        padding: 0;
+    }   
+    #miDetalleMant legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Verdana;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miDetalleMant table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miDetalleMant table tr td table{
+        margin: 0;
+        padding: 0;
+    }  
+    .camposObligatorios{
+        font-size: 12px;
+        font-family: Arial;
+        color: #a51515;
+        padding: 0;
+    }
+    
+#miFooterDetalleMant{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 630px;    
+    border: solid 0px #a6a3a3;  
+    text-align: left
+}    
+
+#misRegistrosEncontrados{
+    margin: 0;   
+    padding: 0; 
+    width: 650px;    
+    border: solid 0px green 
+}
+    #misRegistrosEncontrados fieldset{
+        width: 630px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #misRegistrosEncontrados table{
+        margin: 3px 10px 3px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    } 
+    
+/* TREE VIEW PERMISOS */    
+#miDivTreeView{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 630px;    
+    border: solid 1px #a6a3a3; 
+}  
+    
+/* Modal Popup */    
+    
+.miModalBg{
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+/* Busqueda persona */
+#miModalWindow{
+    /*width: 756px;*/    
+    height: 485px;
+    width: 756px;
+    border: solid 1px black;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;    
+    overflow-x: hidden;
+    /*
+    overflow-y: scroll;
+    overflow-x: hidden;
+    */
+}
+#miModalWindow .TitlebarLeft{
+    padding: 0;   
+    background: #000000 url(../Imagenes/titlebar_bg.jpg);
+    background-repeat: repeat-x;
+}
+#miModalWindow .TitlebarLeft span{
+    margin-left: 20px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;    
+    color: #FFFFFF;
+}
+#miModalWindow #MiTablaParam span{
+    margin-left: 40px;
+    font-size: 11px;
+    font-family: Arial;
+}
+#miModalWindow em{
+    font-size: 10px;
+    font-family: Arial;
+    color: #a51515;
+    margin-right: 7px;
+    padding: 0;    
+} 
+
+#miModalWindow fieldset{
+    border: solid 1px #a6a3a3;
+    margin: auto;
+    width: 720px;    
+}
+    #miModalWindow fieldset span{
+        margin-left: 30px;
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miModalWindow legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+
+#miModalWindow .miGVLista{
+    margin: auto;
+    padding: 0;
+    border: solid 1px black;
+}
+.miGridviewBusquedaPersona{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 740px;
+    border:0;
+    height:auto;
+}
+.miGridviewBusquedaPersona_Header{
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+}
+
+/* ModalPopup Extender */
+.MiModalBackground{
+	background-color: black;    
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+/* FICHA FAMILIAR */
+.miDivDisponible{
+    background: url(../Imagenes/opc_activar.png) no-repeat left;
+    padding-left:25px;    
+    color: Red;
+    font-family: Arial;
+    font-size: 10px;         
+}
+.miDivExiste{
+    background: url(../Imagenes/opc_eliminar.png) no-repeat left;
+    padding-left:25px;
+    color: Red;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+/* ACTUALIZACION FICHA FAMILIAR */
+
+#miPaginaActualizacion_Ficha{  
+    width: 891px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+#miContainerActualizacion_Ficha{
+    width: 880px;
+    margin: 0px 10px 0px 10px;
+    border: solid 0px green 
+}
+
+#miBusquedaActualizacion_Ficha{
+    margin: 0;   
+    padding: 0; 
+    width: 860px;    
+    border: solid 0px green 
+}
+#miBusquedaActualizacion_Ficha fieldset{
+        width: 840px;    
+        /*max-width: 868px;*/
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }
+    #miBusquedaActualizacion_Ficha fieldset table tr td fieldset{
+        width: 815px;    
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        margin: 0;     
+        padding: 0;    
+    }
+    #miBusquedaActualizacion_Ficha fieldset table tr td fieldset table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaActualizacion_Ficha fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miBusquedaActualizacion_Ficha legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 530px;
+        height: 21px;
+        background: url(/SaintGeorgeOnline/App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miBusquedaActualizacion_Ficha table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaActualizacion_Ficha table th {
+        height: 26px;
+    }   
+    
+     #miBusquedaActualizacion_Ficha table table{
+        margin: 0;
+    } 
+    
+#miGridviewMantActualizacion_Ficha{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 840px;    
+    border: solid 1px #a6a3a3; 
+}    
+    
+#miFooterMantActualizacion_Ficha{
+    margin: 0px 10px 0px 10px;   
+    padding: 0; 
+    width: 630px;    
+    border: solid 0px #a6a3a3;  
+    text-align: left
+}
+.miGridviewBusquedaActualizacion_Ficha{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 820px;
+    border:0;
+    height:auto;
+}
+.miGridviewBusquedaActualizacion_Ficha_Header{
+    background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    text-align: left;
+    color: white;
+    height: 26px;
+}
+
+#miPaginaActualizacion_Verificar{  
+    width: 870px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+
+.miGridviewActualizacion_Rows{
+    /*border-bottom: solid 1px #d3eefa;*/
+    
+    /*border-bottom: solid 1px #707070; */
+}
+.miGridviewActualizacion_RowsX2{
+    /*border-bottom: solid 1px #d3eefa; 
+    border-left: solid 1px #d3eefa;*/
+    
+    /*border-bottom: solid 1px #707070; */
+    border-left: solid 1px #707070;    
+}
+
+/* ALERTAS */ 
+#misAlertas a
+{
+    color: #000000; 
+    text-decoration: none;     
+    padding-left:3px;   
+}
+#misAlertas a:hover {
+    color: #ff0000; 
+    text-decoration: underline;        
+    padding-left:3px;
+}
+
+
+/* Motivo Restriccion Matricula*/
+
+.GridMotivoRestriccion_Rows{
+    height: 20px;    
+    border-bottom: solid 1px #000000; 
+    border-right: solid 1px #000000;
+}
+
+/*Exportacion en word -morosidad*/
+
+#miBusquedaExportacionWord_Ficha{
+    margin: 0;   
+    padding: 0; 
+    width: 860px;    
+    border: solid 1px green 
+}
+/*#miBusquedaExportacionWord_Ficha fieldset
+{
+	 width: 500px; 
+        /* width: 840px;    
+       max-width: 868px;
+        border: solid 1px #a6a3a3;
+        margin: 0px 10px 0px 10px;         
+    }*/
+  /*   #miBusquedaExportacionWord_Ficha  table tr td fieldset{
+       width: 530px;
+       /* width: 415px;  margin: 2px;  
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        padding: 5px;    
+    }*/
+   /*  #miBusquedaExportacionWord_Ficha fieldset table tr td fieldset{
+       width: 315px;
+       width: 415px;    
+        border-top: solid 1px #a6a3a3;
+        border-bottom: solid 1px #a6a3a3;
+        margin: 0;     
+        padding: 0;    
+    }
+    #miBusquedaExportacionWord_Ficha fieldset table tr td fieldset table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }   
+    #miBusquedaExportacionWord_Ficha fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }
+    #miBusquedaExportacionWord_Ficha legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+       /* width: 530px;
+        width: 210px;
+        height: 21px;
+        background: url(/SaintGeorgeOnline/App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miBusquedaExportacionWord_Ficha table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+        border: 2px;
+        border-style:solid
+    }  */ 
+   
+     
+     /*/* Gridview Legend Bancos de libros */
+ 
+    #GVLegenda_BL{
+        border: solid 1px #707070;
+        height: 26px;
+        background: #0a0f14 url(../Imagenes/gridview_footer.gif) repeat-x;
+    }   
+    #GVLegendaSpan_BL{
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: bold;
+        color: white;   
+    }  
+    
+
+

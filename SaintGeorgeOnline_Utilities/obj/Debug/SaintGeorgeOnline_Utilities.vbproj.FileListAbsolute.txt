@@ -1,0 +1,44 @@
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\AjaxControlToolkit.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\ClosedXML.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Ionic.Zip.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\itextsharp.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\office.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\DocumentFormat.OpenXml.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\ResolveAssemblyReference.cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.Resources.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.vbproj.GenerateResource.Cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.pdb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.pdb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_Utilities.tlb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\AjaxControlToolkit.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\ClosedXML.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Ionic.Zip.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\itextsharp.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Office.Interop.Word.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\office.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\office.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.pdb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\bin\Debug\SaintGeorgeOnline_BusinessEntities.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.Resources.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.vbproj.GenerateResource.Cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Utilities\obj\Debug\SaintGeorgeOnline_Utilities.pdb

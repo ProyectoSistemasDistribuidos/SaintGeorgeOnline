@@ -1,0 +1,504 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Página sin título</title>
+    
+      <!--Archivos de Javascripts -->
+    <script type="text/javascript" src="/Presupuestos/App_Themes/Javascript/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/Presupuestos/App_Themes/Javascript/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/Presupuestos/App_Themes/Javascript/sexyalertbox.v1.2.js"></script>
+    <script type="text/javascript" src="/Presupuestos/App_Themes/Javascript/jquery.sexylightbox.v2.3.js"></script>
+    <script type="text/javascript" src="/Presupuestos/App_Themes/Javascript/misJS.js"></script> 
+
+    <script src="/Presupuestos/App_Themes/Javascript/jAlert/jquery.alerts.js" type="text/javascript"></script>
+
+    <link href="/Presupuestos/App_Themes/Javascript/jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+
+    <script src="App_Themes/Javascript/json2.js" type="text/javascript"></script>
+    
+    
+       <!--Archivos de Estilos -->
+    <link rel="stylesheet" type="text/css" media="all" href="/Presupuestos/App_Themes/Estilos/styleAlertas.css" />   
+    <link rel="stylesheet" type="text/css" media="all" href="/Presupuestos/App_Themes/Estilos/sexyalertbox.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/Presupuestos/App_Themes/Estilos/misEstilos.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/Presupuestos/App_Themes/Estilos/styles_master.css" />
+    
+    <!--Scripts Internos -->
+    <script type="text/javascript">
+
+  
+
+      
+        $(document).ready(function() {
+
+            function Menu(val) {
+                if (val == 0) {
+                    $('#menu').show('fast', function() {
+                        $(this).fadeIn('slow', function() {
+                            $(this).width(200);
+                        });
+                    });
+                    
+                    /*var ContenidoWidth = $("#contenido").width();
+                    $("#contenido").width(ContenidoWidth - 200);*/
+                    
+                } else {
+                    $("#menu").hide('fast');
+                    $("#menu").width(0);
+
+
+                    /*var ParentWidth = $("#miTablaDinamica").width();
+                    $("#contenido").width(ParentWidth-35);*/
+                }
+            }
+
+            $("#controlador").click(function() {
+                var imagen = $("#imgControl").attr("src");
+                if (imagen == '/Presupuestos/App_Themes/Imagenes/Menu/menuHide.png') {
+                    $("#imgControl").attr("src", '/Presupuestos/App_Themes/Imagenes/Menu/menuShow.png');
+                    Menu(1);
+                } else {
+                $("#imgControl").attr("src", '/Presupuestos/App_Themes/Imagenes/Menu/menuHide.png');
+                    Menu(0);
+                }
+            });
+
+
+            $("ul.ListaMenu").hide();
+            $("a.desplegable").click(function() {
+
+                $("ul.ListaMenu").slideUp('fast');
+                $(this).parent().find("ul.ListaMenu").slideDown('fast');
+            });
+
+
+        });
+
+
+        function confirm_delete() {
+            if (confirm('¿Esta seguro que desea eliminar el registro seleccionado?') == true)
+                return true;
+            else
+                return false;
+        }
+
+        function confirm_activar() {
+            if (confirm('¿Esta seguro que desea activar el registro seleccionado?') == true)
+                return true;
+            else
+                return false;
+        }
+
+        function confirm_cancelar() {
+            if (confirm('¿Esta seguro que desea salir del registro sin guardar sus cambios?') == true)
+                return true;
+            else
+                return false;
+        }
+
+        function confirm_AbrirPeriodo() {
+            if (confirm('¿Esta seguro que desea aperturar el Mid Term seleccionado? Tenga en cuenta que al aperturar un Mid Term el resto de Mid Terms serán cerrados.') == true)
+                return true;
+            else
+                return false;
+        }
+
+        function confirm_CerrarPeriodo() {
+            if (confirm('¿Esta seguro que desea cerrar el Mid Term seleccionado?') == true)
+                return true;
+            else
+                return false;
+        }
+
+        function MostrarImpresion_html() {
+
+            window.open('/SaintGeorgeOnline/Plantillas/Exportaciones/Plantilla_Rep_html.aspx', '_blank', '');
+        }
+
+        function MostrarReporte_html() {
+
+            window.open('/SaintGeorgeOnline/Plantillas/Reportes/Plantilla_Rep_Enfermeria.aspx', '_blank', '');
+        }
+        function MostrarReporteWide_html() {
+
+            window.open('/SaintGeorgeOnline/Plantillas/Reportes/Plantilla_Rep_Enfermeria_Wide.aspx', '_blank', '');
+        }
+
+        function MostrarReportePlanCurricular_html() {
+
+            window.open('/SaintGeorgeOnline/Plantillas/Reportes/Plantilla_Rep_PlanCurricular.aspx', '_blank', '');
+        }
+        
+    </script>  
+    
+    <!--Estilos Internos -->
+    <style type="text/css">
+                
+        .margenLeft{
+            width: 41px;
+            height: 300px;
+            border: solid 0px red;
+            float: left;   
+        }
+        .margenRight{
+            width: 13px;
+            height: 300px;
+            border: solid 0px red;
+            float: left;   
+        }        
+        #contenido{
+            /*width: 693px;*/
+            height: auto;
+            border: solid 0px red;
+            float: left;
+        }
+        .control{
+            width: 35px;
+            height: 100%;
+            border: solid 0px blue;
+            float: left;
+            background: #FFFFFF;
+        }
+        #menu{
+            width: 200px;
+            height: auto;
+            border: solid 0px red;
+            float: left;          
+        }      
+        .Errores{
+            color: Red;
+            font-family:Verdana;   
+        }    
+        
+        .ListaMenu{
+            border: solid 2px #2f3080;
+            margin : 0;
+            padding: 0
+        }        
+        .ItemMenuFondo{
+        	background: #000000 url(/Presupuestos/App_Themes/Imagenes/Menu/menuSubbarra.jpg);
+        	padding: 9px 0 0 10px;
+        	margin: 0;
+        	height: 25px;
+        	border-top: solid 1px white;
+        	cursor: pointer;
+        	list-style: none;
+        	line-height: 100%;
+         }   
+        .ItemMenuFondo:Hover{
+            background: #000000 url(/Presupuestos/App_Themes/Imagenes/Menu/menuSubbarra.jpg);
+        	padding: 9px 0 0 10px;
+        	margin: 0; 
+        	height: 25px; 
+        	border-top: solid 1px white;
+        	cursor: pointer;
+        	color: black;
+        	list-style: none;
+        	line-height: 100% 
+         }
+         .tituloPagina{
+            
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;   
+            color: #031636;            
+         }
+         
+         em {
+             color:Red;
+             font-weight:bold
+         }
+         .MenuGeneral
+         {
+         	z-index: 100;
+         	text-align:left;  
+         	color:White;  
+         	list-style: none;
+         	text-align:left;         	  
+          }
+          .MenuItemGeneral
+          {          	 
+          	color:White;
+          	height:20px;
+          	font-family:Arial;
+          	font-size:11px;   
+          	 text-align:left;
+          	}
+           img.textoizq { 
+            width:0px;
+            height:100%;
+            vertical-align:bottom ;
+            }  
+              
+    </style>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="/Presupuestos/App_Themes/Imagenes/MasterPage/bg.gif" leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px" onLoad="goforit()">
+    <form id="form1" runat="server">
+        <atk:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true"  >
+        </atk:ToolkitScriptManager>
+        <div id="pagina">
+        <table width="100%" border="0px" cellspacing="0px" cellpadding="0px">
+          <tr>
+            <td width="2%" height="392px" valign="top">
+                <img src="/Presupuestos/App_Themes/Imagenes/MasterPage/trans.gif" width="20px" height="20px">
+            </td>
+            <td width="98%" valign="top">
+                <!--1º Cabecera: Fecha y Hora / Enlace al portal principal-->
+                <table width="100%" border="0px" cellpadding="0px" cellspacing="0px" bgcolor="#073163">
+                    <tr>
+                        <td width="56%">
+                            <img src="/Presupuestos/App_Themes/Imagenes/MasterPage/logo.jpg" width="406px" height="73px">
+                        </td>
+                        <td width="44%">
+                            <table width="486px" border="0px" align="right" cellpadding="0px" cellspacing="0px">
+                                <tr>
+                                    <td height="73px" valign="top" background="/Presupuestos/App_Themes/Imagenes/MasterPage/bg_fecha.jpg">
+                                        <table width="100%" border="0px" cellspacing="8px" cellpadding="0px">
+                                            <tr>
+                                                <td width="83%">
+                                                    <div align="right">
+                                                        <script>
+                                                            var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+                                                            var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+                                                            function getthedate() {
+                                                                var mydate = new Date()
+                                                                var year = mydate.getYear()
+                                                                if (year < 1000)
+                                                                    year += 1900
+                                                                var day = mydate.getDay()
+                                                                var month = mydate.getMonth()
+                                                                var daym = mydate.getDate()
+                                                                if (daym < 10)
+                                                                    daym = "0" + daym
+                                                                var hours = mydate.getHours()
+                                                                var minutes = mydate.getMinutes()
+                                                                var seconds = mydate.getSeconds()
+                                                                var dn = "AM"
+                                                                if (hours >= 12)
+                                                                    dn = "PM"
+                                                                if (hours > 12) {
+                                                                    hours = hours - 12
+                                                                }
+                                                                if (hours == 0)
+                                                                    hours = 12
+                                                                if (minutes <= 9)
+                                                                    minutes = "0" + minutes
+                                                                if (seconds <= 9)
+                                                                    seconds = "0" + seconds
+                                                                //change font size here
+                                                                var cdate = "<small><font color='FFFFFF' font size='1' face='Arial'><b>" + dayarray[day] + ", " + montharray[month] + " " + daym + ", " + year + " " + hours + ":" + minutes + ":" + seconds + " " + dn
+                                        + "</b></font></small>"
+                                                                if (document.all)
+                                                                    document.all.clock.innerHTML = cdate
+                                                                else if (document.getElementById)
+                                                                    document.getElementById("clock").innerHTML = cdate
+                                                                else
+                                                                    document.write(cdate)
+                                                            }
+                                                            if (!document.all && !document.getElementById)
+                                                                getthedate()
+                                                            function goforit() {
+                                                                if (document.all || document.getElementById)
+                                                                    setInterval("getthedate()", 1000)
+                                                            }
+                                                          </script>
+                                                        <span id="clock"></span>
+                                                    </div>
+                                                </td>
+                                                <td width="17%">
+                                                    <div align="right">
+                                                    <a href="http://www.sanjorge.edu.pe" target="_blank" class="links">Ir a portal WEB</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>                        
+                        </td>
+                    </tr>
+                </table>
+                <!--2º Cabecera: Datos del Usuario(Nombre, perfil y foto) y nombre del formulario -->
+                <asp:UpdatePanel ID="udp_Cabecera_Principal" runat="server">
+                <ContentTemplate>
+                <table width="100%" border="0px" cellpadding="0px" cellspacing="0px" bgcolor="#194779">
+                <tr>
+                  <td bgcolor="#083264">
+                      <table width="100%" border="0px" align="center" cellpadding="0px" cellspacing="0px" bgcolor="#083264">
+                        <tr>
+                          <td width="67px" style="padding-left:5px"  >
+                          <asp:Image ID="Img_FotoUsuario" runat="server" Width="46px" Height="56px" Style="border: #7f9db9 1px solid"
+                                                                ImageUrl="" />
+                          </td>
+                          <td width="823px"><table width="100%" border="0px" cellspacing="2px" cellpadding="0px">
+                              <tr>
+                                <td class="txt_celeste">Nombre de usuario: <asp:Label ID="lbl_NombreUsuario" runat="server" Font-Bold="True"></asp:Label></td>
+                              </tr>
+                              <tr>
+                                <td><asp:HiddenField ID="hd_Usuario_General" runat="server" /></td>
+                              </tr>
+                              <tr>
+                                <td><span class="txt_contenido_blanco">Periodo: <asp:Label ID="lbl_AnioGeneral" runat="server" Font-Bold="True" ></asp:Label></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                      </table>
+                  </td>
+                  <td align="right" bgcolor="#083264" style="height:70px;width:563px;background-image: url('/Presupuestos/App_Themes/Imagenes/MasterPage/titulo_vacio.jpg'); background-repeat:no-repeat;"  >
+                  <div style="height:70px;text-align: right;">
+                            <asp:Label ID="lblModulo" 
+                                       runat="server" 
+                                       Text="Titulo" 
+                                       CssClass="tituloPagina" 
+                                       Font-Names="Arial" Font-Size="24px" ForeColor="White" /> 
+                            <img class="textoizq" />
+                  </div>
+                  </td>
+                </tr>
+                </table>
+                </ContentTemplate>
+                </asp:UpdatePanel>                    
+                <!--3º Cabecera: Flanja celeste -->
+                <table width="100%" border="0px" align="center" cellpadding="0px" cellspacing="0px">
+                    <tr>
+                        <td background="/Presupuestos/App_Themes/Imagenes/MasterPage/px01.gif">
+                            <img src="/Presupuestos/App_Themes/Imagenes/MasterPage/px01.gif" width="6px" height="15px" />
+                        </td>
+                    </tr>
+                </table>
+                <!--4º Cuerpo: Lado Izquiero el menu, lado derecho el contenido -->              
+                <table style="width:100%;height:100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                    <tr>
+                          <td width="7" valign="top">
+                            <img src="/Presupuestos/App_Themes/Imagenes/MasterPage/trans.gif" width="7" height="20" />
+                          </td>
+                          <td width="780" valign="top">
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                            
+                              <td height="331px" valign="top" class="txt_contenido">
+                              
+                                <div style="float: left;">
+                      
+                      <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;" bgcolor="#FFFFFF">
+                      <tr>
+                <td id="controlador" valign="top" align="center" style="width: 35px; height: 100%; background:#FFFFFF url(/Presupuestos/App_Themes/Imagenes/Menu/MenuBG.png) repeat-y; cursor:pointer; position:relative; z-index: 101;">
+                                                    
+                                                    <table style="width: 100%; height: 100%; background-color: #FFFFFF;" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="width: 35px; height: 200px" valign="top" align="left">
+                                                                <img alt="" id="imgControl" style="cursor: pointer;" src="/Presupuestos/App_Themes/Imagenes/Menu/menuHide.png" />
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                </td>     
+                <td valign="top" align="center" style="height: 100%; position: absolute; z-index: 102;">
+                                                    
+                                                    <div id="menu">
+                                                        <table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td style="width: 10px; height: 100%" valign="top" align="center"></td>
+                                                                <td style="width: 162; height: 100%;" valign="top" align="center">
+                                                                    <asp:Menu ID="mn_General" 
+                                                                              Font-Size="13px"                                                                
+                                                                              BackColor="#18c6fe"
+                                                                              BorderColor="White"
+                                                                              BorderWidth="1px"   
+                                                                              Font-Names="Arial" 
+                                                                              runat="server">
+                                                                              <DynamicMenuStyle BackColor="#94b1d1"
+                                                                                                BorderWidth="1px" 
+                                                                                                Font-Names="Arial"
+                                                                                                CssClass="MenuGeneral"
+                                                                                                Font-Size="13px" 
+                                                                                                ForeColor="White" 
+                                                                                                BorderColor="#2f3080" 
+                                                                                                HorizontalPadding="3px"
+                                                                                                Width="185px"/>
+                                                                             <DynamicHoverStyle ForeColor="#2f3080" Font-Bold="false"/>
+                                                                             <DynamicMenuItemStyle Font-Size="13px"  ForeColor="White" Height="20px" CssClass="MenuItemGeneral" />
+
+                                                                    </asp:Menu>
+                                                                </td>
+                                                                <td style="width: 28px; height: 100%" valign="top" align="center"></td>
+                                                            </tr>
+                                                        </table>                                        
+                                                    </div>
+                                                    
+                </td>
+                <td valign="top" align="center" width="693" style="height: 100%;  z-index: 100; "  id="contenido">
+                                                    
+                                                        <table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr>
+                                                                <td style="width: 100%; height: 100%; padding-left:10px; " valign="top" align="left">
+                                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                                    </asp:ContentPlaceHolder>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                </td>      
+                      </tr>
+                      </table>
+                                </div>
+                              
+                              </td>
+                            </tr>
+                           </table>
+                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                             <tr>
+                              <td>&nbsp;</td>
+                             </tr>
+                           </table>
+                          </td>
+                          <td width="20" valign="top">
+                            <img src="/Presupuestos/App_Themes/Imagenes/MasterPage/trans.gif" width="20" height="20">
+                          </td>
+                    </tr>
+                </table>                
+                <!--5º Pie: Cantidad de Usuarios online-->
+                <asp:UpdatePanel ID="udp_Pie_Principal" runat="server">
+                <ContentTemplate>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#103B6E">
+                <tr>
+                  <td width="739" height="47"><img src="/Presupuestos/App_Themes/Imagenes/MasterPage/footer.jpg" width="284" height="47"></td>
+                  <td width="359"><table width="100%" border="0" cellspacing="10" cellpadding="0">
+                      <tr>
+                        <td width="70%" height="16"><div align="center" class="link_facebook">
+                            <div align="right" class="txt_contenido_blanco">Usuarios Online:</div>
+                        </span></div></td>
+                        <td width="30%"><div align="left" class="txt_celeste">
+                          <div align="left"><asp:Label ID="lbl_Cant_OnlineUsers" runat="server" Text="Label"></asp:Label></div>
+                          </span></div></td>
+                      </tr>
+                  </table></td>
+                </tr>
+              </table>
+                </ContentTemplate>                    
+                </asp:UpdatePanel>   
+                <!--6º Pie: Links de soporte y contactenos -->
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="15" height="29" background="/Presupuestos/App_Themes/Imagenes/MasterPage/px02.gif"><img src="/Presupuestos/App_Themes/Imagenes/MasterPage/trans.gif" width="12" height="12"></td>
+                  <td width="72" background="/Presupuestos/App_Themes/Imagenes/MasterPage/px02.gif"><span class="txt_contenido_blanco">Cont&aacute;ctenos: </span></td>
+                  <td width="994" background="/Presupuestos/App_Themes/Imagenes/MasterPage/px02.gif"><a href="mailto:saintgeorgeonline@sanjorge.edu.pe" class="links">saintgeorgeonline@sanjorge.edu.pe</a></td>
+                </tr>
+              </table>
+            </td>
+            <td width="0%" valign="top"><img src="/Presupuestos/App_Themes/Imagenes/MasterPage/trans.gif" width="20" height="20">
+            </td>
+          </tr>
+        </table>       
+        </div>
+    </form>
+</body>
+</html>

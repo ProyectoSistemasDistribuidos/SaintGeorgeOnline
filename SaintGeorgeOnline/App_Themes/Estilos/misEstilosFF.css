@@ -1,0 +1,164 @@
+﻿.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.miEspacio{
+    width: 100%;
+    height: 10px;
+}
+.miPagina{
+    width: 602px;
+    padding: 0;
+    margin: 10px 10px 10px 20px;
+    border: solid 1px blue;/*#a6a3a3;*/
+    float:left;
+    background: url(../Imagenes/blank.gif);/* no hay visualizacion en el master page */
+    background-repeat: repeat-x repeat-y;
+}
+.miTabContainer{
+    background: url(../Imagenes/blank.gif);/* no hay visualizacion en el master page */
+    background-repeat: repeat-x repeat-y;
+} 
+
+#miContenido{  
+    width: 600px;    
+    margin: 0px;
+    /*border: solid 1px red*/
+}
+
+#miCabecera{
+    margin: 0px 10px 0px 10px;    
+    width: 580px;
+    /*border: solid 1px green*/
+}
+    #miCabecera fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 560px;
+    }
+    #miCabecera legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Verdana;
+        font-weight: bold;
+        width: 500px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabecera table{
+        margin: 0;
+        font-size: 10px;
+        font-family: Verdana;
+    }
+    
+#miContainer{
+    width: 580px;
+    margin: 0px 10px 0px 10px;
+}
+    #miContainer fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 520px;
+        /*padding-top: -40px;*/
+        /*background-color: #FFFFFF;*/
+    }
+    #miContainer legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Verdana;
+        font-weight: bold;
+        width: 460px;
+        height: 21px;
+        background: url(../Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miContainer table{
+        margin: 0;
+        font-size: 10px;
+        font-family: Verdana;
+    }
+    #miContainer miTable{
+        margin: 5px 0px 5px 0px;
+    }
+
+#miContainer table th{
+    height: 21px;
+    background: url(../Imagenes/table_header.gif) repeat-x;
+    color: white;
+}
+
+        .miTextBox
+        {
+            border: solid 1px #a6a3a3;
+            height: 15px;
+        }
+        .miTextBox:hover
+        {
+            border: solid 1px #7F9DB9;
+            height: 15px;
+        }
+        .miTextBoxMultiLine
+        {
+            border: solid 1px #a6a3a3;
+        }
+        .miTextBoxMultiLine:hover
+        {
+            border: solid 1px #7F9DB9;
+        }
+        .miComboBox
+        {
+            border: solid 1px #a6a3a3;
+            height: 20px;
+        }
+        .miComboBox:Hover
+        {
+            border: solid 1px #7F9DB9;
+            height: 20px;
+        }
+        .miBoton
+        {
+            cursor: pointer;
+        }                     
+        .WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_textboxcontainer input
+        {
+            margin: 0;
+            border: solid 1px #7F9DB9;
+            border-right: 0px none;
+            padding: 1px 0px 0px 0px;
+            font-size: 13px;
+            height: 18px;
+        }
+        .WindowsStyle .ajax__combobox_inputcontainer .ajax__combobox_buttoncontainer button
+        {
+            margin: 0;
+            padding: 0;
+            background-image: url(../Imagenes/windows-arrow.gif);
+            background-position: top left;
+            border: 0px none;
+            height: 21px;
+            width: 21px;
+        }
+        
+        .miTextBoxCalendar
+        {
+            border: solid 1px #a6a3a3;
+            width: 100px;
+        }
+        .miTextBoxCalendar:hover
+        {
+            border: solid 1px #7F9DB9;
+            width: 100px;
+        }
+        .Table_Highlight tr:Hover
+        {
+            background-color: #d3eefa   
+        }

@@ -1,0 +1,32 @@
+/* CSS Document */
+.txt_celeste 		{
+	COLOR: #00c0ff;
+	font-size:12px;
+	FONT-FAMILY: Arial, Tahoma, Verdana;
+	TEXT-DECORATION: none;
+}
+.txt_contenido 		{
+	COLOR: #606060;
+	font-size:12px;
+	text-align:justify;
+	FONT-FAMILY: Arial, Tahoma, Verdana;
+	TEXT-DECORATION: none;
+}
+.txt_contenido_blanco 		{
+	COLOR: #FFFFFF;
+	font-size:11px;
+	FONT-FAMILY: Arial, Tahoma, Verdana;
+	TEXT-DECORATION: none;
+}
+.links 		{
+	COLOR: #00befd;
+	font-size:11px;
+	FONT-FAMILY: Arial, Tahoma, Verdana;
+	TEXT-DECORATION: underline;
+}
+.links:hover 		{
+	COLOR: #FFFFFF;
+	font-size:11px;
+	FONT-FAMILY: Arial, Tahoma, Verdana;
+	TEXT-DECORATION: underline;
+}

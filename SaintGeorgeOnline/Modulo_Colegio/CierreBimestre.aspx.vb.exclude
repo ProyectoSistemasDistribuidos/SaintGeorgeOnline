@@ -1,0 +1,196 @@
+﻿Imports SaintGeorgeOnline_BusinessEntities.ModuloMatricula
+Imports SaintGeorgeOnline_BusinessEntities.ModuloPensiones
+Imports SaintGeorgeOnline_BusinessEntities.ModuloCursos
+Imports SaintGeorgeOnline_BusinessEntities.ModuloNotas
+Imports SaintGeorgeOnline_BusinessLogic.ModuloColegio
+Imports SaintGeorgeOnline_BusinessLogic.ModuloCursos
+Imports SaintGeorgeOnline_BusinessLogic.ModuloMatricula
+Imports SaintGeorgeOnline_BusinessLogic.ModuloNotas
+Imports SaintGeorgeOnline_Utilities
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.IO
+
+Partial Class Modulo_Colegio_CierreBimestre
+    Inherits System.Web.UI.Page
+
+    Private cod_Modulo As Integer = 1
+    Private cod_Opcion As Integer = 1
+    Private cod_TipoNota As Integer = 2 ' Cuantitativo
+
+
+#Region "Eventos"
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Try
+            Me.Master.MostrarTitulo("Configuración de Bimestres")
+
+            If Not Page.IsPostBack Then
+
+                cargarComboAnioAcademico()
+                cargarComboBimestres()
+                cargarComboAsignacionAula()
+
+            End If
+        Catch ex As Exception
+            EnvioEmailError(0, ex.ToString)
+        End Try
+    End Sub
+
+    Protected Sub btnGrabar_Click()
+        Try
+            Grabar()
+        Catch ex As Exception
+            EnvioEmailError(1, ex.ToString)
+        End Try
+    End Sub
+
+#End Region
+
+#Region "Metodos"
+
+    ''' <summary>
+    ''' Carga la información de los Anios Academicos
+    ''' </summary>
+    ''' <remarks>
+    ''' Creador:               Juan Vento
+    ''' Fecha de Creación:     22/05/2012
+    ''' Modificado por:        _____________
+    ''' Fecha de modificación: _____________ 
+    ''' </remarks>
+    Private Sub cargarComboAnioAcademico()
+
+        Dim str_Descripcion As String = ""
+        Dim int_Estado As Integer = 1
+        Dim obj_AniosAcademicos As New bl_AniosAcademicos
+        Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+        Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+
+        Dim ds_Lista As DataSet = obj_AniosAcademicos.FUN_LIS_AniosAcademicos(str_Descripcion, int_Estado, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+        Controles.llenarCombo(ddlAnioAcademico, ds_Lista, "Codigo", "Descripcion", False, True)
+        ddlAnioAcademico.SelectedValue = Me.Master.Obtener_CodigoPeriodoEscolar
+
+    End Sub
+
+    ''' <summary>
+    ''' Llena el combo "ddlBimestre" con la lista de bimestres
+    ''' </summary>
+    ''' <remarks>
+    ''' Creador:               Juan Vento
+    ''' Fecha de Creación:     22/05/2012
+    ''' Modificado por:        _____________
+    ''' Fecha de modificación: _____________ 
+    ''' </remarks>
+    Private Sub cargarComboBimestres()
+
+        Dim str_Descripcion As String = ""
+        Dim obj_BL_Bimestres As New bl_Bimestres
+        Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+        Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+
+        Dim ds_Lista As DataSet = obj_BL_Bimestres.FUN_LIS_Bimestres(str_Descripcion, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+        Controles.llenarCombo(ddlBimestre, ds_Lista, "Codigo", "Descripcion", False, False)
+
+    End Sub
+
+    Private Sub cargarComboAsignacionAula()
+
+        Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+        Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+        Dim int_CodigoTrabajador As Integer = int_CodigoUsuario
+        Dim int_CodigoAnioAcademico As Integer = ddlAnioAcademico.SelectedValue
+        Dim int_CodigoSede As Integer = 1
+        Dim int_Estado As Integer = 1
+        Dim int_TipoNota As Integer = cod_TipoNota
+
+        Dim obj_BL_AsignacionAulas As New bl_AsignacionAulas
+
+        Dim ds_Lista As DataSet = obj_BL_AsignacionAulas.FUN_LIS_AsignacionAulasPorAnioAcademico( _
+            int_CodigoAnioAcademico, int_CodigoSede, int_Estado, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+        Controles.llenarCombo(ddlAsignacionAula, ds_Lista, "Codigo", "DescAulaCompuestaCorta", False, False)
+
+    End Sub
+
+    Private Sub Grabar()
+
+        Dim obj_bl_CierreBimestre As New bl_CierreBimestre
+        Dim usp_mensaje As String = ""
+        Dim usp_valor As Integer
+        Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+        Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+
+
+        Dim int_CodigoAsignacionAula As Integer = ddlAsignacionAula.SelectedValue
+        Dim int_CodigoBimestre As Integer = ddlBimestre.SelectedValue
+        Dim int_Estado As Integer = rbList.SelectedValue
+     
+        usp_valor = obj_bl_CierreBimestre.FUN_UPD_CierreBimestre(int_CodigoAsignacionAula, int_CodigoBimestre, int_Estado, usp_mensaje, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+      
+        If usp_valor > 0 Then
+            MostrarSexyAlertBox(usp_mensaje, "Info")
+        Else
+            MostrarSexyAlertBox(usp_mensaje, "Alert")
+        End If
+
+    End Sub
+
+
+    ''' <summary>
+    ''' Setea las acciones de acceso del usuario
+    ''' </summary>
+    ''' <remarks>
+    ''' Creador:               Juan Vento 
+    ''' Fecha de Creación:     22/05/2012
+    ''' Modificado por:        _____________
+    ''' Fecha de modificación: _____________ 
+    ''' </remarks>
+    Private Sub SetearAccionesAcceso()
+
+        Me.Master.RegistrarAccesoPagina(cod_Modulo, cod_Opcion)
+
+    End Sub
+
+    ''' <summary>
+    ''' Envía Email de Error de cualquier metodo que lo invoque.
+    ''' </summary>
+    '''  <param name="int_CodigoAccion">Codigo que hace referencia al tipo de Acción</param>
+    ''' <param name="str_DetalleError">Descripción del error</param>
+    ''' <remarks>
+    ''' Creador:               Juan Vento 
+    ''' Fecha de Creación:     22/05/2012
+    ''' Modificado por:         
+    ''' Fecha de modificación: 
+    ''' </remarks>
+    '''     Private Sub EnvioEmailError(ByVal int_CodigoAccion As Integer, ByVal str_DetalleError As String)
+    Private Sub EnvioEmailError(ByVal int_CodigoAccion As String, ByVal str_DetalleError As String)
+
+        Dim int_TipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+        Dim str_NombreUsuario As String = Me.Master.Obtener_NombreUsuarioLogueado
+
+        Dim str_MensajeUsuario As String = Alertas.EnviarMensajeErrorEmail(cod_Modulo, cod_Opcion, int_CodigoAccion, str_DetalleError, str_NombreUsuario, int_TipoUsuario)
+        MostrarSexyAlertBox(str_MensajeUsuario, "Error")
+
+    End Sub
+
+    ''' <summary>
+    ''' Muestra mensajes de alerta sobre las acciones que se realizan en los distintos formularios.    
+    ''' </summary>
+    ''' <param name="str_mensaje">Descripción del mensaje que se mostrará en el formulario</param>
+    ''' <param name="str_tipoMensaje">Definición de Tipo de Icono que se mostrará en el mensaje</param>
+    ''' <remarks>
+    ''' Creador:               Juan Vento 
+    ''' Fecha de Creación:     22/05/2012
+    ''' Modificado por:        _____________
+    ''' Fecha de modificación: _____________ 
+    ''' </remarks>
+    Protected Sub MostrarSexyAlertBox(ByVal str_Mensaje As String, ByVal str_TipoMensaje As String)
+
+        Me.Master.MostrarMensaje(str_Mensaje, str_TipoMensaje)
+
+    End Sub
+
+#End Region
+
+
+
+End Class

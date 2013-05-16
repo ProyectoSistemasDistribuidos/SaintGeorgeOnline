@@ -1,0 +1,57 @@
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Listeners.exe.config
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Listeners.exe
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Listeners.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Listeners.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\itextsharp.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessEntities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessLogic.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_ConcurrenciaUsuarios.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_DataAccess.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Utilities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\AjaxControlToolkit.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\office.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\ClosedXML.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\DocumentFormat.OpenXml.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessLogic.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessLogic.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessEntities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_BusinessEntities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_DataAccess.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_DataAccess.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_ConcurrenciaUsuarios.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_ConcurrenciaUsuarios.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Utilities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\bin\Debug\SaintGeorgeOnline_Utilities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\ResolveAssemblyReference.cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmCargarDeudas.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmCargarPagos.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmExportacionCartas.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmImpresionTalonarios.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmLogin.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmPrincipal.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmReporteLibretaPrimaria.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmVistaPrevia.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.Resources.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.vbproj.GenerateResource.Cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.exe
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.pdb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmCargarDeudas.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmCargarPagos.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmExportacionCartas.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmImpresionTalonarios.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmLogin.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmPrincipal.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmReporteLibretaPrimaria.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.frmVistaPrevia.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.Resources.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.vbproj.GenerateResource.Cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.exe
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_Listeners\obj\Debug\SaintGeorgeOnline_Listeners.pdb

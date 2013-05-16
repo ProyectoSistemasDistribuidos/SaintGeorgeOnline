@@ -1,0 +1,1311 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SaintGeorgeOnline_Utilities
+</name>
+</assembly>
+<members>
+<member name="M:SaintGeorgeOnline_Utilities.Exportacion.GetNewName">
+	<summary>
+ Obtiene una cadena de caracteres aleatorio (de tipo numero) que será el nombre del documento.
+ </summary>
+	<returns>Retorna descripcion de nombre de documento a generar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.cuadradoCompleto(Microsoft.Office.Interop.Excel.Application,Microsoft.Office.Interop.Excel.Range)">
+	<summary>
+ Insertar los bordes de las celdas según el rango indicado.
+ </summary>
+	<param name="mexcel">Instancia de documento excel</param>
+	<param name="objRango">Rando de celdas a insertar sus bordes</param>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.DevLetraColumna(System.Int32)">
+	<summary>
+ Obtiene la letra del abecedario segun su posicion en el alfabeto
+ </summary>
+	<param name="idColumna">Posicion de columna</param>
+	<returns>Letra que hace referencia a la columan en EXCEL</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.DevIDColumna(System.String)">
+	<summary>
+ Obtiene el id de la letra
+ </summary>
+	<param name="strLetra">Letra a consultar ID</param>
+	<returns>Letra que hace referencia a la columan en EXCEL</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     12/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporte(System.Data.DataTable,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteConfirmacionAsistencia(System.Data.DataTable,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     17/08/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaConfirmacionAsistencia(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dtReporte">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:              Fanny Salinas
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantilla(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dtReporte">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteBancoLibros(System.Data.DataSet,System.Int32,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     04/07/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaPrestamo(System.Data.DataTable,System.Data.DataTable,System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dt_Alumnos">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     04/07/2011
+ Modificado por:        Fanny Salinas
+ Fecha de modificación: 20/07/2011 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteDevolucion(System.Data.DataSet,System.Int32,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     06/07/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteDeudoresBancoLibros(System.Data.DataSet,System.Int32,System.String,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     12/03/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaDeudoresBancoLibros(System.Data.DataTable,System.String,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dt_Alumnos">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     12/03/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteDinamicoCantidadLibrosVendidosPorAula(System.Data.DataSet,System.Int32,System.Int32,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     04/07/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaDinamicoCantidadLibrosVendidosPorAula(System.Data.DataSet,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dtReporte">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     04/07/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteAniosUtilidad(System.Data.DataSet,System.Int32,System.Int32,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Edgar Chang 
+ Fecha de Creación:     23/08/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ BL_USP_REP_AniosUtilidad
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaAniosUtilidad(System.Data.DataTable,System.Data.DataTable,System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="oCells">Instancia de rango de Periodo Inicio y Fin</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Edgar Chang
+ Fecha de Creación:     18/08/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteIncidenciasAsistencia(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     29/05/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteAsistenciaXBimestreMeses(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     29/05/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteControlAsistenciaXBimestre(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     01/06/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaAsistenciaXBimestreMeses(System.Data.DataTable,System.Data.DataTable,System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dt_Bimestre">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     29/05/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteLetras(System.Data.DataTable,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtLetras">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     04/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaLetras(System.Data.DataRow,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dr">DataRow con los datos de la letra a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     04/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteSinFormato(System.Data.DataTable,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     14/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaSinFormato(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dtReporte">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     14/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteMultiHojas(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dsReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     20/05/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaPagos(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="dtReporte">Tabla temporal con los datos a exportar</param>
+	<param name="oCells">Instancia de rango de documento a setear datos</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     26/05/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarLlenarPlantillaNominaSIAGE(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="ds_Consulta">Tabla temporal de datos a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Edgar Chang 
+ Fecha de Creación:     01/09/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaNominaSIAGE_Generalidades(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="oCells">Instancia de rango de Periodo Inicio y Fin</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<remarks>
+ Creador:               Edgar Chang
+ Fecha de Creación:     10/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaNominaSIAGE_EstudiantesMatriculados(System.Data.DataTable,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="oCells">Instancia de rango de Periodo Inicio y Fin</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<remarks>
+ Creador:               Edgar Chang
+ Fecha de Creación:     10/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteUsuariosEnElSistemaGeneral(System.Data.DataSet,System.String,System.String,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Edgar Chang 
+ Fecha de Creación:     01/09/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteUsuariosEnElSistemaDetalle(System.Data.DataSet,System.String,System.String,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Edgar Chang 
+ Fecha de Creación:     01/09/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaUsuariosEnElSistemaDetalle(System.Data.DataTable,System.String,System.String,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="oCells">Instancia de rango de Periodo Inicio y Fin</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Edgar Chang
+ Fecha de Creación:     01/09/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaUsuariosEnElSistemaGeneral(System.Data.DataTable,System.String,System.String,Microsoft.Office.Interop.Excel.Range,Microsoft.Office.Interop.Excel.Application,System.String)">
+	<summary>
+ Llena el documento EXCEL con la información que se envio para su exportación.
+ </summary>
+	<param name="oCells">Instancia de rango de Periodo Inicio y Fin</param>
+	<param name="oExcel">Instancia del libro de excel</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<remarks>
+ Creador:               Edgar Chang
+ Fecha de Creación:     01/09/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteWeeklyReport_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuelve la información enviada en codigo HTML para su exportación en el navegador o en documentos WORD
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     27/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteMidTermReport_IF_Html(System.Data.DataSet,System.String,System.Int32)">
+	<summary>
+ Devuelve la información enviada en codigo HTML para su exportación en el navegador o en documentos WORD
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     04/04/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporte_Html(System.Data.DataTable,System.String)">
+	<summary>
+ Devuelve la información enviada en codigo HTML para su exportación en el navegador o en documentos WORD
+ </summary>
+	<param name="dtReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteFichaAtencion_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuleve la información de la Ficha de Atención Médica recibida en codigo HTML para su exportación en el navegador o en documentos WORD.
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteFichaAtencionFamilia_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuleve la información de la Ficha de Atención Médica recibida en codigo HTML para su exportación en el navegador o en documentos WORD.
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteFichaMedica_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuleve la información de la Ficha Médica recibida en el codig HTML para su exportación en el navegador o en documentos WORD.
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteFichaFamiliar_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuelve la información de la Ficha Familiar recibida en el código HTML para su exportación en el navegador o en un documento de tipo WORD.
+ </summary>
+	<param name="dsReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteCompromisoPago_Html(System.Data.DataSet,System.String)">
+	<summary>
+ Devuleve la información de la Ficha Médica recibida en el codig HTML para su exportación en el navegador o en documentos WORD.
+ </summary>
+	<param name="dtReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaCompromisoPagoHtml(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información del CompromisoPago que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dsReporte">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaHtml(System.String,System.Data.DataTable,System.String)">
+	<summary>
+ Llena el documento HTML con la información que se envió para su exportación. (Sólo listados)
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dtReporte">Tabla temporal con la información a ingresar en la plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaFichaAtencionHtml(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información de la Ficha de Atención que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dsReporte">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaFichaMedicaHtml(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información de la Ficha Médica que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dsReporte">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaFichaFamiliarHtml(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información de la Ficha Familiar que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dsReporte">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaMidTermReportHtml_IF(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información de la Ficha Familiar que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="ds">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     04/04/2012
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaWeeklyReportHtml(System.String,System.Data.DataSet,System.String)">
+	<summary>
+ Llena el documento HTML con la información de la Ficha Familiar que se envió para su exportación.
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="ds">Conjunto de tablas temporales con la informacion a ingresar en el plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     27/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteEnfermeria_Html(System.Data.DataTable,System.String,System.Boolean,System.Boolean,System.Collections.ArrayList,System.Int32)">
+	<summary>
+ Devuelve la información enviada en codigo HTML para su exportación en el navegador o en documentos WORD
+ </summary>
+	<param name="dtReporte">Tabla temporal con la información a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres en codigo HTML a exportar</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     17/02/2011
+ Modificado por:        Juan Vento
+ Fecha de modificación: 21/02/2011 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.LlenarPlantillaReporteEnfermeria_Html(System.String,System.Data.DataTable,System.String,System.Boolean,System.Boolean,System.Collections.ArrayList,System.Int32)">
+	<summary>
+ Llena el documento HTML con la información que se envió para su exportación. (Sólo listados)
+ </summary>
+	<param name="Plantilla">Cadena de caracteres con codigo HTML (Plantilla del documento a llenar)</param>
+	<param name="dtReporte">Tabla temporal con la información a ingresar en la plantilla</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte</param>
+	<returns>Cadena de caracteres de codigo HTML con la información a exportar en el navegador o documento de WORD</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     17/02/2011
+ Modificado por:        Juan Vento
+ Fecha de modificación: 21/02/2011 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteConsolidadoMatricula_Pdf(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reportes de consolidado de matricula en PDF (Soló listados de información)
+ </summary>
+	<param name="ds">Tabla de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Nombre del reporte</param>
+	<returns></returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     25/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporte_Pdf(System.Data.DataTable,System.String)">
+	<summary>
+ Exporta reportes en PDF (Soló listados de información)
+ </summary>
+	<param name="dt_Listado">Tabla de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Nombre del reporte</param>
+	<returns></returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarReporteWeekly_Pdf(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reportes de weekly en PDF (Soló listados de información)
+ </summary>
+	<param name="ds">Tabla de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Nombre del reporte</param>
+	<returns></returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     25/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion.ExportarSolicitudPresupuestoYAsignacionEstructuraSSSCentroCostoClases(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     10/11/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.llenarComboNumerico(System.Web.UI.WebControls.DropDownList,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información (solo númerica) en el seleccionable recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="numInicio">Numero Inicial del rango</param>
+	<param name="numFin">Numero Final del rango</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.ListaMeses">
+	<summary>
+ Retorna 1 DataSet con la lista de meses del año
+ </summary>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     02/03/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.ListaNumerica(System.Int32,System.Int32)">
+	<summary>
+ Retorna 1 DataSet con la lista de meses del año en formato númerico
+ </summary>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     21/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.llenarCombo(System.Web.UI.WebControls.DropDownList,System.Data.DataSet,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información en el seleccionable (de tipo combobox) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="dataSource">Tabla temporal con los datos a insertar</param>
+	<param name="ValueField">Nombre de columna que se referira a los valores internos del seleccionable</param>
+	<param name="TextField">Nombre de columna que se referira a las descripciones mostradas del seleccionable</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.llenarCombo(System.Windows.Forms.ComboBox,System.Data.DataSet,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información en el seleccionable (de tipo combobox - Windows Form) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="dataSource">Tabla temporal con los datos a insertar</param>
+	<param name="ValueField">Nombre de columna que se referira a los valores internos del seleccionable</param>
+	<param name="TextField">Nombre de columna que se referira a las descripciones mostradas del seleccionable</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     27/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.limpiarCombo(System.Web.UI.WebControls.DropDownList,System.Boolean,System.Boolean)">
+	<summary>
+ Limpia la información ingresada en el seleccionable (de tipo combobox) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles_pres.limpiarCombo(System.Windows.Forms.ComboBox,System.Boolean,System.Boolean)">
+	<summary>
+ Limpia la información ingresada en el seleccionable (de tipo combobox - Windows Form) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Seguridad.Desencriptar(System.String)">
+	<summary>
+ Private: Desencriptar()
+ </summary>
+	<param name="sCadena_TEXT">Cadena de conexión Encritada</param>
+	<returns>Cadena de Conexión Desencriptada UTF-8</returns>
+</member><member name="M:SaintGeorgeOnline_Utilities.Seguridad.DesencriptarOnlyText(System.String)">
+	<summary>
+ Public: DesencriptarOnlyText()
+ ------------------------------
+ Desencripta una cadena de conexión o texto cualquiera con Algoritmo de encriptación
+ Triple DES a formato UTF-8
+ </summary>
+	<param name="sCadenaEncrypt_TEXT">Cadena o Texto a desencriptar</param>
+	<returns>Cadena o Texto desencriptado (UTF - 8)</returns>
+</member><member name="M:SaintGeorgeOnline_Utilities.Datos.agregarColumna(System.Data.DataTable@,System.String,System.String)">
+	<summary>
+ Agrega columnas a la tabla temporal que se reciba.
+ </summary>
+	<param name="Table">Tabla temporal enviada</param>
+	<param name="nomCampo">Nombre de columna</param>
+	<param name="tipoDato">Tipo de dato de la columna</param>
+	<returns>Tabla temporal con columna agregada</returns>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Datos.AutogenerarCodigoTemporal(System.Data.DataTable,System.String)">
+	<summary>
+ Atogenera codigo correlativo maximo que identificara a una fila de una tabla temporal.
+ </summary>
+	<param name="dt_Temp_Auto">Tabla temporal</param>
+	<param name="str_NombreAutogenerado">Nombre de columna donde se autogenerará el identificador</param>
+	<returns></returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.GeneracionContrasenias.AleatorioNumeros(System.Int64,System.Int64)">
+	<summary>
+ Retorna un (1) número aleatorio.
+ </summary>
+	<param name="Minimo">Intervalo Inicial del número aleatorio</param>
+	<param name="Maximo">Intervalo Final del número aleatorio</param>
+	<returns>Número aleatorio</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.GeneracionContrasenias.AleatorioLetras(System.Int64,System.Int64)">
+	<summary>
+ Retorna una (1) letra aleatoria.
+ </summary>
+	<param name="Minimo">Intervalo inicial de la posición de la letra</param>
+	<param name="Maximo">Intervalo final de la posición de la letra</param>
+	<returns>Letra aleatoria</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.GeneracionContrasenias.ContraseniaSuperUsuario">
+	<summary>
+ Genera contraseña de super usuario (9 caracteres)
+ </summary>
+	<returns>Retorna contraseña autogenerada de super usuario</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.GeneracionContrasenias.HomologarLetrasAbecedario(System.Int32)">
+	<summary>
+ Obtiene una letra del abecedario segun su posicion
+ </summary>
+	<param name="int_PosicionLetra">Numero que representa una posicion en el abecedario</param>
+	<returns>Retorna letra del abecedario</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.GeneracionContrasenias.AleatorioPosicionCaracteres(System.String,System.String)">
+	<summary>
+ Setea los caracteres alfanumericos de la contraseña del super usuario en una posicion aleatoria
+ </summary>
+	<param name="str_Numeros">Numeros generados aleatoriamente (5)</param>
+	<param name="str_Letras">Letras generadas aleatoriamente (4)</param>
+	<returns>Retorna caracteres de contraseña autogenerada</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail.SendEmail(System.String,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (reciba un (1) email )
+ </summary>
+	<param name="Email">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail.SendEmail(System.Collections.ArrayList,System.String,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (se envia un arreglo de emails )
+ </summary>
+	<param name="Emails">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<param name="AttachmentFile">Nombre del Archivo a adjuntar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Fanny Salinas
+ Fecha de Creación:     29/12/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail.SendEmail(System.Collections.ArrayList,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (se envia un arreglo de emails )
+ </summary>
+	<param name="Emails">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     12/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail.SendEmail(System.String[],System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (se envia un arreglo de emails )
+ </summary>
+	<param name="Emails">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     12/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail.SendEmail_OlvidoContrasenia(System.String,System.String,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (reciba un (1) email y un email de copiado)
+ </summary>
+	<param name="str_email">Email de usuario a enviar el email</param>
+	<param name="str_cuerpo">Cuerpo del email a enviar</param>
+	<param name="str_Asunto">Asunto del email a enviar</param>
+	<param name="str_emailCopia">Email de usuario a copiar el email</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Validacion.ValidarCamposIngreso(System.Web.UI.WebControls.TextBox)">
+	<summary>
+ Valida la cantidad de caracteres de las descripciones enviadas.
+ </summary>
+	<param name="txt_CampoIngreso">Cadena de caracteres enviada</param>
+	<returns>Indicador sobre la valides del campo recibido</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Validacion.Validar_Email(System.String)">
+	<summary>
+ Valida la estructura del email enviado.
+ </summary>
+	<param name="Email">Email enviado</param>
+	<returns>Indicador sobre la valides del email recibido.</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Alertas.ObtenerAlerta(System.String,System.Int32,System.String)">
+	<summary>
+ Obtiene la descripción de la alerta (multiples validaciones a la vez) a mostrar en las validaciones del formulario.
+ </summary>
+	<param name="str_Cadena">Cadena de caracteres, la cual contiene los mensajes de validaciones a enviar</param>
+	<param name="str_TipoAlerta">Tipo de Alerta (Referido al tipo de mensaje a agregar)</param>
+	<param name="str_NombreCampo">Nombre del campo que genera la alerta</param>
+	<returns>Estructura del mesaje de validación a mostrar en el formulario</returns>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Alertas.ObtenerMensaje(System.String,System.String)">
+	<summary>
+ Obtiene la estructura y contenido del mensaje a mostrar.
+ </summary>
+	<param name="str_Mensaje">Mensaje a mostrar</param>
+	<param name="str_TipoMensaje">Tipo de mensaje referente al icono a mostrar</param>
+	<returns>Retorna la estructura en JQuery de los mensajes y tipos de mensajes recibidos por el formulario quien lo invoque.</returns>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Alertas.ObtenerAsuntoEmail(System.Int32)">
+	<summary>
+	</summary>
+	<param name="str_TipoAlerta"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.llenarComboNumerico(System.Web.UI.WebControls.DropDownList,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información (solo númerica) en el seleccionable recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="numInicio">Numero Inicial del rango</param>
+	<param name="numFin">Numero Final del rango</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.ListaMeses">
+	<summary>
+ Retorna 1 DataSet con la lista de meses del año
+ </summary>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     02/03/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.ListaMeses(System.Int32,System.Int32)">
+	<summary>
+ Retorna 1 DataSet con la lista de meses del año
+ </summary>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     03/10/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.ListaNumerica(System.Int32,System.Int32)">
+	<summary>
+ Retorna 1 DataSet con la lista de meses del año en formato númerico
+ </summary>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     21/06/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.llenarCombo(System.Web.UI.WebControls.DropDownList,System.Data.DataSet,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información en el seleccionable (de tipo combobox) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="dataSource">Tabla temporal con los datos a insertar</param>
+	<param name="ValueField">Nombre de columna que se referira a los valores internos del seleccionable</param>
+	<param name="TextField">Nombre de columna que se referira a las descripciones mostradas del seleccionable</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.llenarCombo(AjaxControlToolkit.ComboBox,System.Data.DataSet,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información en el seleccionable (de tipo AjaxControlToolkit.ComboBox) recibido.
+ </summary>
+	<param name="combo">Control de tipo AjaxControlToolkit.ComboBox</param>
+	<param name="dataSource">Tabla temporal con los datos a insertar</param>
+	<param name="ValueField">Nombre de columna que se referira a los valores internos del seleccionable</param>
+	<param name="TextField">Nombre de columna que se referira a las descripciones mostradas del seleccionable</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.llenarCombo(System.Windows.Forms.ComboBox,System.Data.DataSet,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Inserta información en el seleccionable (de tipo combobox - Windows Form) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="dataSource">Tabla temporal con los datos a insertar</param>
+	<param name="ValueField">Nombre de columna que se referira a los valores internos del seleccionable</param>
+	<param name="TextField">Nombre de columna que se referira a las descripciones mostradas del seleccionable</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     27/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.limpiarCombo(System.Web.UI.WebControls.DropDownList,System.Boolean,System.Boolean)">
+	<summary>
+ Limpia la información ingresada en el seleccionable (de tipo combobox) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.limpiarCombo(AjaxControlToolkit.ComboBox,System.Boolean,System.Boolean)">
+	<summary>
+ Limpia la información ingresada en el seleccionable (de tipo AjaxControlToolkit.ComboBox) recibido.
+ </summary>
+	<param name="combo">Control de tipo AjaxControlToolkit.ComboBox</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Controles.limpiarCombo(System.Windows.Forms.ComboBox,System.Boolean,System.Boolean)">
+	<summary>
+ Limpia la información ingresada en el seleccionable (de tipo combobox - Windows Form) recibido.
+ </summary>
+	<param name="combo">Control de tipo combobox</param>
+	<param name="includeTodos">Indica si se agregara un registro indicando -TODOS-</param>
+	<param name="includeSeleccion">Indica si se agrega un registro indicando -SELECCIONE-</param>
+	<remarks>
+ Creador:               Juan Jose
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Deserializer.Deserialize``1(System.String)">
+	<summary>
+ funcion para deserializar objetos desde la base de datos
+ </summary>
+	<typeparam name="T"> el tipo al cual se va castear </typeparam>
+	<param name="CadenaSerializado">cadena del objeto serializado</param>
+	<returns>retorna la lista correspondiente</returns>
+	<remarks> si es una lista debe tener como root ArrayOf Tipo de objeto por ejemplo :ArrayOfSituacion un array de objeto :Situacion</remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Deserializer.Serialize``1(``0)">
+	<summary>
+	</summary>
+	<typeparam name="T">tipo del cual se va serializar </typeparam>
+	<param name="value">el objeto a serializar</param>
+	<returns>la cedna serializada</returns>
+	<remarks></remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail_pres.SendEmail(System.String,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (reciba un (1) email )
+ </summary>
+	<param name="Email">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail_pres.SendEmail(System.Collections.ArrayList,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (reciba un (1) email )
+ </summary>
+	<param name="Emails">Email de usuario a enviar el email</param>
+	<param name="cuerpo">Cuerpo del email a enviar</param>
+	<param name="Asunto">Asunto del email a enviar</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     12/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.EnvioEmail_pres.SendEmail_OlvidoContrasenia(System.String,System.String,System.String,System.String)">
+	<summary>
+ Envia emails a los usuarios especificados (reciba un (1) email y un email de copiado)
+ </summary>
+	<param name="str_email">Email de usuario a enviar el email</param>
+	<param name="str_cuerpo">Cuerpo del email a enviar</param>
+	<param name="str_Asunto">Asunto del email a enviar</param>
+	<param name="str_emailCopia">Email de usuario a copiar el email</param>
+	<returns>Indicador del resultado del envío del email</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion_pres.GetNewName">
+	<summary>
+ Obtiene una cadena de caracteres aleatorio (de tipo numero) que será el nombre del documento.
+ </summary>
+	<returns>Retorna descripcion de nombre de documento a generar</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion_pres.cuadradoCompleto(Microsoft.Office.Interop.Excel.Application,Microsoft.Office.Interop.Excel.Range)">
+	<summary>
+ Insertar los bordes de las celdas según el rango indicado.
+ </summary>
+	<param name="mexcel">Instancia de documento excel</param>
+	<param name="objRango">Rando de celdas a insertar sus bordes</param>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion_pres.DevLetraColumna(System.Int32)">
+	<summary>
+ Obtiene la letra del abecedario segun su posicion en el alfabeto
+ </summary>
+	<param name="idColumna">Posicion de columna</param>
+	<returns>Letra que hace referencia a la columan en EXCEL</returns>
+	<remarks>
+ Creador:               Johnatan Matta
+ Fecha de Creación:     06/01/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion_pres.DevIDColumna(System.String)">
+	<summary>
+ Obtiene el id de la letra
+ </summary>
+	<param name="strLetra">Letra a consultar ID</param>
+	<returns>Letra que hace referencia a la columan en EXCEL</returns>
+	<remarks>
+ Creador:               Juan Vento
+ Fecha de Creación:     12/04/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member><member name="M:SaintGeorgeOnline_Utilities.Exportacion_pres.ExportarSolicitudPresupuestoYAsignacionEstructuraSSSCentroCostoClases(System.Data.DataSet,System.String)">
+	<summary>
+ Exporta reporte en formato EXCEL (listado de items)
+ </summary>
+	<param name="dtReporte">Tabla temporal de datos a exportar</param>
+	<param name="str_NombreEntidadReporte">Titulo del reporte a exportar</param>
+	<returns>Retorna nombre de reporte generado en el servidor a exportar</returns>
+	<remarks>
+ Creador:               Fanny Salinas 
+ Fecha de Creación:     10/11/2011
+ Modificado por:        _____________
+ Fecha de modificación: _____________ 
+ </remarks>
+</member>
+</members>
+</doc>

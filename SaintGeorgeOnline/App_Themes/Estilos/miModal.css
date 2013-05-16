@@ -1,0 +1,61 @@
+﻿.hiddenStyle{
+    display: none;
+}
+.miPanelCSS{
+    background-color: #FFFFFF;
+    width: 752px;
+    border: solid 1px black;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;
+}
+
+.TitlebarLeft{
+    width: 720px;
+    height: 29px;
+    float: left;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    background: #000000 url(../Imagenes/titlebar_bg.jpg);
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+}
+.TitlebarLeft_Button{
+    margin: 7px;
+}
+.TitlebarRight{
+    width: 32px;
+    height: 29px;
+    float: left;
+    padding: 0;
+    background: #000000 url(../Imagenes/titlebar_bg.jpg);
+    background-repeat: repeat-x;
+}
+
+.ModalPopupBG{
+    background-color: #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.7;
+}
+
+.Div_buscarAlumnoGV{
+    width: 710px;
+    height: 200px;
+    border: solid 1px black;
+}
+.buscarAlumnoGV{ 
+    
+}
+.buscarAlumnoGV_Header{
+    height: 21px;
+    background: url(../Imagenes/table_header.gif) repeat-x;
+    color: white;
+}
+.buscarAlumnoGV_rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa;
+}
+.buscarAlumnoGV_rowsHover{
+    background-color: #d3eefa;
+}

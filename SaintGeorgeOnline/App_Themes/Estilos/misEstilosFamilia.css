@@ -1,0 +1,227 @@
+﻿.miHiddenStyle{
+    display:none;
+}
+.noMarginPadding{
+    padding: 0;
+    margin:0;       
+}
+.body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.miEspacio{
+    width: 100%;
+    height: 10px;
+} 
+   
+/* ACTUALIZACION FICHA - FAMILIA */
+
+#miPaginaActualizacion_Familia{  
+    width: 891px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+#miContainerActualizacion_Familia{
+    width: 880px;
+    margin: 0px 10px 0px 10px;
+    border: solid 0px green 
+}
+#miContainerActualizacion_Familia em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 7px;
+        padding: 0;
+} 
+
+#miCabecera_Familia{
+    margin: 0px 10px 0px 10px;    
+    width: 680px;
+}
+    #miCabecera_Familia fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 680px;    }   
+        
+    #miCabecera_Familia fieldset em{
+        font-size: 10px;
+        font-family: Arial;
+        color: #a51515;
+        margin-right: 12px;
+        padding: 0;
+    }     
+    #miCabecera_Familia fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miCabecera_Familia fieldset .misLabels  {
+        font-size: 12px;
+        font-family: Arial;
+    }  
+    #miCabecera_Familia fieldset .misTextBoxLabels  {
+        font-size: 12px;
+        font-family: Arial;
+        border:0;
+        width:400px
+    }      
+    #miCabecera_Familia legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 600px;
+        height: 21px;
+        background: url(../Imagenes/legend_header3.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miCabecera_Familia table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+ 
+/*FICHA - FAMILIA */
+
+#miPaginaFicha_Familia{  
+    width: 851px; 
+    margin: 0;
+    padding: 0;
+    border: solid 1px red
+}
+#miContainerFicha_Familia{
+    width: 830px;
+    margin: 0px 10px 0px 10px;
+}
+
+#miContenidoFicha_Familia{  
+    width: 751px; 
+    margin: 0;
+    padding: 0;
+    border: solid 0px red
+}
+    #miContainerFicha_Familia{
+        width: 831px;
+        margin: 0px 10px 0px 10px;
+    }
+    #miContainerFicha_Familia fieldset{
+        border: solid 1px #a6a3a3;
+        margin: auto;
+        width: 811px;
+    }
+    #miContainerFicha_Familia fieldset span{
+        font-size: 11px;
+        font-family: Arial;
+    }    
+    #miContainerFicha_Familia legend{
+        margin: 0px 20px 0px 20px;  
+        padding: 4px 0px 0px 10px;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 590px;
+        height: 21px;
+        background: url(../Imagenes/legend_header3.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+    }
+    #miContainerFicha_Familia table{
+        margin: 5px 10px 5px 10px;
+        font-size: 10px;
+        font-family: Arial;
+    }    
+    #miContainerFicha_Familia table table{
+        margin: 0;
+    }
+    
+    #miContainerFicha_Familia .miTabla{
+        border: solid 1px black
+    }    
+    #miContainerFicha_Familia Table Th{
+        height: 26px;
+        /*background: url(../Imagenes/table_header.gif) repeat-x;*/
+        color: white;
+    }
+    
+/*Detalle Mantenimiento*/
+#miGridviewMantDetalle_Familia{
+    margin: 0px 0px 0px 0px;   
+    padding: 0; 
+    width: 792px;    
+    border: solid 1px #a6a3a3;  
+}  
+.miGridviewMantDetalle_Familia{
+    background-color: #FFFFFF;
+    font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+    font-size: 10px;    
+    margin: 0;
+    padding: 0; 
+    width: 791px;
+    border:0; 
+    height:auto;  
+}
+.miGridviewMantDetalle_Familia_Header{    
+    background: #0a0f14 url(../Imagenes/gridview_footer2.gif) repeat-x;
+    color: black;
+    height: 26px;
+    font-weight: bold;
+}
+.miGridviewMantDetalle_Familia_HeaderLeft{
+    border-left: solid 1px #a6a3a3;  
+    background: #0a0f14 url(../Imagenes/gridview_footer2.gif) repeat-x;
+    color: black;
+    height: 26px;
+    font-weight: bold;
+}
+.miGridviewMantDetalle_Familia_HeaderRight{
+    border-right: solid 1px #a6a3a3;  
+    background: #0a0f14 url(../Imagenes/gridview_footer2.gif) repeat-x;
+    color: black;
+    height: 26px;
+    font-weight: bold;
+}
+.miGridviewMantDetalle_Familia_Rows{
+    height: 20px;
+    border-bottom: solid 1px #d3eefa;
+	text-align: center ;
+}
+
+/* Detalle de ficha */
+
+#miGVMantFicha{
+        margin: 0px 10px 0px 10px;   
+        padding: 0; 
+        width: 590px;    
+        border: solid 1px #a6a3a3;
+}      
+#miGVMantFicha Table {
+        margin: 0;
+        padding: 0;
+}   
+.miGVBusquedaFicha {
+        background-color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif; /*font-weight: bold;*/
+        font-size: 10px;    
+        margin: 0px;
+        padding: 0px; 
+        width: 590px;
+        border:0;
+        height:auto;  
+} 
+.miGVBusquedaFicha_Header_V2{        
+        background: #0a0f14 url(../Imagenes/legend_header.gif) repeat-x;
+        text-align: left;
+        color: black;
+        height: 26px;        
+        border-bottom: solid 1px black;
+}
+.miGVBusquedaAsignacionPermisos_Rows_2 {
+        height: 20px;
+        
+}

@@ -1,0 +1,208 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/PaginaPrincipal.master" AutoEventWireup="false" CodeFile="Prestamos.aspx.vb" Inherits="Modulo_BancoLibros_Prestamos" %>
+
+<%@ MasterType VirtualPath="~/PaginaPrincipal.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+<div id="miPaginaMantenimiento" style="margin-left: 10px;">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server"> 
+  
+    <ContentTemplate>    
+    
+    <atk:TabContainer ID="TabContainer1" runat="server" Width="881px" ActiveTabIndex="0" AutoPostBack="false" ScrollBars="None" >
+        <atk:TabPanel ID="miTab1" runat="server" HeaderText="Tab1" Enabled="true">
+            <HeaderTemplate>
+                <asp:Label ID="lbTab1" runat="server" Text="Registro de Prestamos" />
+            </HeaderTemplate>
+            <ContentTemplate>    
+<div style="border: solid 0px blue; width: 880px;">
+    <div id="miBusquedaMant"><!-- 650px -->
+    <fieldset style="width: 840px;">
+        <legend>Datos del Registro</legend>
+    
+        <table cellpadding="0" cellspacing="0" border="0" style="width: 820px; border: solid 0px red; margin: 0 0 0 10px; padding: 0; font-size: 11px; font-family: Arial;">
+            <tr>
+               <td style="width: 120px; height: 25px;" align="left" valign="middle">
+                <span>Periodo :</span>    
+                 <asp:Label runat="server" ID ="lblCodigoPrestamo" Text ="0" visible ="true"  ></asp:Label>       
+                 <asp:Label runat="server" ID ="lblTituloLibro" Text ="" visible ="true"  ></asp:Label>  
+                 <asp:Label runat="server" ID ="lblCodigoLibro" Text ="0" visible ="true"  ></asp:Label>  
+                 <asp:Label runat="server" ID ="lblCodigoCopiaLibro" Text ="0" visible ="true"  ></asp:Label>  
+                </td>
+                <td style="width:200px; height: 25px;" align="left" valign="middle">
+                    <asp:DropDownList ID="ddlAnioAcademicoFiltro" runat="server" Width="100px" style="font-size: 8pt; font-family: Arial;">
+                    </asp:DropDownList> 
+                </td>
+                <td style="width: 500px; height: 25px;" align="right" valign="middle" >
+                    <asp:Button ID="btnGrabar" runat="server" Text="Grabar" OnClick="btnGrabar_Click"  />
+                </td>
+            </tr>
+            <tr>
+               <td style="width: 120px; height: 25px;" align="left" valign="middle">
+                <span>Grado :</span>     
+                </td>
+                <td style="width:200px; height: 25px;" align="left" valign="middle">
+                    <asp:DropDownList ID="ddlGradoFiltro" runat="server" Width="200px" style="font-size: 8pt; font-family: Arial;"  AutoPostBack="true"
+                        OnSelectedIndexChanged="ddlGradoFiltro_SelectedIndexChanged">
+                    </asp:DropDownList> 
+                </td>
+                <td style="width: 500px; height: 25px;" align="right" valign="middle" >
+                    
+                </td>
+            </tr>
+              <tr>
+               <td style="width: 120px; height: 25px;" align="left" valign="middle">
+                <span>Aula :</span>     
+                </td>
+                <td style="width:200px; height: 25px;" align="left" valign="middle">
+                    <asp:DropDownList ID="ddlAulaFiltro" runat="server" Width="200px" style="font-size: 8pt; font-family: Arial;" AutoPostBack="true"
+                        OnSelectedIndexChanged="ddlAulaFiltro_SelectedIndexChanged">
+                    </asp:DropDownList> 
+                </td>
+                <td style="width: 500px; height: 25px;" align="right" valign="middle" >
+                    
+                </td>
+            </tr>
+              <tr>
+               <td style="width: 120px; height: 25px;" align="left" valign="middle">
+                <span>Alumno :</span>     
+                </td>
+                <td style="width:200px; height: 25px;" align="left" valign="middle">
+                    <asp:DropDownList ID="ddlAlumnoFiltro" runat="server" Width="200px" style="font-size: 8pt; font-family: Arial;">
+                    </asp:DropDownList> 
+                </td>
+                <td style="width: 500px; height: 25px;" align="right" valign="middle" >
+                    
+                </td>
+            </tr>
+              <tr>
+               <td style="width: 120px; height: 25px;" align="left" valign="middle">
+                <span>Agregar Libro :</span>     
+                </td>
+                <td style="width:200px; height: 25px;" align="left" valign="middle">
+                  <%--<input id="txtAgregarLibro" name="codigo" type="text" style ="width :200px" />--%>
+                  <asp:TextBox ID="tbAgregarLibro" runat ="server"></asp:TextBox>
+                </td>
+                <td style="width: 500px; height: 25px;" align="left" valign="middle" >
+                        <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Agregar" />
+                </td>
+            </tr>
+        </table>
+      </fieldset>
+    </div> 
+     <div class="miEspacio">
+    </div>         
+    <div id="miGridviewMant" style="margin: 0 0 0 10px; padding: 0; width:840px;">    
+        <asp:GridView ID="GV_DatosDetalle" runat="server" 
+            CssClass="miGridviewBusqueda" 
+            Width="840px"
+            GridLines="None" 
+            AutoGenerateColumns="False"
+            EmptyDataText=" - No se encontraron resultados - "                         
+            OnRowDataBound="GV_DatosDetalle_RowDataBound"
+            OnRowCommand="GV_DatosDetalle_RowCommand">
+            <HeaderStyle CssClass="miGridviewBusqueda_Header" Font-Underline="False" ForeColor="White" HorizontalAlign="Center" />
+            <EmptyDataRowStyle ForeColor="#A51515" HorizontalAlign="Center" />                                                                                
+            <Columns>
+             <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblCodigoDetallePrestamoLibro" runat="server" Text='<%# Bind("CodigoDetallePrestamoLibro") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>
+             <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblCodigoPrestamoLibro" runat="server" Text='<%# Bind("CodigoPrestamoLibro") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>
+            <%-- <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblCodigoLibro" runat="server" Text='<%# Bind("CodigoLibro") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>--%>
+             <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblCodigoAlumno" runat="server" Text='<%# Bind("CodigoAlumno") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Alumnos">
+                <ItemTemplate>
+                    <asp:Label ID="lblNombreAlumno" runat="server" Text='<%# Bind("NombreAlumno") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="200px" /> 
+               <ItemStyle  CssClass="miGridviewBusqueda_Rows" HorizontalAlign="Left" Width="200px" />
+            </asp:TemplateField> 
+              <asp:TemplateField HeaderText="Libro">
+                <ItemTemplate>
+                    <asp:Label ID="lblLibro" runat="server" Text='<%# Bind("Libro") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="200px" /> 
+               <ItemStyle  CssClass="miGridviewBusqueda_Rows" HorizontalAlign="Left" Width="200px" />
+            </asp:TemplateField> 
+             <asp:TemplateField HeaderText="Codigo Barra">
+                <ItemTemplate>
+                    <asp:Label ID="lblCodigoBarra" runat="server" Text='<%# Bind("CodigoBarra") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="200px" /> 
+               <ItemStyle  CssClass="miGridviewBusqueda_Rows" HorizontalAlign="Left" Width="200px" />
+            </asp:TemplateField>   
+            <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblTipo" runat="server" Text='<%# Bind("Tipo") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>
+            <asp:TemplateField >                                                                      
+                <ItemTemplate>
+                    <asp:Label ID="lblEstado" runat="server" Text='<%# Bind("Estado") %>' />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="0px" CssClass="miHiddenStyle"/>
+                <ItemStyle CssClass="miHiddenStyle" HorizontalAlign="Left" Width="0px" />
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:ImageButton ID="btnEliminar" runat="server" ImageUrl="~/App_Themes/Imagenes/opc_eliminar.png" 
+                        CommandName="Eliminar" CommandArgument='<%# Bind("CodigoDetallePrestamoLibro") %>' ToolTip="Eliminar Registro" />
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" Width="30px" />
+                <ItemStyle CssClass="miGridviewBusqueda_Rows" HorizontalAlign="Center" Width="30px" />
+            </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+    </div>    
+    
+</div>                 
+            </ContentTemplate> 
+        </atk:TabPanel>
+    </atk:TabContainer>    
+    
+    </ContentTemplate>
+</asp:UpdatePanel>  
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $("#imgControl").attr("src", '/SaintGeorgeOnline/App_Themes/Imagenes/menuShow.png');
+        $("#menu").hide('fast');
+        $("#menu").width(0);
+        $("#contenido").width(893);
+
+    });
+  
+</script>
+    
+</div>
+
+</asp:Content>
+

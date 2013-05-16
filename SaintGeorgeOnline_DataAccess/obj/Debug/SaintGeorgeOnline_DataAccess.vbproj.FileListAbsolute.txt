@@ -1,0 +1,32 @@
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_DataAccess.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_DataAccess.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_DataAccess.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_BusinessEntities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_Utilities.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\office.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Ionic.Zip.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\ClosedXML.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Microsoft.Vbe.Interop.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\itextsharp.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\AjaxControlToolkit.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\DocumentFormat.OpenXml.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_BusinessEntities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_BusinessEntities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_Utilities.pdb
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\bin\Debug\SaintGeorgeOnline_Utilities.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.Resources.resources
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.vbproj.GenerateResource.Cache
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.dll
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.xml
+D:\VSS_Projects S13\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.pdb
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.Resources.resources
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.vbproj.GenerateResource.Cache
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.dll
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.xml
+C:\Users\Fanny\Desktop\VSS\09_05_2013\SaintGeorgeOnline\SaintGeorgeOnline_DataAccess\obj\Debug\SaintGeorgeOnline_DataAccess.pdb

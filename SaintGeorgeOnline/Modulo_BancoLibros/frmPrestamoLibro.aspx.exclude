@@ -1,0 +1,1133 @@
+<%@ Page Title="" Language="VB" MasterPageFile="~/PaginaPrincipal.master" AutoEventWireup="false" CodeFile="frmPrestamoLibro.aspx.vb" Inherits="Modulo_BancoLibros_frmPrestamoLibro" %>
+<%@ MasterType VirtualPath="~/PaginaPrincipal.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+   <style>
+.filas
+{ 
+	height:25px;
+    width:700px;
+    margin-top:5px;
+    line-height:25px;
+}
+    .nombreEtiqueta
+    {
+    height:25px;
+    width:97px;
+    float:left;
+    padding-left:5px;
+    text-align:left;
+    line-height:25px;
+    color: #0000CC;
+    font-family:@GulimChe;
+    font-size:9pt;
+    }
+    .filasGrande
+    { 
+	    height:75px;
+        width:700px;
+    }
+    .nombreEtiquetaGrande
+    {
+    height:75px;
+    width:92px;
+    float:left;
+    padding-left:5px;
+    text-align:left;
+    line-height:75px;
+    color: #0000CC;
+    font-family:@GulimChe;
+    font-size:10pt;
+    	
+    }
+    
+     .celdaDerechaGrande
+    {
+    	
+     height:75px;
+     width:250px; 
+     float:left;
+     line-height:75px;
+    }
+    .contenedor
+    {
+     height:804px;
+     width:890px;
+     overflow:hidden;
+     margin-top:25px;
+    }
+     .celdaDerecha
+      {
+            height:25px;
+            float:left;
+            line-height:25px;
+            width: 280px;
+       }
+    .celdaFecha
+    {
+      float:left;
+      width:150px;
+      height:25px;
+      line-height:25px;
+    	
+	}
+	.celdaHora
+    {
+      float:left;
+      width:100px;
+      height:25px;
+      margin-left:10px;
+      line-height:25px
+    }
+	
+	        .milegend
+    {
+    padding: 4px 0px 0px 10px;
+    text-align:left;
+    font-size: 11px;
+    font-family: Arial;
+    font-weight: bold;
+    width: 470px;
+    height: 21px;
+    background: url(../App_Themes/Imagenes/legend_header.gif) repeat-x;
+    border-left: solid 1px #707070;
+    border-right: solid 1px #707070;
+    margin-left:85px;
+    margin-bottom:10px
+    }      
+        .agrupador
+    {
+	 margin-left:15px;
+           height: 347px;
+       } 
+	.cajasSmallLeft
+	{
+        float:left;
+        width:65px;
+        height:25px;
+        line-height:25px;
+    } 
+    .cajasSmallRight
+	{
+        float:left;
+        width:65px;
+        margin-left:15px;
+        height:25px;
+        line-height:25px;
+        color: #0000CC;
+        font-family:@GulimChe;
+        font-size:9pt;
+    } 
+    
+   
+   .filasCheck
+    {
+        height:auto;
+        width:700px;
+        line-height:25px;
+        margin-top:5px;
+        overflow :hidden;       
+    
+    }
+    .labelCheck
+    {
+        float:left;
+        width:95px;
+        height:85px;
+        color: #0000CC;
+        font-family:@GulimChe;
+        font-size:9pt;
+        padding-left:5px;
+    }
+    
+    .celdaChecks
+    {
+        width: auto;
+        height:auto;
+        float:left;
+        text-align:left;
+        padding-left:5px;
+        overflow :hidden;
+
+    }
+    
+    .botonGrabar
+    {
+         height:45px;
+         float:right;
+         width:180px;	
+         text-align:center;
+         line-height:45px;
+    }
+    #Text1
+    {
+        width: 83px;
+    }
+    #txtNombreActividad
+    {
+        width: 244px;
+    }
+    #txtLugar
+    {
+        width: 246px;
+    }
+    #cmbOrganizador
+    {
+        width: 245px;
+    }
+    #TextArea1
+    {
+        height: 62px;
+        width: 244px;
+    }
+    #Text2
+    {
+        width: 60px;
+    }
+    #Text3
+    {
+        width: 60px;
+    }
+    #Text4
+    {
+        width: 60px;
+    }
+    #txtNumeroPadres
+    {
+        width: 59px;
+    }
+    #txtNumeroAlumnos
+    {
+        width: 57px;
+    }
+    #txtNumeroAsistentes
+    {
+        width: 58px;
+    }
+    #txtNumeroDocentes
+    {
+        width: 56px;
+    }
+    #txtObjetivo
+    {
+        height: 61px;
+        width: 246px;
+    }
+    #Button1
+    {
+        height: 26px;
+        width: 68px;
+    }
+    
+    .milegend{
+        margin: 0px 20px 20px 20px;  
+        padding: 4px 0px 0px 10px;
+        text-align:left;
+        font-size: 11px;
+        font-family: Arial;
+        font-weight: bold;
+        width: 470px;
+        height: 21px;
+        background: url(../App_Themes/Imagenes/legend_header.gif) repeat-x;
+        border-left: solid 1px #707070;
+        border-right: solid 1px #707070;
+} 
+
+
+.contenedorBusqueda
+{
+ 
+   width:auto;
+   height:auto;
+   overflow :hidden;
+}      
+.filaBusqueda
+{
+	
+	 height:25px;
+	 width:800px;
+	 margin-top:5px;
+	 line-height:25px;
+	 margin-bottom:8px;
+	
+} 
+
+.grilla
+    {
+ height :auto;
+ width:800px;
+  overflow:hidden;
+    }
+.etiquetaFilaBusqueda
+{
+        width:75px;
+        height:25px;	
+        float:left;
+        line-height:25px;
+        color: #0000CC;
+        font-family:@GulimChe;
+        font-size:9pt;
+        padding-right:5px;
+         text-align :right ;
+         
+	}
+	.etiquetaFilaBusquedaCentrado
+{
+        width:100px;
+        height:25px;	
+        float:left;
+        line-height:25px;
+        color: #0000CC;
+        font-family:@GulimChe;
+        font-size:9pt;
+        padding-left:5px;
+        text-align:left;
+	}
+    .ControlFilaBusqueda
+        {
+                width:125px;
+                height:25px;	
+                float:left;
+                line-height:25px;
+        }
+        
+        .filasOpcionesAnioMes 
+        {
+         height:auto;	
+         width:800px;
+         margin-top:5px;
+        	
+         }
+          .filasOpcionesFechas
+        {
+         height:auto;	
+         width:800px;
+         margin-top:5px;
+        	
+         }
+	
+    #Text2
+    {
+        width: 77px;
+    }
+    	
+    #Text3
+    {
+        width: 33px;
+    }
+    #Text4
+    {
+        width: 33px;
+    }
+        	
+        #txtHoraInicio
+        {
+            width: 83px;
+        }
+        #txtHoraFin
+        {
+            width: 81px;
+        }
+        	
+        	
+        	
+        	.combo
+        	{
+        		 width:280px;
+        		 height:25px;
+        		 font-size:8pt;
+        		 font-style: italic;
+        		 
+        		
+        	}
+        	
+        .texto
+        {
+        	 width:125px;
+        	 height:23px;
+        	 font-size:8pt;
+        	 
+        	}
+        	.botonesDerecha
+        	{
+        	 height:25px;
+        	 width:125px;
+        	 float:right;
+        	 margin-right:20px;	
+        	 text-align:right;
+        	 line-height:25px;
+            }	
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+ <link href="../App_Themes/Estilos/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" />
+<div class="contenedor">
+<div id="tabs">
+    <ul>
+    <li><a href="#fragment-2"><span >Busqueda</span></a></li>
+        <li><a href="#fragment-1"><span>Registro</span></a></li>
+        
+    </ul>
+     <div id="fragment-1" style="height: auto; overflow :hidden ">
+     <fieldset class="agrupador">
+
+<legend class="milegend">
+
+    Datos del registro</legend>
+    
+    <div class="filas">
+<div class="nombreEtiqueta">
+
+    Periodo:</div>
+<div class="celdaDerecha">
+
+
+    
+    <select id="cmbPeriodo" name="D1"  onchange="F_cagarAulasXGrado()"  class="combo">
+        
+         <option value="0">-----------------Seleccione----------------------</option>
+        <%For Each flAnioAcademico As Data.DataRow In dtAnio.Rows%>
+        
+        <%If Date.Now.Year = flAnioAcademico("Descripcion") Then%>
+        <option selected=selected value="<%=flAnioAcademico("Codigo") %>"><%=flAnioAcademico("Descripcion")%></option>
+       <%Else%>
+        <option value="<%=flAnioAcademico("Codigo") %>"><%=flAnioAcademico("Descripcion")%></option>
+        <%End If%>
+         
+      
+      
+        <%Next%>
+    </select>
+    
+    </div>
+
+    
+</div>
+    <div class="filas">
+<div class="nombreEtiqueta">
+
+    Grado:</div>
+<div class="celdaDerecha">
+
+
+    
+    <select onchange="F_cagarAulasXGrado()" id="cmbGrado" name="D2"   class="combo">
+      <option selected="selected" value="0">-----------------Todos----------------------</option>
+        <%For Each rwGrado As Data.DataRow In dtGrado.Rows%>
+          <option value="<%=rwGrado("Codigo") %>"><%=rwGrado("Descripcion")%></option>
+        <%Next%>
+    </select></div>
+ <div class="botonesDerecha">
+  <img   title="Cancelar" onclick="F_cambiarPanelCancelar()" style="  cursor:pointer;height:21px; width:96px;" 
+            src="../App_Themes/Imagenes/btnCancelarV2_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnCancelarV2_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnCancelarV2_2.png'"/>
+ </div>
+    
+</div>
+<div class="filas">
+<div class="nombreEtiqueta">
+
+    Aula:</div>
+<div class="celdaDerecha">
+
+
+
+    <select onchange="F_AlumnosXaula()" id="cmbAula" name="D3"   class="combo">
+       <option selected="selected"  value="0">-----------------Todos----------------------</option>
+    </select></div>
+<div class="botonesDerecha">
+    <img   title="Guardar" style="  cursor:pointer;height:21px; width:96px;" 
+            onclick="F_insertarBD()"
+            src="../App_Themes/Imagenes/btnGrabar_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnGrabar_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnGrabar_2.png'"/>
+    </div>
+    
+</div>
+
+<div class="filas">
+<div class="nombreEtiqueta">
+
+    Alumno:</div>
+<div class="celdaDerecha">
+
+
+    
+    <select id="cmbAlumno" name="D4"   class="combo">
+       <option selected="selected"" value="0">-----------------Todos----------------------</option>
+    </select></div>
+    <div class="botonesDerecha">
+    <img   title="Agregar"  onclick="AddItemGrilla()" style="  cursor:pointer;height:21px; width:96px;" 
+            src="../App_Themes/Imagenes/btnAgregar_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnAgregar_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnAgregar_2.png'"/>
+    </div>
+
+    
+ 
+    
+    
+</div>
+<div class="filas">
+<div class="nombreEtiqueta">
+
+    Codigo de barra :</div>
+<div class="celdaDerecha">
+<input id="txtCodigoBarras"  type="text" class="texto" />
+
+    
+    </div>
+<div class="botonesDerecha">
+    <img   title="Limpiar" style="  cursor:pointer;height:21px; width:96px;" 
+            onclick="f_limpiarInput()"
+            src="../App_Themes/Imagenes/btnLimpiar_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnLimpiar_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnLimpiar_2.png'"/>
+    </div>
+    
+</div>
+
+<div style="height:25px; width:800px; margin-top:10px; " class="miGridviewBusquedaActualizacion_Ficha_Header">
+ <%--<div style="height:25px; width:750px; font-size:10pt; ">--%>
+ <div style="height:25px; width:75px;; font-size:10pt;  float:left; text-align:left; line-height:25px;">
+ Codigo Barra
+ </div>
+   <div style="height:25px; width:85px;; font-size:10pt;  float:left; text-align: center; line-height:25px;">
+ Estado
+ </div>
+  <div style="height:25px; width:250px;; font-size:10pt;  float:left; text-align: center; line-height:25px;">
+ Titulo
+ </div>
+  <div style="height:25px; width:125px;; font-size:10pt;  float:left; text-align:center; line-height:25px;">
+ Autor
+ </div>
+ <div style="height:25px; width:175px;; font-size:10pt;  float:left; text-align:center; line-height:25px;">
+ Nombre Alumno 
+ </div>
+  <div style="height:25px; width:75px;; font-size:10pt;  float:left; text-align:center; line-height:25px;">
+ Eliminar
+ </div>
+</div>
+
+<div style="width:800px; height:auto; overflow :hidden ; " id="listaLibros">
+
+</div>
+
+ 
+    </fieldset>
+     
+     
+     
+     </div>
+      <div id="fragment-2" style="height: auto; overflow :hidden ">
+      
+      <fieldset class="agrupador">
+      <legend class=" milegend">
+      Consultar
+      </legend>
+      <div class="filas">
+<div class="nombreEtiqueta">
+
+          Periodo:</div>
+    <div class="celdaDerecha">
+    <select id="cmbPeriodoBusqueda" name="D1"  onchange="F_cagarAulasXGradoBusqueda()"  class="combo">
+        <option selected=selected value="0">------Todos-----------</option>
+        <%For Each flAnioAcademico As Data.DataRow In dtAnio.Rows%>
+        
+        <%If Date.Now.Year = flAnioAcademico("Descripcion") Then%>
+        <option selected=selected value="<%=flAnioAcademico("Codigo") %>"><%=flAnioAcademico("Descripcion")%></option>
+       <%Else%>
+        <option value="<%=flAnioAcademico("Codigo") %>"><%=flAnioAcademico("Descripcion")%></option>
+        <%End If%>
+         
+      
+      
+        <%Next%>
+    </select>
+    </div>
+      </div>
+            <div class="filas">
+<div class="nombreEtiqueta">
+
+                Grado:</div>
+                <div class="celdaDerecha">
+                <select onchange="F_cagarAulasXGradoBusqueda()" id="cmbGradoBusqueda" name="D2"   class="combo">
+      <option selected="selected" value="0">-----------------Todos----------------------</option>
+        <%For Each rwGrado As Data.DataRow In dtGrado.Rows%>
+          <option value="<%=rwGrado("Codigo") %>"><%=rwGrado("Descripcion")%></option>
+        <%Next%>
+    </select>
+    </div>
+    <div class="botonesDerecha">
+    <img   title="Nuevo" style="  cursor:pointer;height:25px; width:96px;" 
+            onclick="F_cambiarPanel()"
+            src="../App_Themes/Imagenes/agregarNuevo_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/agregarNuevo_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/agregarNuevo_2.png'"/>
+    </div>
+      </div>
+    
+    
+      <div class="filas">
+<div class="nombreEtiqueta">
+
+                Aula:</div>
+                <div class="celdaDerecha">
+                <select onchange="F_AlumnosXaulaBusqueda()" id="cmbAulaBusqueda" name="D3"   class="combo">
+       <option selected="selected"  value="0">-----------------Todos----------------------</option>
+    </select>
+    </div>
+    <div class="botonesDerecha">
+    <img   title="Limpiar" style="  cursor:pointer;height:21px; width:96px;" 
+            onclick="f_limpiarInputBusqueda()"
+            src="../App_Themes/Imagenes/btnLimpiar_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnLimpiar_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnLimpiar_2.png'"/>
+    </div>
+      </div>
+      
+      <div class="filas">
+<div class="nombreEtiqueta">
+
+                Alumno:</div>
+                <div class="celdaDerecha">
+                <select id="cmbAlumnoBusqueda" name="D4"   class="combo">
+       <option selected="selected" value="0">-----------------Todos----------------------</option>
+    </select>
+    </div>
+    <div class="botonesDerecha">
+    <img   title="Buscar" style="  cursor:pointer;height:21px; width:96px;" 
+            onclick="F_BuscarPrestamos()"
+            src="../App_Themes/Imagenes/btnBuscarV2_1.png"   
+            onmouseout="this.src = '../App_Themes/Imagenes/btnBuscarV2_1.png'" 
+            onmouseover="this.src = '../App_Themes/Imagenes/btnBuscarV2_2.png'"/>
+    </div>
+      </div>
+      <div class="filas">
+<div class="nombreEtiqueta">
+
+                Codigo de barra:</div>
+                <div class="celdaDerecha">
+                &nbsp;<input id="txtCodigoBarrasBusqueda"  type="text" class="texto" /></div>
+      </div>
+      
+      <div class="miGridviewBusquedaActualizacion_Ficha_Header" style=" height:25px; width:800px; margin-top:10px;; font-size:10pt;  float:left; text-align:center; line-height:25px;  ">
+      <div style=" height: 25px; width:200px;; float:left;   ">
+      Nombre Persona 
+      </div>
+      <div style=" height: 25px; width:75px;; float:left ">
+      Cod.&nbsp; Barra  
+      </div>
+       <div style=" height: 25px; width:125px;; float:left ">
+      Autor 
+      </div>
+       <div style=" height: 25px; width:175px;; float:left ">
+     Titulo
+      </div>
+       <div style=" height: 25px; width:85px;; float:left ">
+    Fecha
+      </div>
+      <div style=" height: 25px; width:85px;; float:left ">
+    Estado
+      </div>
+      
+      <div style=" height: 25px; width:18px;; float:left ">
+    Editar
+      </div>
+      </div>
+      <div style="overflow-y : scroll;overflow-x:hidden     ; height:100px;  width:815px;; margin-top:10px;  ">
+      <div  id="pnlResultado" style="height:auto; overflow:hidden; width:800px;; margin-top:10px;  ">
+      
+      </div>
+      </div>
+      
+      </fieldset>
+     </div>
+     
+     </div>
+
+</div>
+<script>
+    /****************************************************************************************/
+    /****** variables globales **************************************************************/
+    var listaPrestamos = [];
+    
+
+    /****************************************************************************************/
+    
+    
+    
+
+    /****************************************************************************************/
+   /****** inicializar UI Tabs**************************************************************/
+    $(document).ready(function() {
+
+    $("#tabs").tabs({ collapsible: true });
+    $("#menu").hide('fast');
+    $("#tabs").tabs("disable", 1);
+   
+   
+   
+    });
+
+    /****************************************************************************************/
+   /****** inicializar UI Tabs**************************************************************/
+  /****************************************************************************************/
+ /* eventos cargar combos */
+/*******************cargar aulas por grado ******************************/
+    function F_cagarAulasXGrado() {
+
+        var codGrado = 0
+        var codAnio = 0
+        
+        codGrado = parseInt($("#cmbGrado option:selected").val())
+        codAnio = parseInt($("#cmbPeriodo option:selected").val())
+
+
+
+//        if (codAnio == 0) {
+//            Sexy.alert("Ingrese el anio ")
+
+//            return false;
+//        }
+        
+        $.ajax({
+            url: "frmPrestamoLibro.aspx/FListarAulasXGrado",
+            async: false,
+            cache: false,
+            type: "post",
+            data: JSON.stringify({
+                codGrado: codGrado,
+                codAnio: codAnio
+            }),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res, textStatus, jqXHR) {
+                $("#cmbAula").html(res.d.html)
+
+                F_AlumnosXaula();
+            }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+        });
+    }
+
+    /*******************cargar alumnmos  por aula segun el anio academico  ******************************/
+    function F_AlumnosXaula() {
+
+        var codAula = 0
+        var codAnio = 0
+        codAula = parseInt($("#cmbAula option:selected").val())
+        codAnio = parseInt($("#cmbPeriodo option:selected").val())
+        var codGrado= parseInt($("#cmbGrado option:selected").val())
+
+        
+        $.ajax({
+        url: "frmPrestamoLibro.aspx/F_listarAlumnosXAula",
+            async: false,
+            cache: false,
+            type: "post",
+            data: JSON.stringify({
+                codAula: codAula,
+                codAnio: codAnio,
+                codGrado: codGrado
+                
+            }),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res, textStatus, jqXHR) {
+            $("#cmbAlumno").html(res.d.html)
+
+
+            }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+        });
+    }
+    /*******************funcion efectos grilla filas    ******************************/
+
+
+
+
+    function Over(ctr) {
+
+        $(ctr).css("backgroundColor", "#DEE8F5")
+
+    }
+
+    function Out(ctr) {
+        $(ctr).css("backgroundColor", "#FFFFFF")
+
+
+    }
+    /*******************funcion agregar elementos  a la grilla   ******************************/
+
+    function AddItemGrilla() {
+       
+   
+    var codBarra="";
+        codBarra=$("#txtCodigoBarras").val();
+
+        var codAlumno = 0;
+        codAlumno = parseInt( $("#cmbAlumno option:selected").val())
+        var codAnio = 0;
+        codAnio =  parseInt( $("#cmbPeriodo option:selected").val())
+
+
+        if ( $.trim(codBarra) =="") {
+            Sexy.alert("Ingrese el codigo de barra ")
+
+            return false;
+        }
+        if (codAlumno == 0   )
+            {
+                    Sexy.alert("Seleccione el alumno")
+
+                    return false;
+                       }
+
+                if (codAnio == 0) {
+                    Sexy.alert("Seleccione UN año academico")
+                    return false;
+                }
+
+                $.blockUI({
+                    message: '<h4><img src="../App_Themes/Imagenes/barrita.gif" /> Agregando elemento...</h4>'
+                });
+        var nombreAlumno = "";
+        nombreAlumno = $("#cmbAlumno option:selected").text()
+        $.ajax({
+            url: "frmPrestamoLibro.aspx/F_operacionAgregarElemento",
+            async: false,
+            cache: false,
+            type: "post",
+            data: JSON.stringify({
+                nombreAlumno: nombreAlumno,
+                codAnio: codAnio,
+                codAlumno: codAlumno,
+                codBarra: codBarra,
+                listaActual: listaPrestamos
+            }),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(res, textStatus, jqXHR) {
+
+
+            if (res.d.codOperacion > 0) {
+                    Sexy.info(res.d.mensaje)
+                    listaPrestamos = res.d.ListaACtualizada
+                    $("#listaLibros").html(res.d.html)
+                }
+                else {
+                    Sexy.alert(res.d.mensaje)
+                 }
+
+                 /*
+                
+                 */
+              
+                $.unblockUI();
+
+
+            }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+        });
+    
+    }
+
+  
+
+/*******************funcion Insertar base de datos    ******************************/
+function F_insertarBD() {
+/*-----------------Validar si esta cargado */
+    if (listaPrestamos.length==0)
+        {
+            Sexy.alert("Ingrese registros para guardar ")
+            return false;
+        }
+if(!confirm("Seguro que desea guardar "))
+{
+    return false;
+}
+
+
+$.blockUI({
+    message: '<h4><img src="../App_Themes/Imagenes/barrita.gif" /> Insertando elemento...</h4>'
+});
+
+$.ajax({
+    url: "frmPrestamoLibro.aspx/F_insertarPrestamoLibros",
+    async: false,
+    cache: false,
+    type: "post",
+    data: JSON.stringify({
+        listaActual: listaPrestamos
+    }),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function(res, textStatus, jqXHR) {
+
+    if (res.d.codigo > 0)
+         {
+            Sexy.info(res.d.mensaje)
+            //$("#pnlResultado").html("");
+            listaPrestamos = res.d.fuenteActualizado;
+
+        }
+        else {
+            Sexy.alert(res.d.mensaje)
+        }
+
+        $.unblockUI();
+    }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+});
+
+}
+
+/*******************funcion Eliminar item prestamo detalle     ******************************/
+function fEliminar(index) {
+
+    if (!confirm("Seguro que desea Eliminar ")) {
+        return false;
+    }
+
+    $.blockUI({
+        message: '<h4><img src="../App_Themes/Imagenes/barrita.gif" /> Eliminado item ...</h4>'
+    });
+    
+    $.ajax({
+    url: "frmPrestamoLibro.aspx/F_eliminarItem",
+        async: false,
+        cache: false,
+        type: "post",
+        data: JSON.stringify({
+            indexDetalle:index,
+            listaActual: listaPrestamos
+        }),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(res, textStatus, jqXHR) {
+
+        if (res.d.codOperacion > 0) {
+            Sexy.info(res.d.mensaje)
+            listaPrestamos = res.d.ListaACtualizada
+            $("#listaLibros").html(res.d.html)
+        }
+        else {
+            Sexy.alert(res.d.mensaje)
+        }
+
+
+
+        $.unblockUI();
+
+        }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+    });
+
+}
+/*******************funcion Eliminar item prestamo detalle     ******************************/
+
+function f_limpiarInput() {
+    $("#txtCodigoBarras").val("")
+    $("#cmbPeriodo option").removeAttr("selected")
+    $("#cmbPeriodo[option=0]").attr("selected", true)
+    $("#cmbGrado option").removeAttr("selected")
+    $("#cmbGrado[option=0]").attr("selected", true)
+    F_cagarAulasXGrado();
+
+
+}
+
+
+  /*************************************************************************************************************/
+ /*******************filtro  para cambiar  los filtros de busqueda               ******************************/
+/*************************************************************************************************************/
+/*******************cargar aulas por grado busqueda  ******************************/
+
+
+/*******************limpiar filtro de busqueuda                ******************************/
+function f_limpiarInputBusqueda() {
+    $("#txtCodigoBarrasBusqueda").val("")
+    $("#cmbPeriodoBusqueda option").removeAttr("selected")
+    $("#cmbPeriodoBusqueda[option=0]").attr("selected", true)
+    $("#cmbGradoBusqueda option").removeAttr("selected")
+    $("#cmbGradoBusqueda[option=0]").attr("selected", true)
+    F_cagarAulasXGradoBusqueda();
+
+
+}
+
+
+function F_cagarAulasXGradoBusqueda() {
+
+    var codGrado = 0
+    var codAnio = 0
+
+    codGrado = parseInt($("#cmbGradoBusqueda option:selected").val())
+    codAnio = parseInt($("#cmbPeriodoBusqueda option:selected").val())
+    $.ajax({
+        url: "frmPrestamoLibro.aspx/FListarAulasXGrado",
+        async: false,
+        cache: false,
+        type: "post",
+        data: JSON.stringify({
+            codGrado: codGrado,
+            codAnio: codAnio
+        }),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(res, textStatus, jqXHR) {
+        $("#cmbAulaBusqueda").html(res.d.html)
+        F_AlumnosXaulaBusqueda();
+       
+        }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+    });
+}
+
+function F_AlumnosXaulaBusqueda() {
+
+    var codAula = 0
+    var codAnio = 0
+    codAula = parseInt($("#cmbAulaBusqueda option:selected").val())
+    codAnio = parseInt($("#cmbPeriodoBusqueda option:selected").val())
+var codGrado= parseInt($("#cmbGradoBusqueda option:selected").val())
+
+    $.ajax({
+        url: "frmPrestamoLibro.aspx/F_listarAlumnosXAula",
+        async: false,
+        cache: false,
+        type: "post",
+        data: JSON.stringify({
+            codAula: codAula,
+            codAnio: codAnio,
+            codGrado:codGrado
+        }),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(res, textStatus, jqXHR) {
+        $("#cmbAlumnoBusqueda").html(res.d.html)
+
+
+        }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+    });
+}
+/*******************funcion para buscar      ******************************/
+function F_BuscarPrestamos()  {
+    $.blockUI({
+        message: '<h4><img src="../App_Themes/Imagenes/barrita.gif" /> Buscando  ...</h4>'
+    });
+    
+var pCodAnio =0;
+pCodAnio = parseInt( $("#cmbPeriodoBusqueda option:selected").val())
+var pCodGrado =0;
+pCodGrado = parseInt( $("#cmbGradoBusqueda option:selected").val())
+var pCodAula =0;
+pCodAula = parseInt( $("#cmbAulaBusqueda option:selected").val())
+var pCodAlumno =0;
+pCodAlumno = parseInt( $("#cmbAlumnoBusqueda option:selected").val())
+var pCodBarra ="";
+pCodBarra=$.trim($("#txtCodigoBarrasBusqueda").val())
+ 
+    $.ajax({
+        url: "frmPrestamoLibro.aspx/F_ListarPrstamos",
+        async: false,
+        cache: false,
+        type: "post",
+        data: JSON.stringify({
+            codAnio: pCodAnio,
+            codGrado: pCodGrado,
+            codAula: pCodAula,
+            codAlumno: pCodAlumno,
+            codBarra: pCodBarra
+        }),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(res, textStatus, jqXHR) {
+            $("#pnlResultado").html(res.d.html)
+            $.unblockUI();
+
+        }
+
+
+      , error: function(xhr, ajaxOptions, thrownError) {
+          alert(xhr.status); alert(thrownError);
+      }
+    });
+
+}
+
+/*******************funcion para edicion de registros******************************/
+
+function EditarFilas(codReg )
+{
+alert(codReg)
+}
+
+
+/*******************funcion   cambiar de panel  agregar nuevo******************************/
+function F_cambiarPanel() {
+    $("#tabs").tabs("enable", 1)
+    $("#tabs").tabs("select", 1);
+    $("#tabs").tabs("disable", 0);
+    $("#txtCodigoBarras").val("")
+}
+/*******************funcion   cambiar de panel   cancelar regresar consultar******************************/
+function F_cambiarPanelCancelar() {
+    $("#tabs").tabs("enable", 0)
+    $("#tabs").tabs("select", 0);
+    $("#tabs").tabs("disable", 1);
+    $("#txtCodigoBarrasBusqueda").val("")
+}
+</script>
+
+
+  <script type="text/javascript">
+//      var auComplet = ["asas","sdfsdf"];
+//      
+//      $(document).ready(function() {
+//          $("#txtCodigoBarras").autocomplete({
+//          source: ["asas","sdfsdf"]//,
+//          
+//          // change: function(event, ui) {alert(12) }
+//           
+//          })
+
+       
+ 
+      
+      
+    </script>
+</asp:Content>
+

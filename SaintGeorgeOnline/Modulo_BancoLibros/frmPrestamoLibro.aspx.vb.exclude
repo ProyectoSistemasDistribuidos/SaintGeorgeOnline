@@ -1,0 +1,455 @@
+﻿Imports System.Data
+Imports SaintGeorgeOnline_BusinessLogic
+Imports SaintGeorgeOnline_BusinessLogic.ModuloNotas
+Imports SaintGeorgeOnline_BusinessLogic.ModuloColegio
+Imports SaintGeorgeOnline_Utilities
+Imports System.Web.Script.Services
+Imports System.Web.Services
+
+Partial Class Modulo_BancoLibros_frmPrestamoLibro
+    Inherits System.Web.UI.Page
+    Public dtAnio As DataTable
+    Public dtGrado As DataTable
+#Region "cargar combos "
+    Private Sub cargarComboAniosAcademico()
+        Try
+            dtAnio = New DataTable
+            Dim obj_BL_Grados As New bl_AniosAcademicos
+            Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+            Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+            Dim ds_Lista As DataSet = obj_BL_Grados.FUN_LIS_AniosAcademicos("", 1, int_CodigoUsuario, int_CodigoTipoUsuario, 1, 1)
+            dtAnio = ds_Lista.Tables(0)
+        Catch ex As Exception
+
+        End Try
+
+
+
+    End Sub
+
+
+    Private Sub cargarComboGrado()
+
+        Try
+            Dim obj_BL_Grados As New bl_Grados
+            Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+            Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoUsuarioLogueado
+            Dim ds_Lista As DataSet = obj_BL_Grados.FUN_LIS_Grados("", 1, int_CodigoUsuario, int_CodigoTipoUsuario, 1, 1)
+            dtGrado = New DataTable
+            dtGrado = ds_Lista.Tables(0)
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+#End Region
+
+
+
+
+#Region "cargar combos dependientes"
+
+
+#Region "web services "
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function FListarAulasXGrado(ByVal codGrado As Integer, ByVal codAnio As Integer) As Object
+        Dim dtAulas As DataTable
+        Dim xel As XElement
+        Try
+            dtAulas = New DataTable
+
+            Dim dc As New Dictionary(Of String, Object)
+
+            Dim nParam As String = "USP_LisAulasGrado"
+
+            dc("pCodGrado") = codGrado
+            dc("pCodAnioAcademico") = codAnio
+
+            dtAulas = New bl_rep_libretaNotas().FListarReporteComparacionBimestre(dc, nParam).Tables(0)
+
+
+            xel = New XElement("select", New XAttribute("id", "cmbAula"), _
+                                New XAttribute("class", "combo"), _
+                               (From x In dtAulas.AsEnumerable() Select New XElement("option", _
+                                                                                                New XAttribute("value", x("AU_CodigoAula")), x("AU_Descripcion"))))
+            If dtAulas.Rows.Count > 0 Then
+                Return New With {.html = xel.ToString()}
+            Else
+                Return New With {.html = f_crearComboDefault("cmbAula", "-----------------Todos----------------------", "0", "combo")}
+            End If
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_listarAlumnosXAula(ByVal codAula As Integer, ByVal codAnio As Integer, ByVal codGrado As Integer) As Object
+        Dim dtAlumnos As DataTable
+        Dim xel As XElement
+        Try
+            dtAlumnos = New DataTable
+            Dim nParam As String = "USP_LisAlumnosAula"
+            Dim dc As New Dictionary(Of String, Object)
+            dc("codAula") = codAula
+            dc("codAnio") = codAnio
+            dc("codGrado") = codGrado
+
+            dtAlumnos = New bl_rep_libretaNotas().FListarReporteComparacionBimestre(dc, nParam).Tables(0)
+
+
+            xel = New XElement("select", New XAttribute("id", "cmbAula"), _
+                           New XAttribute("class", "combo"), New XElement("option", New XAttribute("value", "0"), "-----------------Todos----------------------"), _
+                          (From x In dtAlumnos.AsEnumerable() Select New XElement("option", _
+                                                                                           New XAttribute("value", x("codAlumno")), x("nombreCompleto"))))
+
+            If dtAlumnos.Rows.Count > 0 Then
+
+                Return New With {.html = xel.ToString()}
+            Else
+                Return New With {.html = f_crearComboDefault("cmbAula", "-----------------Todos----------------------", "0", "combo").ToString()}
+
+            End If
+
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_VerificarDisponibilidadLibro(ByVal codBarra As String, ByVal listaCliente As Dictionary(Of String, String)) As Object
+
+        Try
+
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_operacionAgregarElemento(ByVal nombreAlumno As String, ByVal codAnio As Integer, ByVal codAlumno As Integer, ByVal codBarra As String, ByVal listaActual As List(Of Dictionary(Of String, Object))) As Object
+        Dim dtCodigoBarras As DataTable
+        Dim dtPrestado As New DataTable
+        Try
+
+            'Dim funcion As Func(Of DataRow, Integer, Dictionary(Of String, Object))
+            'funcion = AddressOf obtenerObjetosXfilas
+
+            
+            dtCodigoBarras = New DataTable
+            Dim nParam As String = "USP_LisLibroBanco"
+            Dim dc As New Dictionary(Of String, Object)
+            dc("codBarra") = codBarra.Trim()
+            Dim existe As Boolean = False
+
+            existe = listaActual.Exists(Function(dicLibros) dicLibros("codigoBarra") = codBarra)
+            dtCodigoBarras = New bl_rep_libretaNotas().FListarReporteComparacionBimestre(dc, nParam).Tables(0)
+            dtPrestado = New bl_rep_libretaNotas().FListarReporteComparacionBimestre(dc, nParam).Tables(1)
+            If dtPrestado.Rows.Count > 0 Then
+                Return New With {.mensaje = "El libro por devolver fecha prestado: " & dtPrestado.Rows(0)("fechaSacoLibro").ToString() & " nombre persona que se presto  :" & dtPrestado.Rows(0)("nombrePersona").ToString(), .codOperacion = 0}
+            End If
+            If dtCodigoBarras.Rows.Count = 0 Then
+                Return New With {.mensaje = "EL codigo de barras ingresado no existe ", .codOperacion = 0}
+            End If
+            Dim dcElementoNuevo As New Dictionary(Of String, Object)
+            dcElementoNuevo = dtCodigoBarras.AsEnumerable().Select(AddressOf obtenerObjetosXfilas).First()
+            dcElementoNuevo("codALumno") = codAlumno
+            dcElementoNuevo("codAnio") = codAnio
+            dcElementoNuevo("nombreAlumno") = nombreAlumno
+            dcElementoNuevo("Estado") = True
+
+            If Not existe Then
+                listaActual.Add(dcElementoNuevo)
+            Else
+                Return New With {.mensaje = "El item que ingreso ya  esta asignado", .codOperacion = 0}
+            End If
+            Dim xmlUiLista As New XElement("table", _
+                                              New XAttribute("id", "grillaLibros"), _
+                                              New XAttribute("cellpadding", "0"), _
+                                              New XAttribute("cellspacing", "0"), _
+                                              New XAttribute("border", "0"), (listaActual.AsEnumerable().Select(Function(fil, index) _
+                                                       New XElement("tr", New XAttribute("onmouseover", "Over(this)") _
+                                            , New XAttribute("onmouseout", "Out(this)"), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:left; line-height:25px;") _
+                                                                                                       , fil("codigoBarra"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:85px; float:left; text-align: center; line-height:25px;") _
+                                                                                                        , "Estado")), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:250px; float:left; text-align: center; line-height:25px;") _
+                                                                                                       , fil("tituloLibro"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:125px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("autor"))), _
+                                                                                                        New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:175px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("nombreAlumno"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , _
+                                                                                                        New XElement("img", _
+                                                                                                                      New XAttribute("title", "Eliminar"), _
+                                                                                                            New XAttribute("onclick", "fEliminar(" & index.ToString() & ")"), _
+                                                                                                            New XAttribute("src", "../App_Themes/Imagenes/opc_eliminar.png"), _
+                                                                                                            New XAttribute("style", " cursor:pointer;height:18px; width:18px;") _
+                                                                                                                     )))))))
+            Return New With {.mensaje = "Se agrego corretamente ", .codOperacion = 1, .ListaACtualizada = listaActual, .html = xmlUiLista.ToString}
+        Catch ex As Exception
+            Return New With {.mensaje = "Error de sistema " & ex.Message.ToString(), .codOperacion = -1, .ListaACtualizada = Nothing, .html = ""}
+        End Try
+    End Function
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_eliminarItem(ByVal indexDetalle As Integer, ByVal listaActual As List(Of Dictionary(Of String, Object))) As Object
+        Try
+
+            listaActual.RemoveAt(indexDetalle)
+            Dim xmlUiLista As New XElement("table", _
+                                              New XAttribute("id", "grillaLibros"), _
+                                              New XAttribute("cellpadding", "0"), _
+                                              New XAttribute("cellspacing", "0"), _
+                                              New XAttribute("border", "0"), (listaActual.AsEnumerable().Select(Function(fil, index) _
+                                                       New XElement("tr", New XAttribute("onmouseover", "Over(this)") _
+                                            , New XAttribute("onmouseout", "Out(this)"), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:left; line-height:25px;") _
+                                                                                                       , fil("codigoBarra"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:85px; float:left; text-align: center; line-height:25px;") _
+                                                                                                        , "Estado")), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:250px; float:left; text-align: center; line-height:25px;") _
+                                                                                                       , fil("tituloLibro"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:125px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("autor"))), _
+                                                                                                        New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:200px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("nombreAlumno"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , _
+                                                                                                        New XElement("img", _
+                                                                                                                      New XAttribute("title", "Eliminar"), _
+                                                                                                            New XAttribute("onclick", "fEliminar(" & index.ToString() & ")"), _
+                                                                                                            New XAttribute("src", "../App_Themes/Imagenes/opc_eliminar.png"), _
+                                                                                                            New XAttribute("style", " cursor:pointer;height:18px; width:18px;") _
+                                                                                                                     )))))))
+
+            Return New With {.ListaACtualizada = listaActual, .html = xmlUiLista.ToString, .mensaje = "El Elimino Corretamente ", .codOperacion = 1}
+
+
+        Catch ex As Exception
+            Return New With {.mensaje = "Error de sistema " & ex.Message.ToString(), .codOperacion = -1, .ListaACtualizada = Nothing, .html = ""}
+        End Try
+    End Function
+
+
+   
+
+
+
+
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_insertarPrestamoLibros(ByVal listaActual As List(Of Dictionary(Of Object, Object))) As Object
+        Dim dcRresultado As New Dictionary(Of Object, Object)
+        dcRresultado = New BL_GSV_RegistroPrestamoLibros().F_insertarPrestamosLIbros(listaActual)
+
+        'dcResultado("mensaje") = mensaje1
+        'dcResultado("codigo") = cod1
+
+
+        Try
+            If dcRresultado("codigo") > 0 Then
+
+                For Each dcLibros In listaActual
+                    dcLibros("Estado") = False
+                Next
+
+            End If
+            Return New With {.fuenteActualizado = listaActual, .mensaje = dcRresultado("mensaje"), .codigo = cint(dcRresultado("codigo"))}
+        Catch ex As Exception
+
+            Return New With {.fuenteActualizado = listaActual, .mensaje = "Error de sistema " & ex.Message.ToString(), .codigo = -1, .ListaACtualizada = Nothing, .html = ""}
+
+        End Try
+    End Function
+
+    <WebMethod(EnableSession:=True)> _
+<ScriptMethod(ResponseFormat:=ResponseFormat.Json)> _
+Public Shared Function F_ListarPrstamos(ByVal codAnio As Integer, ByVal codGrado As Integer, ByVal codAula As Integer, _
+                                        ByVal codAlumno As Integer, ByVal codBarra As String) As Object
+        
+        Dim dtBusqueda As DataTable
+        Try
+            dtBusqueda = New DataTable
+            Dim nParam As String = "USP_LisPrestamos"
+            Dim dc As New Dictionary(Of String, Object)
+            dc("codAnio") = codAnio
+            dc("codGrado") = codGrado
+            dc("codAula") = codAula
+            dc("codALumno") = codAlumno
+            dc("codigoBarra") = codBarra.Trim()
+            dtBusqueda = New bl_rep_libretaNotas().FListarReporteComparacionBimestre(dc, nParam).Tables(0)
+
+
+            Dim xmlTabla As New XElement("table", New XAttribute("id", "grillaBusquedaLibros"), _
+                                              New XAttribute("cellpadding", "0"), _
+                                              New XAttribute("cellspacing", "0"), _
+                                              New XAttribute("border", "0"), (From dt In dtBusqueda.AsEnumerable() _
+                                         Select New XElement("tr", New XAttribute("onmouseover", "Over(this)"), New XAttribute("onmouseout", "Out(this)"), New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:200px;float:left; text-align:left; line-height:25px;") _
+                                                           , dt("nombrePersona"))), _
+                                                           New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px;float:left; text-align:left; line-height:25px;") _
+                                                           , dt("codigoBarra"))) _
+                                                           , New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:125px;float:left; text-align:left; line-height:25px;") _
+                                                           , dt("autor"))) _
+                                                            , New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:175px;float:left; text-align:left; line-height:25px;") _
+                                                           , dt("titulo"))) _
+                                                            , New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:85px;float:left; text-align:left; line-height:25px;") _
+                                                           , dt("fechaPrestamo"))), _
+                                                             New XElement("td", _
+                                               New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:85px;float:left; text-align:left; line-height:25px;") _
+                                                                                   , dt("estado"))), _
+                                                                                    New XElement("td", New XElement("div", _
+                                                New XAttribute("style", " height:25px;width:45px;font-size:8pt;text-align:center"), New XElement("img", _
+                                                                            New XAttribute("style", "cursor:pointer;height:18px ;width:18px;"), _
+                                                                              New XAttribute("title", "Editar"), _
+                                                                                New XAttribute("onclick", "EditarFilas(" & dt("codReg").ToString() & " )"), _
+                                                                                  New XAttribute("src", "../App_Themes/Imagenes/opc_actualizar.png")))))))
+
+            Return New With {.html = xmlTabla.ToString()}
+
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+
+
+#End Region
+
+#End Region
+
+
+#Region "Fuciones "
+
+#Region "Funciones  para crear diccionarios"
+
+    Shared Function obtenerObjetosXfilas(ByVal filas As DataRow, ByVal index As Integer) As Dictionary(Of String, Object)
+        Try
+            Dim dc As New Dictionary(Of String, Object)
+            dc("codCopiaLibro") = filas("codCopiaLibro")
+            dc("codBlLibro") = filas("codBlLibro")
+            dc("codigoBarra") = filas("codigoBarra")
+            dc("tituloLibro") = filas("tituloLibro")
+            dc("autor") = filas("autor")
+
+            Return dc
+
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Shared Function f_crearComboDefault(ByVal idHtml As String, ByVal nombreDefecto As String, ByVal value As String, ByVal clas As String) As XElement
+        Try
+            Dim xel = New XElement("select", New XAttribute("id", idHtml), _
+                                  New XAttribute("class", clas), New XElement("option", New XAttribute("value", value), nombreDefecto))
+            Return xel
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+
+#End Region
+
+#Region "crear XML desed diccionario "
+
+
+    Shared Function creaXml(ByVal listaActual As List(Of Dictionary(Of Object, Object))) As XElement
+        Try
+
+
+            ''
+            Dim xmlUiLista As New XElement("table", _
+                                              New XAttribute("id", "grillaLibros"), _
+                                              New XAttribute("cellpadding", "0"), _
+                                              New XAttribute("cellspacing", "0"), _
+                                              New XAttribute("border", "0"), (listaActual.AsEnumerable().Select(Function(fil, index) _
+                                                       New XElement("tr", New XAttribute("onmouseover", "Over(this)") _
+                                            , New XAttribute("onmouseout", "Out(this)"), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:left; line-height:25px;") _
+                                                                                                       , fil("codigoBarra"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:85px; float:left; text-align: center; line-height:25px;") _
+                                                                                                        , "Estado")), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:250px; float:left; text-align: center; line-height:25px;") _
+                                                                                                       , fil("tituloLibro"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:125px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("autor"))), _
+                                                                                                        New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:175px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , fil("nombreAlumno"))), _
+                                                                            New XElement("td", _
+                                                                                           New XElement("div", New XAttribute("style", "; font-size:8pt;height:25px; width:75px; float:left; text-align:center; line-height:25px;") _
+                                                                                                       , _
+                                                                                                        New XElement("img", _
+                                                                                                                      New XAttribute("title", "Eliminar"), _
+                                                                                                            New XAttribute("onclick", "fEliminar(" & index.ToString() & ")"), _
+                                                                                                            New XAttribute("src", "../App_Themes/Imagenes/opc_eliminar.png"), _
+                                                                                                            New XAttribute("style", " cursor:pointer;height:18px; width:18px;") _
+                                                                                                                     )))))))
+            ''
+
+            Return xmlUiLista
+        Catch ex As Exception
+
+        End Try
+    End Function
+#End Region
+
+#End Region
+
+#Region "eventos pagina "
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not Page.IsPostBack Then
+            cargarComboAniosAcademico()
+            cargarComboGrado()
+        End If
+    End Sub
+#End Region
+
+
+
+End Class

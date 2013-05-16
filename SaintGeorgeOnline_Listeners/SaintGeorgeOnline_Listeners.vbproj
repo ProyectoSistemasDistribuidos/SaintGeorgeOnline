@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3D81B4C-F569-495D-866D-283C3E57717D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SaintGeorgeOnline_Listeners.My.MyApplication</StartupObject>
+    <RootNamespace>SaintGeorgeOnline_Listeners</RootNamespace>
+    <AssemblyName>SaintGeorgeOnline_Listeners</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Resources\cat-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SaintGeorgeOnline_Listeners.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SaintGeorgeOnline_Listeners.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DDL\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\Debug\Reportes\DataSet\DsImpBoleta.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImpBoleta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\DataSet\DsImpFactura.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImpFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\DataSet\DsImpNotaCredito.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImpNotaCredito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\DataSet\DsImpNotaDebito.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImpNotaDebito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\ReportesCrystal\RptImpFactura.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptImpFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionBoletaConDetalle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptImpresionBoletaConDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionFacturaConDetalle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptImpresionFacturaConDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionNotaCreditoConDetalle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptImpresionNotaCreditoConDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionNotaDebitoConDetalle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptImpresionNotaDebitoConDetalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Constantes.vb" />
+    <Compile Include="frmCargarDeudas.Designer.vb">
+      <DependentUpon>frmCargarDeudas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarDeudas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargarPagos.Designer.vb">
+      <DependentUpon>frmCargarPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCargarPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExportacionCartas.Designer.vb">
+      <DependentUpon>frmExportacionCartas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmExportacionCartas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpresionTalonarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpresionTalonarios.Designer.vb">
+      <DependentUpon>frmImpresionTalonarios.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteLibretaPrimaria.Designer.vb">
+      <DependentUpon>frmReporteLibretaPrimaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteLibretaPrimaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaPrevia.Designer.vb">
+      <DependentUpon>frmVistaPrevia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVistaPrevia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\Reportes\ReportesCrystal\RptImpFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptImpFactura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionBoletaConDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptImpresionBoletaConDetalle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionFacturaConDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptImpresionFacturaConDetalle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionNotaCreditoConDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptImpresionNotaCreditoConDetalle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reportes\ReportesCrystal\RptImpresionNotaDebitoConDetalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptImpresionNotaDebitoConDetalle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarDeudas.resx">
+      <DependentUpon>frmCargarDeudas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarPagos.resx">
+      <DependentUpon>frmCargarPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExportacionCartas.resx">
+      <DependentUpon>frmExportacionCartas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpresionTalonarios.resx">
+      <DependentUpon>frmImpresionTalonarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteLibretaPrimaria.resx">
+      <DependentUpon>frmReporteLibretaPrimaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaPrevia.resx">
+      <DependentUpon>frmVistaPrevia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SaintGeorgeOnline_BusinessEntities\SaintGeorgeOnline_BusinessEntities.vbproj">
+      <Project>{BB0A9EC9-DEC9-4AED-95A4-C6ACA31DBD28}</Project>
+      <Name>SaintGeorgeOnline_BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaintGeorgeOnline_BusinessLogic\SaintGeorgeOnline_BusinessLogic.vbproj">
+      <Project>{C59860B1-8BBF-4AD4-BF77-DB82209A40E1}</Project>
+      <Name>SaintGeorgeOnline_BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaintGeorgeOnline_DataAccess\SaintGeorgeOnline_DataAccess.vbproj">
+      <Project>{63DE71E8-3036-4EF9-B37B-AAB7166060E7}</Project>
+      <Name>SaintGeorgeOnline_DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaintGeorgeOnline_Utilities\SaintGeorgeOnline_Utilities.vbproj">
+      <Project>{C2183CA4-F67A-407D-B1DC-417C9105C5FC}</Project>
+      <Name>SaintGeorgeOnline_Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opc_ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opc_printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpBoleta.xsc">
+      <DependentUpon>DsImpBoleta.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpBoleta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImpBoleta.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpBoleta.xss">
+      <DependentUpon>DsImpBoleta.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpFactura.xsc">
+      <DependentUpon>DsImpFactura.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpFactura.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImpFactura.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpFactura.xss">
+      <DependentUpon>DsImpFactura.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaCredito.xsc">
+      <DependentUpon>DsImpNotaCredito.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaCredito.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImpNotaCredito.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaCredito.xss">
+      <DependentUpon>DsImpNotaCredito.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaDebito.xsc">
+      <DependentUpon>DsImpNotaDebito.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaDebito.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImpNotaDebito.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Reportes\DataSet\DsImpNotaDebito.xss">
+      <DependentUpon>DsImpNotaDebito.xsd</DependentUpon>
+    </None>
+    <None Include="DDL\Microsoft.Office.Interop.Excel.dll.refresh" />
+    <None Include="Resources\cross_icon_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDL\itextsharp.dll" />
+    <Content Include="DDL\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="DDL\Microsoft.Office.Interop.Word.dll" />
+    <None Include="bin\Debug\Plantillas\Exportaciones\Formato1_Esquela.dot" />
+    <None Include="bin\Debug\Plantillas\Exportaciones\Formato2_Esquela.dot" />
+    <None Include="bin\Debug\Plantillas\Exportaciones\Formato3_Citacion.dot" />
+    <None Include="bin\Debug\Plantillas\Exportaciones\Formato4_Suspension.dot" />
+    <None Include="bin\Debug\Plantillas\ExportacionLibreta\ConsolidadoSecundaria.xls" />
+    <None Include="bin\Debug\Plantillas\ExportacionLibreta\libretaInicial.xlsx" />
+    <None Include="bin\Debug\Plantillas\ExportacionLibreta\libretaPrimaria.xlsx" />
+    <None Include="bin\Debug\Plantillas\ExportacionLibreta\LibretaSecundaria.xls" />
+    <None Include="Resources\ajax-loading.gif" />
+    <Content Include="Resources\cat-icon.ico" />
+    <Content Include="Resources\cat-icon.png" />
+    <None Include="Resources\invoice-icon.png" />
+    <Content Include="Resources\lock-icon.png" />
+    <Content Include="Resources\login_bg.png" />
+    <Content Include="Resources\login_bg_2.png" />
+    <Content Include="Resources\Medical-invoice-information-icon.png" />
+    <Content Include="Resources\print-icon.png" />
+    <Content Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Temporales\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
