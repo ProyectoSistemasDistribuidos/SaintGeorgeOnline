@@ -20,6 +20,8 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
     Private cod_Modulo As Integer = 4
     Private cod_Opcion As Integer = 74
 
+    Dim miSer As New wsMatricula.BancoLibrosWebService
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             Me.Master.MostrarTitulo("Proceso de Matrícula")
@@ -427,7 +429,7 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
     ''' Fecha de modificación: _____________ 
     ''' </remarks>
     Private Sub Cargar_Etapa1()
-        mv_PasosMatricula.ActiveViewIndex = 0
+         mv_PasosMatricula.ActiveViewIndex = 0
 
         Dim str_CodigoAlumno As String = hiddenCodigoAlumno.Value
         Dim int_CodigoAnioAcademicoMatricula As Integer = hiddenCodigoAnioAcademico.Value
@@ -435,75 +437,66 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
         Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoFamiliarLogueado
         Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
 
-        Dim obj_BL_Matricula As New bl_Matricula
-        Dim ds_Lista As DataSet = obj_BL_Matricula.FUN_VAL_RequisitosMatricula(str_CodigoAlumno, int_CodigoAnioAcademicoMatricula, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+        Dim int_codigoanioanterior As Integer = CInt(Me.Master.Obtener_DescripcionPeriodoEscolar) - 1
+
+
+        'Dim obj_BL_Matricula As New bl_Matricula
+        'Dim ds_Lista As DataSet = obj_BL_Matricula.FUN_VAL_Matricula(str_CodigoAlumno, int_CodigoAnioAcademicoMatricula, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
 
         'View1_Div1.Visible = False
 
-        'Situacion Final
-        Dim usp_MensajeDNI As String = ""
-        Dim usp_ValorDNI As Integer = 0
+        'DNI
+        Dim usp_MensajeDNI As String = miSer.validaDOI(str_CodigoAlumno).strMensaje
+        Dim usp_ValorDNI As Integer = miSer.validaDOI(str_CodigoAlumno).strCodigo
 
         'Situacion Final
-        Dim usp_MensajeSF As String = ""
-        Dim usp_ValorSF As Integer = 0
+        Dim usp_MensajeSF As String = miSer.validacionSituacionFinal(str_CodigoAlumno, int_codigoanioanterior).strMensaje
+        Dim usp_ValorSF As Integer = miSer.validacionSituacionFinal(str_CodigoAlumno, int_codigoanioanterior).strCodigo
+
         'Libros Biblioteca
-        Dim usp_MensajeLB As String = ""
-        Dim usp_ValorLB As Integer = 0
+        Dim usp_MensajeLB As String = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strMensaje
+        Dim usp_ValorLB As Integer = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strCodigo
 
         'Libros banco de Libros
-        Dim usp_MensajeBL As String = ""
-        Dim usp_ValorBL As Integer = 0
+        'wsMatricula.bancoLibrosResponse()
+        Dim ob As wsMatricula.bancoLibrosResponse = miSer.validacionDocumentosBancoLibro(str_CodigoAlumno, int_codigoanioanterior)
+
+        Dim usp_MensajeBL As String = ob.strMensaje 'miSer.validacionDocumentosBancoLibro(str_CodigoAlumno, int_codigoanioanterior).strMensaje
+        Dim usp_ValorBL As Integer = ob.strCodigo 'miSer.validacionDocumentosBancoLibro(str_CodigoAlumno, int_codigoanioanterior).strCodigo
 
         Dim usp_MensajeFinal As String = ""
         Dim usp_ValorFinal As Integer = 0
 
-
-        If ds_Lista.Tables(0).Rows.Count > 0 Then
-            usp_MensajeDNI = ds_Lista.Tables(0).Rows(0).Item("p_Mensaje")
-            usp_ValorDNI = ds_Lista.Tables(0).Rows(0).Item("p_Valor")
-
-            If usp_ValorDNI = 1 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje0.Text = usp_MensajeDNI
-                img_Icono0.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
-                'btn_SiguienteEtapa1.Visible = True
-            ElseIf usp_ValorDNI = 0 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje0.Text = usp_MensajeDNI
-                'btn_SiguienteEtapa1.Visible = False
-                img_Icono0.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
-            Else ' Error
-                View1_Div1.Visible = False
-                'btn_SiguienteEtapa1.Visible = False
-            End If
-
+        If usp_ValorDNI = 1 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje0.Text = usp_MensajeDNI
+            img_Icono0.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
+            'btn_SiguienteEtapa1.Visible = True
+        ElseIf usp_ValorDNI = 0 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje0.Text = usp_MensajeDNI
+            'btn_SiguienteEtapa1.Visible = False
+            img_Icono0.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
+        Else ' Error
+            View1_Div1.Visible = False
+            'btn_SiguienteEtapa1.Visible = False
         End If
 
-        If ds_Lista.Tables(1).Rows.Count > 0 Then
-            usp_MensajeSF = ds_Lista.Tables(1).Rows(0).Item("p_Mensaje")
-            usp_ValorSF = ds_Lista.Tables(1).Rows(0).Item("p_Valor")
 
-            If usp_ValorSF = 1 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje1.Text = usp_MensajeSF
-                img_Icono1.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
-                'btn_SiguienteEtapa1.Visible = True
-            ElseIf usp_ValorSF = 0 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje1.Text = usp_MensajeSF
-                'btn_SiguienteEtapa1.Visible = False
-                img_Icono1.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
-            Else ' Error
-                View1_Div1.Visible = False
-                'btn_SiguienteEtapa1.Visible = False
-            End If
-
+        If usp_ValorSF = 1 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje1.Text = usp_MensajeSF
+            img_Icono1.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
+            'btn_SiguienteEtapa1.Visible = True
+        ElseIf usp_ValorSF = 0 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje1.Text = usp_MensajeSF
+            'btn_SiguienteEtapa1.Visible = False
+            img_Icono1.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
+        Else ' Error
+            View1_Div1.Visible = False
+            'btn_SiguienteEtapa1.Visible = False
         End If
-
-        If ds_Lista.Tables(2).Rows.Count > 0 Then
-            usp_MensajeLB = ds_Lista.Tables(2).Rows(0).Item("p_Mensaje")
-            usp_ValorLB = ds_Lista.Tables(2).Rows(0).Item("p_Valor")
 
             If usp_ValorLB = 1 Then
                 View1_Div1.Visible = True
@@ -519,42 +512,43 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
                 View1_Div1.Visible = False
                 'btn_SiguienteEtapa1.Visible = False
             End If
-        End If
+        
 
-        If ds_Lista.Tables(3).Rows.Count > 0 Then
-            usp_MensajeBL = ds_Lista.Tables(3).Rows(0).Item("p_Mensaje")
-            usp_ValorBL = ds_Lista.Tables(3).Rows(0).Item("p_Valor")
+        If usp_ValorBL = 1 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje3.Text = usp_MensajeBL
+            img_Icono3.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
+            'btn_SiguienteEtapa1.Visible = True
+        ElseIf usp_ValorBL = 0 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje3.Text = usp_MensajeBL
+            'btn_SiguienteEtapa1.Visible = False
+            img_Icono3.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
 
-            If usp_ValorBL = 1 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje3.Text = usp_MensajeBL
-                img_Icono3.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
-                'btn_SiguienteEtapa1.Visible = True
-            ElseIf usp_ValorBL = 0 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje3.Text = usp_MensajeBL
-                'btn_SiguienteEtapa1.Visible = False
-                img_Icono3.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
+            'If ds_Lista.Tables(4).Rows.Count > 0 Then 'tiene libros prestados
+            '    
+            Dim dt As DataTable = ObtenerLibrosPrestadoBL(int_codigoanioanterior, str_CodigoAlumno)
 
-                If ds_Lista.Tables(4).Rows.Count > 0 Then 'tiene libros prestados
-                    pnl_DetLibros.Visible = True
-                    GridView2.DataSource = ds_Lista.Tables(4)
-                    GridView2.DataBind()
-
-                End If
-
-            Else ' Error
-                View1_Div1.Visible = False
-                'btn_SiguienteEtapa1.Visible = False
+            If dt.Rows.Count > 0 Then
+                pnl_DetLibros.Visible = True
+                GridView2.DataSource = dt
+                GridView2.DataBind()
             End If
+
+
+            'End If
+
+        Else ' Error
+            View1_Div1.Visible = False
+            'btn_SiguienteEtapa1.Visible = False
         End If
+
 
         If usp_ValorDNI = 1 And usp_ValorSF = 1 And usp_ValorLB = 1 And usp_ValorBL = 1 Then
             btn_SiguienteEtapa1.Visible = True
         Else
             btn_SiguienteEtapa1.Visible = False
         End If
-
 
     End Sub
 
