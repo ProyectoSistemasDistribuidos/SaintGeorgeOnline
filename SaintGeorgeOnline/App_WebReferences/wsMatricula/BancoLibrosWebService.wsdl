@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:tns="http://ws.bancoLibros.upc.edu/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="BancoLibrosWebService" targetNamespace="http://ws.bancoLibros.upc.edu/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/BancoLibrosWS/BancoLibrosWebService?xsd=1" namespace="http://ws.bancoLibros.upc.edu/" />
+    </xsd:schema>
+  </types>
+  <message name="validacionSituacionFinal">
+    <part name="parameters" element="tns:validacionSituacionFinal" />
+  </message>
+  <message name="validacionSituacionFinalResponse">
+    <part name="parameters" element="tns:validacionSituacionFinalResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="validaDOI">
+    <part name="parameters" element="tns:validaDOI" />
+  </message>
+  <message name="validaDOIResponse">
+    <part name="parameters" element="tns:validaDOIResponse" />
+  </message>
+  <message name="consultaPrestamo">
+    <part name="parameters" element="tns:consultaPrestamo" />
+  </message>
+  <message name="consultaPrestamoResponse">
+    <part name="parameters" element="tns:consultaPrestamoResponse" />
+  </message>
+  <message name="validacionDocumentosBancoLibro">
+    <part name="parameters" element="tns:validacionDocumentosBancoLibro" />
+  </message>
+  <message name="validacionDocumentosBancoLibroResponse">
+    <part name="parameters" element="tns:validacionDocumentosBancoLibroResponse" />
+  </message>
+  <message name="listaLibroBanco">
+    <part name="parameters" element="tns:listaLibroBanco" />
+  </message>
+  <message name="listaLibroBancoResponse">
+    <part name="parameters" element="tns:listaLibroBancoResponse" />
+  </message>
+  <message name="validacionDocumentosLibro">
+    <part name="parameters" element="tns:validacionDocumentosLibro" />
+  </message>
+  <message name="validacionDocumentosLibroResponse">
+    <part name="parameters" element="tns:validacionDocumentosLibroResponse" />
+  </message>
+  <portType name="BancoLibrosWebService">
+    <operation name="validacionSituacionFinal">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionSituacionFinalRequest" message="tns:validacionSituacionFinal" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionSituacionFinalResponse" message="tns:validacionSituacionFinalResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionSituacionFinal/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validaDOI">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validaDOIRequest" message="tns:validaDOI" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validaDOIResponse" message="tns:validaDOIResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validaDOI/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="consultaPrestamo">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/consultaPrestamoRequest" message="tns:consultaPrestamo" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/consultaPrestamoResponse" message="tns:consultaPrestamoResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/consultaPrestamo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validacionDocumentosBancoLibro">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosBancoLibroRequest" message="tns:validacionDocumentosBancoLibro" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosBancoLibroResponse" message="tns:validacionDocumentosBancoLibroResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosBancoLibro/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listaLibroBanco">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/listaLibroBancoRequest" message="tns:listaLibroBanco" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/listaLibroBancoResponse" message="tns:listaLibroBancoResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/listaLibroBanco/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validacionDocumentosLibro">
+      <input wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosLibroRequest" message="tns:validacionDocumentosLibro" />
+      <output wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosLibroResponse" message="tns:validacionDocumentosLibroResponse" />
+      <fault wsam:Action="http://ws.bancoLibros.upc.edu/BancoLibrosWebService/validacionDocumentosLibro/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="BancoLibrosWebServicePortBinding" type="tns:BancoLibrosWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="validacionSituacionFinal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validaDOI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="consultaPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validacionDocumentosBancoLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listaLibroBanco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validacionDocumentosLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="BancoLibrosWebService">
+    <port name="BancoLibrosWebServicePort" binding="tns:BancoLibrosWebServicePortBinding">
+      <soap:address location="http://localhost:8080/BancoLibrosWS/BancoLibrosWebService" />
+    </port>
+  </service>
+</definitions>
