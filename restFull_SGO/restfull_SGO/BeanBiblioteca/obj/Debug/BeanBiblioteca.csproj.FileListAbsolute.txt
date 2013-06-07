@@ -1,0 +1,5 @@
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BeanBiblioteca\bin\Debug\BeanBiblioteca.dll
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BeanBiblioteca\bin\Debug\BeanBiblioteca.pdb
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BeanBiblioteca\obj\Debug\BeanBiblioteca.csprojResolveAssemblyReference.cache
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BeanBiblioteca\obj\Debug\BeanBiblioteca.dll
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BeanBiblioteca\obj\Debug\BeanBiblioteca.pdb

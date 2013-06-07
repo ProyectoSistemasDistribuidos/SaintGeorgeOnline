@@ -1,0 +1,7 @@
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\obj\Debug\BibliotecaDAO.csprojResolveAssemblyReference.cache
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\bin\Debug\BibliotecaDAO.dll
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\bin\Debug\BibliotecaDAO.pdb
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\bin\Debug\BeanBiblioteca.dll
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\bin\Debug\BeanBiblioteca.pdb
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\obj\Debug\BibliotecaDAO.dll
+C:\Users\Fanny\Desktop\presentacion_proyecto\restFull_SGO\restfull_SGO\BibliotecaDAO\obj\Debug\BibliotecaDAO.pdb
