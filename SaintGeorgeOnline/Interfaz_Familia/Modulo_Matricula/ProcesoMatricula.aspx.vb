@@ -428,8 +428,8 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
     ''' Modificado por:        _____________
     ''' Fecha de modificación: _____________ 
     ''' </remarks>
-    Private Sub Cargar_Etapa1()
-         mv_PasosMatricula.ActiveViewIndex = 0
+       Private Sub Cargar_Etapa1()
+        mv_PasosMatricula.ActiveViewIndex = 0
 
         Dim str_CodigoAlumno As String = hiddenCodigoAlumno.Value
         Dim int_CodigoAnioAcademicoMatricula As Integer = hiddenCodigoAnioAcademico.Value
@@ -441,7 +441,7 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
 
 
         'Dim obj_BL_Matricula As New bl_Matricula
-        'Dim ds_Lista As DataSet = obj_BL_Matricula.FUN_VAL_Matricula(str_CodigoAlumno, int_CodigoAnioAcademicoMatricula, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
+        'Dim ds_Lista As DataSet = obj_BL_Matricula.FUN_VAL_RequisitosMatricula(str_CodigoAlumno, int_CodigoAnioAcademicoMatricula, int_CodigoUsuario, int_CodigoTipoUsuario, cod_Modulo, cod_Opcion)
 
         'View1_Div1.Visible = False
 
@@ -453,11 +453,22 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
         Dim usp_MensajeSF As String = miSer.validacionSituacionFinal(str_CodigoAlumno, int_codigoanioanterior).strMensaje
         Dim usp_ValorSF As Integer = miSer.validacionSituacionFinal(str_CodigoAlumno, int_codigoanioanterior).strCodigo
 
-        'Libros Biblioteca
-        Dim usp_MensajeLB As String = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strMensaje
-        Dim usp_ValorLB As Integer = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strCodigo
+        'Libros Biblioteca  RESTFULL
+        'Dim usp_MensajeLB As String = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strMensaje
+        'Dim usp_ValorLB As Integer = miSer.validacionDocumentosLibro(str_CodigoAlumno, Me.Master.Obtener_DescripcionPeriodoEscolar).strCodigo
 
-        'Libros banco de Libros
+        Dim data As String = "{""codigo"":""" & str_CodigoAlumno & """,""anio"":""" & Me.Master.Obtener_DescripcionPeriodoEscolar & """,}"
+        Dim metodo As String = "POST"
+        Dim URL As String = "getLibros"
+
+        Dim respuesta = Me.ejecutar(URL, data, metodo)
+
+        Dim serializer As New JavaScriptSerializer()
+        Dim vObj_E As be_BibliotecaLibros = serializer.Deserialize(Of be_BibliotecaLibros)(respuesta)
+
+        Dim usp_MensajeLB As String = vObj_E.mensaje
+        Dim usp_ValorLB As Integer = vObj_E.valor
+        'Libros banco de Libros SOAP
         'wsMatricula.bancoLibrosResponse()
         Dim ob As wsMatricula.bancoLibrosResponse = miSer.validacionDocumentosBancoLibro(str_CodigoAlumno, int_codigoanioanterior)
 
@@ -498,21 +509,21 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
             'btn_SiguienteEtapa1.Visible = False
         End If
 
-            If usp_ValorLB = 1 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje2.Text = usp_MensajeLB
-                img_Icono2.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
-                'btn_SiguienteEtapa1.Visible = True
-            ElseIf usp_ValorLB = 0 Then
-                View1_Div1.Visible = True
-                View1_lblMensaje2.Text = usp_MensajeLB
-                'btn_SiguienteEtapa1.Visible = False
-                img_Icono2.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
-            Else ' Error
-                View1_Div1.Visible = False
-                'btn_SiguienteEtapa1.Visible = False
-            End If
-        
+        If usp_ValorLB = 1 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje2.Text = usp_MensajeLB
+            img_Icono2.ImageUrl = "../../App_Themes/Imagenes/opc_activar.png"
+            'btn_SiguienteEtapa1.Visible = True
+        ElseIf usp_ValorLB = 0 Then
+            View1_Div1.Visible = True
+            View1_lblMensaje2.Text = usp_MensajeLB
+            'btn_SiguienteEtapa1.Visible = False
+            img_Icono2.ImageUrl = "../../App_Themes/Imagenes/AlertIcon.gif"
+        Else ' Error
+            View1_Div1.Visible = False
+            'btn_SiguienteEtapa1.Visible = False
+        End If
+
 
         If usp_ValorBL = 1 Then
             View1_Div1.Visible = True
@@ -550,8 +561,75 @@ Partial Class Interfaz_Familia_Modulo_Matricula_ProcesoMatricula
             btn_SiguienteEtapa1.Visible = False
         End If
 
-    End Sub
 
+    End Sub
+    'Metodo Post RESTFULL
+    Public Function ejecutar(ByVal extremo As String, ByVal datos As String, ByVal metodo As String) As String
+
+        Dim str_url = "http://localhost:1254/biblioteca.svc/"
+
+        Try
+            Dim data As Byte() = UTF8Encoding.UTF8.GetBytes(datos)
+            Dim request As HttpWebRequest
+            request = WebRequest.Create(str_url + extremo)
+            request.Timeout = 10 * 1000
+            request.Method = metodo
+
+            request.ContentLength = data.Length
+            request.ContentType = "application/json; charset=utf-8"
+            Dim postStream = request.GetRequestStream()
+            postStream.Write(data, 0, data.Length)
+
+            Dim response As HttpWebResponse = request.GetResponse()
+            Dim reader As StreamReader = New StreamReader(response.GetResponseStream)
+            Dim json As String = reader.ReadToEnd()
+            Return json
+
+        Catch ex As Exception
+            Return ""
+        End Try
+
+ 
+
+    End Function
+
+    Private Function ObtenerLibrosPrestadoBL(ByVal anio As Integer, ByVal str_CodigoAlumno As String) As DataTable
+
+        'Dim int_CodigoAlumno As Integer = hiddenCodigoAlumno.Value
+        Dim int_CodigoAnioAcademico As Integer = Me.Master.Obtener_CodigoPeriodoEscolar
+        Dim int_CodigoUsuario As Integer = Me.Master.Obtener_CodigoFamiliarLogueado
+        Dim int_CodigoTipoUsuario As Integer = Me.Master.Obtener_CodigoTipoUsuarioLogueado
+
+        Dim dt As DataTable = New DataTable("BancoLibros")
+        dt.Columns.Add("Titulo", Type.GetType("System.String"))
+        'dt.Columns.Add("TipoLibro", Type.GetType("System.String"))
+        'dt.Columns.Add("Curso", Type.GetType("System.String"))
+        'dt.Columns.Add("Estado", Type.GetType("System.String"))
+        'dt.Columns.Add("PrecioReposicion", Type.GetType("System.String"))
+
+        Dim dr As DataRow
+        Dim prestamo() As wsMatricula.beanBancolibroPrestamo
+
+        prestamo = miSer.listaLibroBanco(str_CodigoAlumno, anio).bancoLibros
+
+        If prestamo IsNot Nothing Then
+            If prestamo.Length > 0 Then
+                For Each num In prestamo
+
+                    dr = dt.NewRow
+
+                    dr.Item("Titulo") = num.libro
+                    'dr.Item("TipoLibro") = num.tipoLibro
+                    'dr.Item("Curso") = num.curso
+                    'dr.Item("Estado") = num.estado
+                    'dr.Item("PrecioReposicion") = num.precio
+                    dt.Rows.Add(dr)
+                Next
+            End If
+        End If
+        Return dt
+    End Function
+    
     ''' <summary>
     ''' Carga la información sobre el Segundo paso de la Matrícula : Obligaciones Económicas 
     ''' </summary>
